@@ -1,0 +1,139 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/img/fondo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: Halloweeni;
+    src: url(../assets/img/fonts/mc3e8rG.ttf);
+  }
+  
+  @font-face {
+    font-family: navHall;
+    src: url(../assets/img/fonts/Witch\ Magic.ttf);
+  }
+  @font-face {
+    font-family: navblood;
+    src: url(../assets/img/fonts/Bloody\ Terror\ TTF\ Personal.ttf);
+  }
+  @font-face {
+    font-family: navghost;
+    src: url(../assets/img/fonts/Bad\ Ghost_PersonalUseOnly.ttf);
+  }
+
+  
+  .loginDiv {
+    width: 20%;
+    text-align: end;
+    padding: 0 2em;
+  }
+  
+  .loginDiv a {
+    color: #171717;
+    text-decoration: none;
+    font-family: navHall;
+    transition: all 0.3s ease;
+  }
+  
+  .loginDiv a:hover {
+    color: rgb(249, 106, 34);
+    text-shadow: black 1px 1px 5px;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: transparent;
+  }
+  
+  header {
+    text-shadow: 1px 1px 5px rgb(172, 172, 172);
+    background-color: rgb(205, 56, 2);
+    padding: 10px;
+  }
+  
+  .contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative;
+  }
+  
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-family: navHall;
+    
+  }
+  
+  .menuNavbar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li {
+    margin-left: 40px;
+    position: relative;
+    line-height: 30px;
+    
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #171717;
+    font-size: 1rem;
+    transition: all 1s ease;
+  }
+  
+  /* Define la animación del balanceo */
+  @keyframes li-anim {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+
+  nav ul li.listahover:hover {
+    animation: li-anim .6s ease infinite;  
+    >a{
+        color: #ffffff;
+       
+        
+    }
+    
+  }
+  
+  .logoTitulo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    font-family: Halloweeni;
+    text-transform: uppercase;
+    
+  }
+  
+  .logo {
+    width: 60px;
+    margin-right: 20px;
+    filter: drop-shadow(1px 1px 2px white);
+  }
+  
