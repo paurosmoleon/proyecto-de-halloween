@@ -1,0 +1,78 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height: 100svh;
+  
+    
+}
+main{
+   
+    display: flex;
+    justify-content: center;
+    min-height: 80%; 
+    
+
+}
+
+.contenedor_juego{
+    padding: 2em;
+    color: #c1c1c1;
+    text-align: center;
+    margin-top: 2.5em;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 50%;
+    height: 85svh;
+    width: 90%;
+    border: 2px solid #cd3802;
+    border-radius: 14px;
+    animation: border 5s ease infinite;
+}
+.titulo_juego{
+    padding-bottom: 1em ;
+}
+@keyframes border {
+    0%{ border-color: #CD3802;}
+    25%{ border-color: #D1480B;}
+    50%{ border-color: #CD3802;}
+    75%{ border-color: #B53001;}
+    100%{ border-color: #C54010;}
+}
+
+.juego{
+    height: 90%;
+}
+table{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+}
+.cell{
+    border: 5px solid white;
+ 
+    
+    width: 10em;
+    height: 10em;
+    padding: 15px;
+}
+tr:first-child td {
+    border-top: none; 
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td:first-child {
+    border-left: none; 
+}
+
+td:last-child {
+    border-right: none; 
+}
