@@ -76,3 +76,8 @@ td:first-child {
 td:last-child {
     border-right: none; 
 }
+img{
+    max-width: 50%;
+    max-height: 50%;
+    
+}
