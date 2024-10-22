@@ -17,20 +17,20 @@ html {
   
   @font-face {
     font-family: Halloweeni;
-    src: url(../assets/img/fonts/mc3e8rG.ttf);
+    src: url(../assets/fonts/mc3e8rG.ttf);
   }
   
   @font-face {
     font-family: navHall;
-    src: url(../assets/img/fonts/Witch\ Magic.ttf);
+    src: url(../assets/fonts/Witch\ Magic.ttf);
   }
   @font-face {
     font-family: navblood;
-    src: url(../assets/img/fonts/Bloody\ Terror\ TTF\ Personal.ttf);
+    src: url(../assets/fonts/Bloody\ Terror\ TTF\ Personal.ttf);
   }
   @font-face {
     font-family: navghost;
-    src: url(../assets/img/fonts/Bad\ Ghost_PersonalUseOnly.ttf);
+    src: url(../assets/fonts/Bad\ Ghost_PersonalUseOnly.ttf);
   }
 
   
