@@ -1,0 +1,85 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/img/fondo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    width: 100vw; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: Halloweeni;
+    src:url(../assets/img/fonts/mc3e8rG.ttf);
+  }
+  .loginDiv {
+    width: 20%;
+  }
+  .loginDiv a {
+    color: white;
+    margin-left: 20%;
+    text-decoration: none;
+  }
+  .loginDiv a:hover {
+    color: black;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #171717;
+  }  
+header {
+    background-color: #8b55af;
+    padding: 10px;
+  }
+  
+  .contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  auto;
+    position: relative;
+  }
+  
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menuNavbar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li {
+    margin-left: 40px;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #c1c1c1;
+  }
+  
+  .logoTitulo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    font-family: Halloweeni;
+    text-transform: uppercase;
+  }
+  
+  .logo {
+    width: 60px;
+    margin-right: 20px;
+}
