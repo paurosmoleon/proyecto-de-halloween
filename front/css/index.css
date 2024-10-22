@@ -1,14 +1,31 @@
-
-main {
-  font-family: "Roboto", sans-serif;
+.contenedor {
+ font-family: "Roboto", sans-serif;
   padding: 20px;
   width: 60%;
   background-color: #171717d5;
-  border-bottom-left-radius:10px ;
-  border-bottom-right-radius:10px ;
-  margin: 0 auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0 auto; 
+
+#esqueleto_eleccion {
+  height: auto;           
+  margin: 0;             
+  padding: 0;            
 }
 
+#esqueleto_eleccion img {
+  max-width: 100%; 
+  height: auto;    
+}
+#titulo_esqueleto{
+  text-align:center;
+}
+#titulo_esqueleto hr{
+  width: 40%;
+  margin: auto;
+}
+
+/* Resto de tus estilos para h2, p, etc. */
 h2 {
   margin-top: 10px;
   color: #ff7518;
@@ -27,7 +44,8 @@ p {
   color: #c1c1c1;
 }
 
-/* Medidas dispositivos que piden */
+/* Media queries y otros estilos (si los tienes) */
+
 @media (max-width: 375px) {
   /* iPhone SE 2020 de pie */
   .contenedorHeader {
@@ -158,4 +176,5 @@ p {
   section {
     margin-bottom: 40px; /* Más espacio entre secciones */
   }
+}
 }
