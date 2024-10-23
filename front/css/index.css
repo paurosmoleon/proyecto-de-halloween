@@ -1,3 +1,6 @@
+body, html{
+  max-width: 100%;
+}
 .contenedor {
  font-family: "Roboto", sans-serif;
   padding: 20px;
