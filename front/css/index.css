@@ -2,18 +2,29 @@ body,
 html {
   max-width: 100%;
 }
-.tumba{
+.tumba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
   position: absolute;
   background-color: #1a1a1a;
 }
-.tumba img{
+.tumba img {
   cursor: pointer;
+  width: 20%;
+  height: 40%;
 }
 .conFuenteBlood {
   font-family: navHall;
 }
+header {
+  display: none;
+}
 .contenedor {
+  display: none;
+
   font-family: "Roboto", sans-serif;
   padding: 20px;
   width: 60%;
@@ -106,7 +117,6 @@ html {
   }
   .imagenJoseC {
     text-align: center;
-
   }
 
   .imagenJoseC img {
@@ -118,11 +128,8 @@ html {
     position: relative;
     width: 100%;
     height: 7svh;
-
-    
   }
   .imagenJaviC img {
-    
     position: absolute;
     bottom: 0;
     right: 0;
@@ -132,21 +139,17 @@ html {
   }
   .imagenJuliC {
     text-align: center;
-
-    
   }
   .imagenJuliC img {
     margin-top: 2%;
     width: 50%;
     height: auto;
     opacity: 0.5;
-
   }
-  .imagenJuliC,.imagenJaviC.imagenJoseC p {
+  .imagenJuliC,
+  .imagenJaviC.imagenJoseC p {
     color: #2c2c2c;
   }
-
-
 
   @media (max-width: 375px) {
     /* iPhone SE 2020 de pie */
