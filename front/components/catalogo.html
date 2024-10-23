@@ -6,6 +6,7 @@
     <title>Catalogo</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/catalogo.css" />
+    <script src="../js/catalogo.js"></script>
   </head>
   <body>
     <header>
@@ -34,21 +35,21 @@
           <img src="../assets/img/img-catalogo/postre1.jpg" alt="Chupito Ocular" />
           <h1>Chupito Ocular</h1>
           <p class="descripcion">Verás más allá...</p>
-          <a href="#chupito-ojo"><button>Ver receta</button></a>
+          <a href="#chupito-ojo" href="javascript: void(0);" onClick="toggle('chupito-ojo')"><button id="chupi">Ver receta</button></a>
         </div>
 
         <div class="card">
           <img src="../assets/img/img-catalogo/postre2.jpg" alt="Cookie Vampire" />
           <h1>BatCookie</h1>
           <p class="descripcion">Vuelan hasta tu gusto</p>
-          <a href="#galletas-murcielago"><button>Ver receta</button></a>
+          <a href="#galletas-murcielago" href="javascript: void(0);" onClick="toggle('galletas-murcielago')"><button>Ver receta</button></a>
         </div>
 
         <div class="card">
           <img src="../assets/img/img-catalogo/postre3.jpg" alt="Choco Arañas" />
           <h1>Choco Arañas</h1>
           <p class="descripcion">Trepan tus sentidos</p>
-          <a href="#chocoaranya"><button>Ver receta</button></a>
+          <a href="#chocoaranya" href="javascript: void(0);" onClick="toggle('chocoaranya')"><button>Ver receta</button></a>
         </div>
 
         <div class="image-container">
@@ -57,7 +58,7 @@
             <img src="../assets/img/img-catalogo/postre4.jpg" alt="Cookie Boo" />
             <h1>Cookie Boo</h1>
             <p class="descripcion">Miedo lo ricas que están</p>
-            <a href="#cookie-boo"><button>Ver receta</button></a>
+            <a href="#cookie-boo" href="javascript: void(0);" onClick="toggle('cookie-boo')"><button>Ver receta</button></a>
           </div>
         </div>
         <div class="image-container">
@@ -66,7 +67,7 @@
             <img src="../assets/img/img-catalogo/postre5.jpg" alt="HectoCake" />
             <h1>HectoCakes</h1>
             <p class="descripcion">Miedo a parar de comer</p>
-            <a href="#hectocakes"><button>Ver receta</button></a>
+            <a href="#hectocakes" href="javascript: void(0);" onClick="toggle('hectocakes')"><button>Ver receta</button></a>
           </div>
         </div>
 
@@ -74,28 +75,28 @@
           <img src="../assets/img/img-catalogo/postre6.jpg" alt="VampiCakes" />
           <h1>VampiCakes</h1>
           <p class="descripcion">Vuelna de lo dulce que estan</p>
-          <a href="#murcielago-cakes"><button>Ver receta</button></a>
+          <a href="#murcielago-cakes" href="javascript: void(0);" onClick="toggle('murcielago-cakes')"><button>Ver receta</button></a>
         </div>
 
         <div class="card">
           <img src="../assets/img/img-catalogo/postre7.jpg" alt="TartaMuerta" />
           <h1>TartaMuerta</h1>
           <p class="descripcion">Entierra la cuchara</p>
-          <a href="#tarta-muerta"><button>Ver receta</button></a>
+          <a href="#tarta-muerta" href="javascript: void(0);" onClick="toggle('tarta-muerta')"><button>Ver receta</button></a>
         </div>
 
         <div class="card">
           <img src="../assets/img/img-catalogo/postre8.jpg" alt="VampiCookies" />
           <h1>VampiCookies</h1>
           <p class="descripcion">Muerdelas tu!!</p>
-          <a href="#vampi-cookies"><button>Ver receta</button></a>
+          <a href="#vampi-cookies" href="javascript: void(0);" onClick="toggle('vampi-cookies')"><button>Ver receta</button></a>
         </div>
       </div>
-      
+
       <hr />
 
-      <div class="texto-recetas">
-        <h1 id="chupito-ojo">Chupito Ocular: Un vistazo a lo desconocido 👁️</h1>
+      <div class="texto-recetas" id="chupito-ojo" style="display: none;">
+        <h1 >Chupito Ocular: Un vistazo a lo desconocido 👁️</h1>
         <p>
           ¡Bienvenidos a una experiencia aterradora y deliciosa! Este
           <strong>Chupito Ocular</strong> es el cóctel perfecto para impresionar a tus amigos en
@@ -147,8 +148,8 @@
           un poco de "sangre" falsa (jarabe de granadina) alrededor de los vasos.
         </p>
       </div>
-      <div class="texto-recetas">
-        <h1 id="galletas-murcielago">
+      <div class="texto-recetas"id="galletas-murcielago" style="display: none;">
+        <h1 >
           Galletas Murciélago: Delicias aterradoras para Halloween 🦇
         </h1>
         <p>
@@ -212,8 +213,8 @@
           espeluznantemente delicioso!
         </p>
       </div>
-      <div class="texto-recetas">
-        <h1 id="chocoaranya">Chocoarañas: Galletas de Chocolate Aterradoramente Deliciosas 🕷️</h1>
+      <div class="texto-recetas"id="chocoaranya" style="display: none;">
+        <h1 >Chocoarañas: Galletas de Chocolate Aterradoramente Deliciosas 🕷️</h1>
         <p>
           ¡Prepárate para un festín espeluznante! Estas <strong>Chocoarañas</strong> son galletas de
           chocolate que no solo son deliciosas, sino que también añadirán un toque aterrador a tu
@@ -274,8 +275,8 @@
           antes de decorarlas. ¡Esto les dará un aspecto espeluznante y delicioso!
         </p>
       </div>
-      <div class="texto-recetas receta-premium">
-        <h1 id="cookie-boo">Cookie Boo: Galletas de Halloween Espeluznantes 🎃</h1>
+      <div class="texto-recetas receta-premium" id="cookie-boo" style="display: none;">
+        <h1 >Cookie Boo: Galletas de Halloween Espeluznantes 🎃</h1>
         <p>
           ¡Dale un toque dulce y aterrador a tu Halloween con nuestras <strong>Cookie Boo</strong>!
           Estas galletas redondas se pueden decorar en forma de calabazas, esqueletos y más,
@@ -342,8 +343,8 @@
           Halloween!
         </p>
       </div>
-      <div class="texto-recetas receta-premium">
-        <h1 id="hectocakes">Hectocakes: Cupcakes Fantasmales para Halloween 👻</h1>
+      <div class="texto-recetas receta-premium" id="hectocakes" style="display: none;">
+        <h1 >Hectocakes: Cupcakes Fantasmales para Halloween 👻</h1>
         <p>
           ¡Sorprende a todos en tu fiesta de Halloween con nuestros <strong>Hectocakes</strong>!
           Estos cupcakes con forma de fantasma son irresistibles y muy fáciles de hacer. Además, su
@@ -406,8 +407,8 @@
           lugar del colorante. ¡Deja volar tu creatividad!
         </p>
       </div>
-      <div class="texto-recetas">
-        <h1 id="murcielago-cakes">Murciélago Cakes: Cupcakes Espeluznantes para Halloween 🦇</h1>
+      <div class="texto-recetas" id="murcielago-cakes" style="display: none;">
+        <h1>Murciélago Cakes: Cupcakes Espeluznantes para Halloween 🦇</h1>
         <p>
           ¡Dale un giro aterrador a tu celebración de Halloween con nuestros
           <strong>Murciélago Cakes</strong>! Estos cupcakes son perfectos para asustar a tus
@@ -476,8 +477,8 @@
           negro al glaseado para darle un efecto más aterrador.
         </p>
       </div>
-      <div class="texto-recetas">
-        <h1 id="tarta-muerta">Tarta Muerta: Un Cementerio Delicioso para Halloween ⚰️</h1>
+      <div class="texto-recetas" id="tarta-muerta" style="display: none;">
+        <h1>Tarta Muerta: Un Cementerio Delicioso para Halloween ⚰️</h1>
         <p>
           ¡Bienvenidos a una experiencia escalofriante y deliciosa! La
           <strong>Tarta Muerta</strong> es la opción perfecta para impresionar a tus amigos en
@@ -542,8 +543,8 @@
           esqueletos en la parte superior de la tarta.
         </p>
       </div>
-      <div class="texto-recetas">
-        <h1 id="vampi-cookies">Vampi Cookies: ¡Dulce y Tenebroso! 🧛‍♀️🧄</h1>
+      <div class="texto-recetas" id="vampi-cookies" style="display: none;">
+        <h1>Vampi Cookies: ¡Dulce y Tenebroso! 🧛‍♀️🧄</h1>
         <p>
           ¡Prepárate para deleitarte con las <strong>Vampi Cookies</strong>! Estas galletas con
           forma de vampiro son el complemento perfecto para tu mesa de dulces en Halloween. Con su
