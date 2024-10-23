@@ -1,20 +1,93 @@
 body,
 html {
   max-width: 100%;
+  background-color: #292929 !important;
 }
+
+@keyframes salirDelSuelo {
+  0% {
+    bottom: -200px;
+  }
+  50% {
+    bottom: 20%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+#manoZombie {
+  animation: salirDelSuelo 4s forwards;
+  width: 20%;
+  z-index: 10;
+}
+#manoZombie.animar {
+  animation: salirDelSuelo 4s forwards;
+}
+
+.prePagina {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+}
+
+@keyframes moverDerecha {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moverIzquierda {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nube1 {
+  animation: moverDerecha 14s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nube2 {
+  animation: moverIzquierda 14s linear infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .tumba {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #1a1a1a;
+  height: calc(100% - 100px);
+  position: relative;
+  z-index: 2;
 }
+
 .tumba img {
   cursor: pointer;
   width: 20%;
-  height: 40%;
+  transition: transform 0.2s;
+}
+
+.tumba img:hover {
+  transform: scale(1.05);
 }
 .conFuenteBlood {
   font-family: navHall;
