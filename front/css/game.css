@@ -13,8 +13,9 @@ main{
    
     display: flex;
     justify-content: center;
-    min-height: 80%; 
-    
+    height: 80%;
+    font-family: Halloweeni;
+    text-transform: uppercase
 
 }
 
@@ -25,12 +26,21 @@ main{
     margin-top: 2.5em;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    width: 50%;
-    height: 85svh;
     width: 90%;
+    height: 95%;
     border: 2px solid #cd3802;
     border-radius: 14px;
     animation: border 5s ease infinite;
+    
+}
+button{
+
+    text-transform: uppercase; 
+    font-family: Halloweeni;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid #CD3802;
 }
 .titulo_juego{
     padding-bottom: 1em ;
@@ -50,15 +60,15 @@ table{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     border-collapse: collapse;
 }
 .cell{
     border: 5px solid white;
  
     
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
     padding: 15px;
 }
 tr:first-child td {
@@ -76,8 +86,19 @@ td:first-child {
 td:last-child {
     border-right: none; 
 }
+.container_assets{
+   display: grid;
+   place-items: center;
+   gap: .6em;
+   padding-bottom: 1.5em;
+}
 img{
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(1px 1px 1px  #cd3802)
     
+}
+
+.player{
+    filter: drop-shadow(1px 1px 5px #651616);
 }
