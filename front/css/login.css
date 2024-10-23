@@ -1,6 +1,4 @@
-body {
-  overflow-x: hidden;
-}
+
 
 .contieneTodo {
   text-align: center;
@@ -25,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  margin-top: 4%;
 }
 
 

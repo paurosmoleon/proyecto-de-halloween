@@ -2,6 +2,9 @@ body,
 html {
   max-width: 100%;
 }
+.conFuenteBlood {
+  font-family: navHall;
+}
 .contenedor {
   font-family: "Roboto", sans-serif;
   padding: 20px;
@@ -94,27 +97,30 @@ html {
     outline: none;
   }
   .imagenJoseC {
-    position: relative;
-    width: 100%;
-    height: 7svh;
+    text-align: center;
+
   }
 
   .imagenJoseC img {
+    margin-top: 2%;
+    width: 50%;
+    height: auto;
+  }
+  .imagenJaviC {
+    position: relative;
+    width: 100%;
+    height: 7svh;
+
+    
+  }
+  .imagenJaviC img {
+    
     position: absolute;
     bottom: 0;
     right: 0;
     width: 10%;
     height: auto;
-  }
-  .imagenJaviC {
-    text-align: center;
-
-    
-  }
-  .imagenJaviC img {
-    margin-top: 2%;
-    width: 50%;
-    height: auto;
+    cursor: pointer;
   }
   .imagenJuliC {
     text-align: center;
@@ -128,7 +134,7 @@ html {
     opacity: 0.5;
 
   }
-  .imagenJuliC p {
+  .imagenJuliC,.imagenJaviC.imagenJoseC p {
     color: #2c2c2c;
   }
 
