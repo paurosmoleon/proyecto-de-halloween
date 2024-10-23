@@ -1,39 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+  overflow-x: hidden;
+}
 
 .contieneTodo {
-    text-align: center;
-    padding: 20px;
-
-  }
-  
-  .contieneTodo img {
-    width: 80px;
-    margin-bottom: 10px;
-  }
-  
-  .contieneTodo h1 {
-    font-family: navHall;
-    font-size: 2.5rem;
-    color: #fff;
-    text-shadow: 2px 2px 5px black;
-  }
-  
-.section {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-
-.section::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  text-align: center;
+  padding: 20px;
 }
+
+.contieneTodo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.contieneTodo h1 {
+  font-family: navHall;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px black;
+}
+
+.section {
+  width: 100%;
+  height: 50svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 
 @keyframes animate {
   0% {
@@ -45,7 +39,7 @@
 }
 
 .section .login {
-  position: absolute;
+  position: relative;
   width: 400px;
   background: #222;
   z-index: 1000;
@@ -138,17 +132,4 @@
 
 input[type="submit"]:active {
   opacity: 0.6;
-}
-
-@media (max-width: 900px) {
-  .section .login {
-    width: 300px;
-  }
-}
-
-@media (max-width: 600px) {
-  .section .login {
-    width: 100%;
-    padding: 20px;
-  }
 }
