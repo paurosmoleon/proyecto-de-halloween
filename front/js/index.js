@@ -49,26 +49,26 @@ function sonidoCaballo() {
 }
 function tumbaInicio() {
   document.body.style.backgroundImage = "url('./assets/img/fondo.webp')";
-  var tumba = document.getElementsByClassName("prePagina")[0]; 
+  var tumba = document.getElementsByClassName("prePagina")[0];
   tumba.style.display = "none";
-  var contenedor = document.getElementsByClassName("contenedor")[0]; 
+  var contenedor = document.getElementsByClassName("contenedor")[0];
   contenedor.style.display = "block";
-  var header = document.getElementsByTagName("header")[0]; 
+  var header = document.getElementsByTagName("header")[0];
   header.style.display = "block";
 }
 function animarManoZombie() {
   const manoZombie = document.getElementById("manoZombie");
-  manoZombie.style.display = "block"; // Muestra la mano de zombie
+  manoZombie.style.display = "block"; 
 
-  // Inicia la animación
   manoZombie.classList.add("animar");
 
-  // Espera a que la animación termine
-  manoZombie.addEventListener('animationend', function() {
-    // Oculta la mano de zombie después de la animación
-    manoZombie.style.display = "none";
-    
-    // Llama a la función tumbaInicio
-    tumbaInicio();
-  }, { once: true }); // Se asegura de que se ejecute solo una vez
+  manoZombie.addEventListener(
+    "animationend",
+    function () {
+      manoZombie.style.display = "none";
+
+      tumbaInicio();
+    },
+    { once: true }
+  ); 
 }
