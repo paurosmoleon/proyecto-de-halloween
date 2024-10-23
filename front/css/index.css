@@ -45,6 +45,59 @@ p {
   font-size: 16px;
   color: #c1c1c1;
 }
+.boton-elegante {
+  padding: 5px 10px;
+
+  color: #ffffff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 30px;
+  max-width: 172px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid #2c2c2c;
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 30px;
+  padding: 0 1em ;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+  border-color: rgb(205, 56, 2);
+  background: #292929;}
+
+.input:focus, .input:focus-visible {
+  border-color: rgb(205, 56, 2);
+  outline: none;
+}
+
 
 @media (max-width: 375px) {
   /* iPhone SE 2020 de pie */
