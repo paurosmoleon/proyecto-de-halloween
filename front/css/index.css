@@ -25,7 +25,6 @@
   margin: auto;
 }
 
-/* Resto de tus estilos para h2, p, etc. */
 h2 {
   margin-top: 10px;
   color: #ff7518;
@@ -43,8 +42,6 @@ p {
   font-size: 16px;
   color: #c1c1c1;
 }
-
-/* Media queries y otros estilos (si los tienes) */
 
 @media (max-width: 375px) {
   /* iPhone SE 2020 de pie */
