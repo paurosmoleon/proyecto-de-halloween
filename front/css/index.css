@@ -2,6 +2,14 @@ body,
 html {
   max-width: 100%;
 }
+.tumba{
+  width: 100%;
+  position: absolute;
+  background-color: #1a1a1a;
+}
+.tumba img{
+  cursor: pointer;
+}
 .conFuenteBlood {
   font-family: navHall;
 }

@@ -46,7 +46,13 @@ function verificarNombreJuli() {
         sonido.currentTime = 0; 
         sonido.play(); 
     }
+  function tumbaInicio() {
+      document.body.style.backgroundColor = "black";
+      var contenedor = document.getElementsByClassName('contenedor');
+      contenedor.style.display = "none";
+      var header = document.getElementsByTagName('header');
+      header.style.display = "none";
+      var tumba = document.getElementsByClassName('tumba');
+      tumba.style.display = "block";
+  }
   
-  function sonidoBloodborne() {
-
-    }
