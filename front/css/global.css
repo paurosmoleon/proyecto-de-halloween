@@ -101,7 +101,7 @@ html {
     font-size: 1rem;
     transition: all 1s ease;
   }
-  
+
   @keyframes li-anim {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(2deg); }
@@ -115,6 +115,7 @@ html {
     animation: li-anim .6s ease infinite;  
     >a{
         color: #ffffff;
+
         
     }
     

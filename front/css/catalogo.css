@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  min-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px 20px 20px 20px;
+}
+
+.card h1 {
+  color: #ff8215;
+}
+
+.card p {
+  color: rgb(167, 167, 167);
+  padding: 0.3em;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card img {
+  height: 20em;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+
+#cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px; /* Espacio entre las cards */
+  margin-top: 6%;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Para pantallas de tamaño mediano (tabletas, pantallas medianas) */
+@media (max-width: 1024px) {
+  #cards-container {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en pantallas medianas */
+  }
+}
+
+/* Para pantallas de tamaño pequeño (tabletas pequeñas, teléfonos grandes) */
+@media (max-width: 768px) {
+  main {
+    width: 90%; /* Aumenta el ancho del contenido para ocupar más espacio */
+  }
+  
+  #cards-container {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas pequeñas */
+  }
+
+  .card img {
+    height: 15em; /* Ajustar la altura de las imágenes */
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+  #cards-container {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+  }
+
+  .card img {
+    height: 12em; /* Reducir más la altura de las imágenes */
+  }
+
+  .card button {
+    font-size: 16px; /* Ajustar el tamaño del texto del botón */
+  }
+}
