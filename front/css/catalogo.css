@@ -132,8 +132,6 @@ main {
 }
 
 #corona {
-  margin-top: -14%;
-  margin-left: 57%;
   position: absolute;
   width: 150px;
   z-index: 10;

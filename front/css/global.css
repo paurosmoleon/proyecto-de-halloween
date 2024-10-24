@@ -1,139 +1,249 @@
 html {
-    margin: 0;
-    padding: 0;
-    background-image: url(../assets/img/fondo.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @font-face {
-    font-family: Halloweeni;
-    src: url(../assets/fonts/mc3e8rG.ttf);
-  }
-  
-  @font-face {
-    font-family: navHall;
-    src: url(../assets/fonts/Witch\ Magic.ttf);
-  }
-  @font-face {
-    font-family: navblood;
-    src: url(../assets/fonts/Bloody\ Terror\ TTF\ Personal.ttf);
-  }
-  @font-face {
-    font-family: navghost;
-    src: url(../assets/fonts/Bad\ Ghost_PersonalUseOnly.ttf);
-  }
+  margin: 0;
+  padding: 0;
+  background-image: url(../assets/img/fondo.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+}
 
-  
-  .loginDiv {
-    width: 20%;
-    text-align: end;
-    padding: 0 2em;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Halloweeni;
+  src: url(../assets/fonts/mc3e8rG.ttf);
+}
+
+@font-face {
+  font-family: navHall;
+  src: url(../assets/fonts/Witch\ Magic.ttf);
+}
+@font-face {
+  font-family: navblood;
+  src: url(../assets/fonts/Bloody\ Terror\ TTF\ Personal.ttf);
+}
+@font-face {
+  font-family: navghost;
+  src: url(../assets/fonts/Bad\ Ghost_PersonalUseOnly.ttf);
+}
+
+.loginDiv {
+  width: 20%;
+  text-align: end;
+  padding: 0 2em;
+}
+
+.loginDiv a {
+  color: #171717;
+  text-decoration: none;
+  font-family: navHall;
+  transition: all 0.3s ease;
+}
+
+.loginDiv a:hover {
+  color: rgb(249, 106, 34);
+  text-shadow: black 1px 1px 5px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: transparent;
+}
+
+header {
+  text-shadow: 1px 1px 5px rgb(172, 172, 172);
+  background-color: rgb(205, 56, 2);
+  padding: 10px;
+}
+
+.contenedorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  position: relative;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-family: navHall;
+}
+
+.menuNavbar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  margin-left: 40px;
+  position: relative;
+  line-height: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #171717;
+  font-size: 1rem;
+  transition: all 1s ease;
+}
+
+@keyframes li-anim {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+nav ul li.listahover:hover {
+  animation: li-anim .6s ease infinite;
+  >a{
+      color: #ffffff;
   }
-  
-  .loginDiv a {
-    color: #171717;
-    text-decoration: none;
-    font-family: navHall;
-    transition: all 0.3s ease;
-  }
-  
-  .loginDiv a:hover {
-    color: rgb(249, 106, 34);
-    text-shadow: black 1px 1px 5px;
-  }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-    background-color: transparent;
-  }
-  
-  header {
-    text-shadow: 1px 1px 5px rgb(172, 172, 172);
-    background-color: rgb(205, 56, 2);
-    padding: 10px;
-  }
-  
+}
+
+.logoTitulo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  font-family: Halloweeni;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 60px;
+  margin-right: 20px;
+  filter: drop-shadow(1px 1px 2px white);
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
+@media (max-width: 1024px) {
   .contenedorHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    position: relative;
+      flex-direction: column;
+      text-align: center;
   }
-  
-  nav {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    font-family: navHall;
-    
+
+  .loginDiv {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      margin-top: 10px;
   }
-  
-  .menuNavbar {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
   }
-  
+
   nav ul li {
-    margin-left: 40px;
-    position: relative;
-    line-height: 30px;
-    
+      margin-left: 0;
+      margin-bottom: 10px;
   }
-  
+
   nav ul li a {
-    text-decoration: none;
-    color: #171717;
-    font-size: 1rem;
-    transition: all 1s ease;
+      font-size: 1.2rem;
   }
 
-  @keyframes li-anim {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(2deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-2deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
-
-  nav ul li.listahover:hover {
-    animation: li-anim .6s ease infinite;  
-    >a{
-        color: #ffffff;
-
-        
-    }
-    
-  }
-  
   .logoTitulo {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    font-family: Halloweeni;
-    text-transform: uppercase;
-    
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 15px;
   }
-  
+
   .logo {
-    width: 60px;
-    margin-right: 20px;
-    filter: drop-shadow(1px 1px 2px white);
+      width: 50px;
+  }
+}
+
+/* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
+@media (max-width: 768px) {
+  .contenedorHeader {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .logoTitulo {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+
+  .logo {
+      width: 50px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  nav ul li a {
+      font-size: 1rem;
+  }
+
+  .loginDiv {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+  }
+
+  header {
+      padding: 20px 10px;
+  }
+
+  .menuNavbar {
+      display: block;
+  }
+
+  nav ul li a {
+      font-size: 0.9rem;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .contenedorHeader {
+      padding: 10px;
+  }
+
+  .logoTitulo {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .logo {
+      width: 40px;
+  }
+
+  .loginDiv a {
+      font-size: 0.8rem;
+  }
+
+  nav ul li a {
+      font-size: 0.8rem;
+  }
+
+  header {
+      padding: 15px 5px;
   }
   
   @media (max-width: 1024px) {
@@ -250,4 +360,5 @@ html {
     header {
         padding: 15px 5px;
     }
+  }
   }
