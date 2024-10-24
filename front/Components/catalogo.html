@@ -1,59 +1,614 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo - ¡Recetas espeluznantes!</title>
+    <title>Catalogo</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/catalogo.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/img/icos-svg/halloween-icon-orange.png">
+    <script src="../js/catalogo.js"></script>
   </head>
   <body>
     <header>
       <div class="contenedorHeader">
         <div class="logoTitulo">
-          <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" />
+          <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" alt="Logo Halloween" />
           <h1>Halloween</h1>
         </div>
         <nav>
           <ul class="menuNavbar">
-            <li class="listahover"><a href="../index.html">HOME</a></li>
-            <li class="listahover"><a href="./catalogo.html">catalogo</a></li>
+            <li class="listahover"><a href="./index.html">HOME</a></li>
+            <li class="listahover"><a href="./catalogo.html">Catalogo</a></li>
             <li class="listahover"><a href="./game.html">MINIJUEGO</a></li>
-            <li class="listahover"><a href="./aboutus.html">About us</a></li>
+            <li class="listahover"><a href="./aboutus.html">About Us</a></li>
           </ul>
         </nav>
         <div class="loginDiv">
-          <a href="./login.html">Iniciar sesion</a>
+          <a href="./login.html">Iniciar sesión</a>
         </div>
       </div>
     </header>
+
     <main>
       <div id="cards-container">
         <div class="card">
-          <img src="../assets/img/img-catalogo/postre1.jpg" alt="Denim Jeans"/>
+          <img src="../assets/img/img-catalogo/postre1.jpg" alt="Chupito Ocular" />
           <h1>Chupito Ocular</h1>
-          <p>Veras mas alla...</p>
-          <p><button>Ver receta</button></p>
+          <p class="descripcion">Verás más allá...</p>
+          <a href="#chupito-ojo" href="javascript: void(0);" onClick="toggle('chupito-ojo')"><button id="chupi">Ver receta</button></a>
         </div>
+
         <div class="card">
-          <img src="../assets/img/img-catalogo/postre2.jpg" alt="Denim Jeans" />
-          <h1>Cookie Vampire</h1>
-          <p>Vuelan hasta tu gusto</p>
-          <p><button>Ver receta</button></p>
+          <img src="../assets/img/img-catalogo/postre2.jpg" alt="Cookie Vampire" />
+          <h1>BatCookie</h1>
+          <p class="descripcion">Vuelan hasta tu gusto</p>
+          <a href="#galletas-murcielago" href="javascript: void(0);" onClick="toggle('galletas-murcielago')"><button>Ver receta</button></a>
         </div>
+
         <div class="card">
-          <img src="../assets/img/img-catalogo/postre3.jpg" alt="Denim Jeans" />
+          <img src="../assets/img/img-catalogo/postre3.jpg" alt="Choco Arañas" />
           <h1>Choco Arañas</h1>
-          <p>Trepan tus sentidos</p>
-          <p><button>Ver receta</button></p>
+          <p class="descripcion">Trepan tus sentidos</p>
+          <a href="#chocoaranya" href="javascript: void(0);" onClick="toggle('chocoaranya')"><button>Ver receta</button></a>
         </div>
+
+        <div class="image-container">
+          <img src="../assets/img/img-catalogo/corona.png" alt="Corona" id="corona" />
+          <div class="card premium">
+            <img src="../assets/img/img-catalogo/postre4.jpg" alt="Cookie Boo" />
+            <h1>Cookie Boo</h1>
+            <p class="descripcion">Miedo lo ricas que están</p>
+            <a href="#cookie-boo" href="javascript: void(0);" onClick="toggle('cookie-boo')"><button>Ver receta</button></a>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="../assets/img/img-catalogo/corona.png" alt="Corona" id="corona" />
+          <div class="card premium">
+            <img src="../assets/img/img-catalogo/postre5.jpg" alt="HectoCake" />
+            <h1>HectoCakes</h1>
+            <p class="descripcion">Miedo a parar de comer</p>
+            <a href="#hectocakes" href="javascript: void(0);" onClick="toggle('hectocakes')"><button>Ver receta</button></a>
+          </div>
+        </div>
+
         <div class="card">
-          <img src="../assets/img/img-catalogo/postre4.jpg" alt="Denim Jeans" />
-          <h1>Cookie Boo</h1>
-          <p>Miedo lo ricas que estan</p>
-          <p><button>Ver receta</button></p>
+          <img src="../assets/img/img-catalogo/postre6.jpg" alt="VampiCakes" />
+          <h1>VampiCakes</h1>
+          <p class="descripcion">Vuelna de lo dulce que estan</p>
+          <a href="#murcielago-cakes" href="javascript: void(0);" onClick="toggle('murcielago-cakes')"><button>Ver receta</button></a>
         </div>
+
+        <div class="card">
+          <img src="../assets/img/img-catalogo/postre7.jpg" alt="TartaMuerta" />
+          <h1>TartaMuerta</h1>
+          <p class="descripcion">Entierra la cuchara</p>
+          <a href="#tarta-muerta" href="javascript: void(0);" onClick="toggle('tarta-muerta')"><button>Ver receta</button></a>
+        </div>
+
+        <div class="card">
+          <img src="../assets/img/img-catalogo/postre8.jpg" alt="VampiCookies" />
+          <h1>VampiCookies</h1>
+          <p class="descripcion">Muerdelas tu!!</p>
+          <a href="#vampi-cookies" href="javascript: void(0);" onClick="toggle('vampi-cookies')"><button>Ver receta</button></a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="texto-recetas" id="chupito-ojo" style="display: none;">
+        <h1 >Chupito Ocular: Un vistazo a lo desconocido 👁️</h1>
+        <p>
+          ¡Bienvenidos a una experiencia aterradora y deliciosa! Este
+          <strong>Chupito Ocular</strong> es el cóctel perfecto para impresionar a tus amigos en
+          cualquier fiesta de Halloween. Con su intrigante apariencia, simula ser un verdadero ojo,
+          ¡y su sabor encantador hará que todos deseen más!
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>30 ml de licor de melón</li>
+          <li>30 ml de vodka</li>
+          <li>30 ml de jugo de piña</li>
+          <li>Unas gotas de colorante rojo</li>
+          <li>Unas bolitas de gelatina o uvas verdes para simular el "iris"</li>
+          <li>1 rodaja de limón (opcional, para decorar)</li>
+          <li>Un poco de jarabe de granadina (para el "sangre")</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Preparar el vaso:</strong> Comienza por elegir un vaso de chupito. Para darle un
+            toque especial, puedes escarchar el borde con un poco de sal o azúcar.
+          </li>
+          <li>
+            <strong>Mezclar los ingredientes:</strong> En una coctelera, combina el licor de melón,
+            el vodka y el jugo de piña. Agrega hielo y agita bien hasta que esté frío.
+          </li>
+          <li>
+            <strong>Crear la ilusión:</strong> Vierte la mezcla en el vaso de chupito, llenándolo
+            hasta la mitad. Luego, agrega suavemente el jarabe de granadina para que se asiente en
+            el fondo, creando un efecto de "sangre".
+          </li>
+          <li>
+            <strong>El toque final:</strong> Con cuidado, coloca las bolitas de gelatina o las uvas
+            en el centro del chupito para simular el "iris". Si deseas, añade una rodaja de limón en
+            el borde del vaso.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Listo! Ahora solo falta llevarlo a la mesa y ver
+            las reacciones de tus amigos. Sirve frío y disfruta de esta bebida aterradoramente
+            deliciosa.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para una experiencia aún más escalofriante, puedes decorar la mesa con ojos de plástico y
+          un poco de "sangre" falsa (jarabe de granadina) alrededor de los vasos.
+        </p>
+      </div>
+      <div class="texto-recetas"id="galletas-murcielago" style="display: none;">
+        <h1 >
+          Galletas Murciélago: Delicias aterradoras para Halloween 🦇
+        </h1>
+        <p>
+          ¡Bienvenidos a un mundo de dulzura y terror! Estas
+          <strong>Galletas Murciélago</strong> son perfectas para añadir un toque espeluznante a tu
+          mesa de Halloween. Con su forma única y un sabor delicioso, ¡serán un éxito entre tus
+          invitados!
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>250 g de harina de trigo</li>
+          <li>125 g de mantequilla (a temperatura ambiente)</li>
+          <li>100 g de azúcar</li>
+          <li>1 huevo</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>1/2 cucharadita de bicarbonato de sodio</li>
+          <li>Una pizca de sal</li>
+          <li>Chocolate negro (para decorar)</li>
+          <li>Ojos comestibles (para decorar)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Preparar la masa:</strong> En un bol grande, bate la mantequilla con el azúcar
+            hasta que la mezcla esté cremosa. Añade el huevo y el extracto de vainilla, y mezcla
+            bien.
+          </li>
+          <li>
+            <strong>Mezclar ingredientes secos:</strong> En otro bol, combina la harina, el
+            bicarbonato y la sal. Luego, incorpora lentamente los ingredientes secos a la mezcla de
+            mantequilla hasta formar una masa homogénea.
+          </li>
+          <li>
+            <strong>Dar forma a las galletas:</strong> En una superficie enharinada, extiende la
+            masa con un rodillo y corta las galletas en forma de murciélagos usando un cortador de
+            galletas. Asegúrate de hacer un corte adicional en la parte superior para simular las
+            alas.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Precalienta el horno a 180°C (350°F) y coloca las galletas en
+            una bandeja para hornear. Hornea durante 10-12 minutos o hasta que estén ligeramente
+            doradas.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez frías, derrite el chocolate negro y úsalo para cubrir
+            las galletas. Agrega ojos comestibles para darles vida y un toque final escalofriante.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Listo! Estas galletas murciélago son perfectas
+            para compartir en cualquier fiesta de Halloween. ¡Disfruta de cada bocado
+            aterradoramente dulce!
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para un efecto aún más aterrador, puedes añadir un poco de polvo comestible de brillo
+          negro al chocolate derretido antes de cubrir las galletas. ¡El resultado será
+          espeluznantemente delicioso!
+        </p>
+      </div>
+      <div class="texto-recetas"id="chocoaranya" style="display: none;">
+        <h1 >Chocoarañas: Galletas de Chocolate Aterradoramente Deliciosas 🕷️</h1>
+        <p>
+          ¡Prepárate para un festín espeluznante! Estas <strong>Chocoarañas</strong> son galletas de
+          chocolate que no solo son deliciosas, sino que también añadirán un toque aterrador a tu
+          mesa de Halloween. Perfectas para compartir y disfrutar con amigos y familia.
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>200 g de chocolate negro (para la masa)</li>
+          <li>100 g de mantequilla</li>
+          <li>150 g de azúcar</li>
+          <li>2 huevos</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>150 g de harina de trigo</li>
+          <li>1 cucharadita de polvo de hornear</li>
+          <li>Chips de chocolate blanco (para los ojos)</li>
+          <li>Regaliz o palillos (para las patas)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Derretir el chocolate:</strong> En un cazo a fuego lento, derrite el chocolate
+            negro junto con la mantequilla hasta obtener una mezcla suave. Retira del fuego y deja
+            enfriar un poco.
+          </li>
+          <li>
+            <strong>Mezclar ingredientes:</strong> En un bol, bate los huevos con el azúcar y el
+            extracto de vainilla. Agrega la mezcla de chocolate derretido y mezcla bien.
+          </li>
+          <li>
+            <strong>Incorporar ingredientes secos:</strong> Tamiza la harina y el polvo de hornear
+            sobre la mezcla anterior. Mezcla hasta que todos los ingredientes estén bien integrados.
+          </li>
+          <li>
+            <strong>Formar las galletas:</strong> Precalienta el horno a 180°C (350°F). Con ayuda de
+            una cuchara, coloca montones de masa en una bandeja para hornear cubierta con papel
+            encerado. Dale forma redonda y aplana ligeramente.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Hornea las galletas durante 10-12 minutos, o hasta que estén
+            firmes en los bordes pero aún suaves en el centro. Deja enfriar sobre una rejilla.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez frías, coloca los chips de chocolate blanco en el
+            centro de cada galleta como ojos. Usa regaliz o palillos para crear las patas de las
+            arañas.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tus Chocoarañas están listas para asustar y
+            deleitar! Sirve en una bandeja y disfruta de estas galletas aterradoramente deliciosas.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para un toque extra, puedes espolvorear un poco de azúcar en polvo sobre las galletas
+          antes de decorarlas. ¡Esto les dará un aspecto espeluznante y delicioso!
+        </p>
+      </div>
+      <div class="texto-recetas receta-premium" id="cookie-boo" style="display: none;">
+        <h1 >Cookie Boo: Galletas de Halloween Espeluznantes 🎃</h1>
+        <p>
+          ¡Dale un toque dulce y aterrador a tu Halloween con nuestras <strong>Cookie Boo</strong>!
+          Estas galletas redondas se pueden decorar en forma de calabazas, esqueletos y más,
+          ¡perfectas para impresionar a tus amigos y familiares!
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>250 g de mantequilla a temperatura ambiente</li>
+          <li>200 g de azúcar</li>
+          <li>1 huevo</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>400 g de harina de trigo</li>
+          <li>1 cucharadita de polvo de hornear</li>
+          <li>Colorantes alimentarios (naranja, negro, blanco)</li>
+          <li>Glaseado (de colores para decorar)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Preparar la masa:</strong> En un bol grande, bate la mantequilla con el azúcar
+            hasta que la mezcla esté suave y cremosa. Agrega el huevo y el extracto de vainilla, y
+            mezcla bien.
+          </li>
+          <li>
+            <strong>Incorporar ingredientes secos:</strong> En otro bol, mezcla la harina y el polvo
+            de hornear. Gradualmente, añade esta mezcla a la mezcla de mantequilla, batiendo hasta
+            que se forme una masa homogénea.
+          </li>
+          <li>
+            <strong>Enfriar la masa:</strong> Envuelve la masa en film transparente y refrigérala
+            por al menos 1 hora. Esto facilitará el manejo de la masa al cortarla.
+          </li>
+          <li>
+            <strong>Precalentar el horno:</strong> Precalienta el horno a 180°C (350°F) y prepara
+            una bandeja para hornear con papel encerado.
+          </li>
+          <li>
+            <strong>Cortar las galletas:</strong> Estira la masa sobre una superficie enharinada
+            hasta que tenga un grosor de aproximadamente 0.5 cm. Usa cortadores de galletas en forma
+            de calabaza, esqueleto y otras figuras de Halloween para cortar las galletas.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Coloca las galletas en la bandeja para hornear y hornea
+            durante 10-12 minutos, o hasta que los bordes estén ligeramente dorados. Deja enfriar en
+            la bandeja por 5 minutos antes de transferir a una rejilla.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez que las galletas estén completamente frías, utiliza
+            glaseado y colorantes alimentarios para decorarlas a tu gusto. ¡Deja volar tu
+            imaginación!
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tus Cookie Boo están listas para asustar y
+            deleitar! Sirve en una bandeja y disfruta de estas galletas espeluznantes.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para una presentación extra divertida, coloca las galletas en bolsas de celofán y
+          ciérralas con cintas de colores. ¡Son ideales para regalar o como detalle en tu fiesta de
+          Halloween!
+        </p>
+      </div>
+      <div class="texto-recetas receta-premium" id="hectocakes" style="display: none;">
+        <h1 >Hectocakes: Cupcakes Fantasmales para Halloween 👻</h1>
+        <p>
+          ¡Sorprende a todos en tu fiesta de Halloween con nuestros <strong>Hectocakes</strong>!
+          Estos cupcakes con forma de fantasma son irresistibles y muy fáciles de hacer. Además, su
+          decoración espeluznante les dará un toque festivo a tu mesa.
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>200 g de harina de trigo</li>
+          <li>150 g de azúcar</li>
+          <li>100 g de mantequilla a temperatura ambiente</li>
+          <li>2 huevos</li>
+          <li>120 ml de leche</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>1 cucharadita de polvo de hornear</li>
+          <li>Una pizca de sal</li>
+          <li>Colorante alimentario negro (opcional, para decorar)</li>
+          <li>Glaseado blanco (puede ser de merengue o crema de mantequilla)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Precalentar el horno:</strong> Precalienta el horno a 180°C (350°F) y coloca
+            cápsulas de papel en un molde para cupcakes.
+          </li>
+          <li>
+            <strong>Mezclar ingredientes secos:</strong> En un bol, mezcla la harina, el polvo de
+            hornear y la sal. Reserva.
+          </li>
+          <li>
+            <strong>Batir mantequilla y azúcar:</strong> En otro bol, bate la mantequilla con el
+            azúcar hasta obtener una mezcla cremosa. Agrega los huevos uno a uno, mezclando bien
+            después de cada adición. Incorpora el extracto de vainilla.
+          </li>
+          <li>
+            <strong>Combinar ingredientes:</strong> Alterna añadiendo la mezcla de ingredientes
+            secos y la leche a la mezcla de mantequilla, comenzando y terminando con la harina.
+            Mezcla hasta que esté bien combinado.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Llena las cápsulas de papel hasta 2/3 de su capacidad con la
+            mezcla. Hornea durante 18-20 minutos o hasta que al insertar un palillo en el centro,
+            este salga limpio. Deja enfriar completamente.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez fríos, utiliza el glaseado blanco para cubrir los
+            cupcakes, creando una forma de fantasma. Usa un palillo o una boquilla para hacer ojos y
+            boca con el colorante negro.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tus Hectocakes están listos para asustar y
+            deleitar! Sirve en una bandeja y disfruta de estos deliciosos cupcakes fantasmales.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para un efecto aún más divertido, puedes añadir unas chispas de chocolate como "ojos" en
+          lugar del colorante. ¡Deja volar tu creatividad!
+        </p>
+      </div>
+      <div class="texto-recetas" id="murcielago-cakes" style="display: none;">
+        <h1>Murciélago Cakes: Cupcakes Espeluznantes para Halloween 🦇</h1>
+        <p>
+          ¡Dale un giro aterrador a tu celebración de Halloween con nuestros
+          <strong>Murciélago Cakes</strong>! Estos cupcakes son perfectos para asustar a tus
+          invitados y son tan deliciosos que no podrán resistirse. Con una decoración creativa que
+          simula murciélagos, son ideales para cualquier mesa de dulces.
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>200 g de harina de trigo</li>
+          <li>150 g de azúcar</li>
+          <li>100 g de mantequilla a temperatura ambiente</li>
+          <li>2 huevos</li>
+          <li>120 ml de leche</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>1 cucharadita de polvo de hornear</li>
+          <li>Una pizca de sal</li>
+          <li>Glaseado de chocolate (puede ser de crema de mantequilla o ganache)</li>
+          <li>Galletas Oreo (para las alas)</li>
+          <li>Chispas de chocolate o M&M's (para los ojos)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Precalentar el horno:</strong> Precalienta el horno a 180°C (350°F) y coloca
+            cápsulas de papel en un molde para cupcakes.
+          </li>
+          <li>
+            <strong>Mezclar ingredientes secos:</strong> En un bol, mezcla la harina, el polvo de
+            hornear y la sal. Reserva.
+          </li>
+          <li>
+            <strong>Batir mantequilla y azúcar:</strong> En otro bol, bate la mantequilla con el
+            azúcar hasta obtener una mezcla cremosa. Agrega los huevos uno a uno, mezclando bien
+            después de cada adición. Incorpora el extracto de vainilla.
+          </li>
+          <li>
+            <strong>Combinar ingredientes:</strong> Alterna añadiendo la mezcla de ingredientes
+            secos y la leche a la mezcla de mantequilla, comenzando y terminando con la harina.
+            Mezcla hasta que esté bien combinado.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Llena las cápsulas de papel hasta 2/3 de su capacidad con la
+            mezcla. Hornea durante 18-20 minutos o hasta que al insertar un palillo en el centro,
+            este salga limpio. Deja enfriar completamente.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez fríos, cubre los cupcakes con el glaseado de
+            chocolate. Luego, corta las galletas Oreo por la mitad para crear las alas y colócalas a
+            los lados de cada cupcake.
+          </li>
+          <li>
+            <strong>Agregar los ojos:</strong> Usa las chispas de chocolate o M&M's para hacer los
+            ojos en la parte superior del glaseado.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tus Murciélago Cakes están listos para asustar y
+            deleitar! Sirve en una bandeja y disfruta de estos deliciosos cupcakes.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Si quieres que tus murciélagos sean aún más divertidos, puedes añadir un poco de colorante
+          negro al glaseado para darle un efecto más aterrador.
+        </p>
+      </div>
+      <div class="texto-recetas" id="tarta-muerta" style="display: none;">
+        <h1>Tarta Muerta: Un Cementerio Delicioso para Halloween ⚰️</h1>
+        <p>
+          ¡Bienvenidos a una experiencia escalofriante y deliciosa! La
+          <strong>Tarta Muerta</strong> es la opción perfecta para impresionar a tus amigos en
+          Halloween. Con su diseño que simula un cementerio, ¡será la estrella de tu mesa de dulces!
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>250 g de galletas de chocolate (para la base)</li>
+          <li>125 g de mantequilla derretida</li>
+          <li>400 g de queso crema</li>
+          <li>200 g de azúcar</li>
+          <li>3 huevos</li>
+          <li>200 ml de nata para montar</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>Colorante verde y negro (opcional, para decorar)</li>
+          <li>Chocolates o caramelos en forma de lápida (para decorar)</li>
+          <li>Galletas Oreo (para simular tierra)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Precalentar el horno:</strong> Precalienta el horno a 180°C (350°F). Engrasa un
+            molde para tartas de forma rectangular o cuadrada.
+          </li>
+          <li>
+            <strong>Preparar la base:</strong> Tritura las galletas de chocolate en un procesador de
+            alimentos hasta que queden como polvo. Mezcla con la mantequilla derretida hasta que
+            esté bien combinado. Presiona la mezcla en el fondo del molde para formar la base de la
+            tarta.
+          </li>
+          <li>
+            <strong>Mezclar la crema:</strong> En un bol grande, bate el queso crema con el azúcar
+            hasta que esté suave y cremoso. Añade los huevos uno a uno, mezclando bien después de
+            cada adición. Incorpora la nata y el extracto de vainilla.
+          </li>
+          <li>
+            <strong>Verter la mezcla:</strong> Vierte la mezcla de queso crema sobre la base de
+            galleta en el molde. Alisa la parte superior con una espátula.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Hornea la tarta durante 40-50 minutos o hasta que esté firme
+            en los bordes y ligeramente temblorosa en el centro. Deja enfriar a temperatura ambiente
+            y luego refrigera durante al menos 4 horas, preferiblemente toda la noche.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez que la tarta esté fría, cubre la parte superior con
+            galletas Oreo trituradas para simular la tierra. Usa los chocolates o caramelos en forma
+            de lápida para decorar la tarta, y si lo deseas, añade colorante verde y negro para dar
+            un toque más escalofriante.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tu Tarta Muerta está lista para servir! Corta en
+            porciones y sorprende a tus invitados con esta deliciosa y aterradora creación.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Para un efecto aún más aterrador, puedes añadir figuras de plástico de fantasmas o
+          esqueletos en la parte superior de la tarta.
+        </p>
+      </div>
+      <div class="texto-recetas" id="vampi-cookies" style="display: none;">
+        <h1>Vampi Cookies: ¡Dulce y Tenebroso! 🧛‍♀️🧄</h1>
+        <p>
+          ¡Prepárate para deleitarte con las <strong>Vampi Cookies</strong>! Estas galletas con
+          forma de vampiro son el complemento perfecto para tu mesa de dulces en Halloween. Con su
+          deliciosa combinación de sabores y su divertida apariencia, ¡harán que tus amigos se
+          mueran por probarlas!
+        </p>
+
+        <h2>Ingredientes:</h2>
+        <ul>
+          <li>200 g de mantequilla a temperatura ambiente</li>
+          <li>150 g de azúcar</li>
+          <li>1 huevo</li>
+          <li>1 cucharadita de extracto de vainilla</li>
+          <li>300 g de harina de trigo</li>
+          <li>50 g de cacao en polvo</li>
+          <li>1 cucharadita de polvo de hornear</li>
+          <li>Chocolates o caramelos en forma de ojos (para decorar)</li>
+          <li>Glaseado rojo (para simular "sangre")</li>
+          <li>Almendras fileteadas (para las colmillos)</li>
+        </ul>
+
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            <strong>Precalentar el horno:</strong> Precalienta el horno a 180°C (350°F) y prepara
+            una bandeja para hornear con papel pergamino.
+          </li>
+          <li>
+            <strong>Mezclar la mantequilla y el azúcar:</strong> En un bol grande, bate la
+            mantequilla con el azúcar hasta que la mezcla esté cremosa y suave. Agrega el huevo y el
+            extracto de vainilla, y mezcla bien.
+          </li>
+          <li>
+            <strong>Agregar ingredientes secos:</strong> En otro bol, combina la harina, el cacao en
+            polvo y el polvo de hornear. Incorpora gradualmente la mezcla seca a la mezcla húmeda,
+            mezclando hasta que todo esté bien combinado.
+          </li>
+          <li>
+            <strong>Formar las galletas:</strong> Toma pequeñas porciones de masa y forma figuras de
+            vampiros. Puedes hacer cabezas redondas y añadir orejas puntiagudas, o utilizar un
+            cortador de galletas en forma de vampiro si tienes uno.
+          </li>
+          <li>
+            <strong>Hornear:</strong> Coloca las galletas en la bandeja para hornear y hornea
+            durante 10-12 minutos, o hasta que estén firmes. Deja enfriar en la bandeja durante unos
+            minutos antes de transferirlas a una rejilla para enfriar completamente.
+          </li>
+          <li>
+            <strong>Decorar:</strong> Una vez que las galletas estén frías, usa el glaseado rojo
+            para simular "sangre" y coloca los chocolates o caramelos en forma de ojos. Para los
+            colmillos, coloca las almendras fileteadas en la parte inferior de la cabeza del
+            vampiro.
+          </li>
+          <li>
+            <strong>Servir y disfrutar:</strong> ¡Tus Vampi Cookies están listas para asustar y
+            deleitar! Comparte con amigos y familiares y disfruta de su sabor terrorífico.
+          </li>
+        </ol>
+
+        <h2 class="decoracion">Consejo del chef:</h2>
+        <p class="decoracion">
+          Puedes hacer las galletas un día antes y guardarlas en un recipiente hermético. ¡Sorpresa
+          a tus invitados con su apariencia tenebrosa!
+        </p>
       </div>
     </main>
   </body>
