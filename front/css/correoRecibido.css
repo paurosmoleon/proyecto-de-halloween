@@ -1,0 +1,15 @@
+.pergamino {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100svh;
+  background-image: url("../assets/img/pergamino.png") !important;
+  background-size: 43%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.elUl {
+  text-align: left;
+}
