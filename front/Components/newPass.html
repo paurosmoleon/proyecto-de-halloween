@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>¡Identifícate mortal!</title>
+    <title>¡Recupera tu condena!</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/login.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/icos-svg/halloween-icon-orange.png">
   </head>
   <body>
     <header>
@@ -30,29 +31,46 @@
 
     <div class="contieneTodo">
       <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" />
-      <h1>¡Identifícate mortal!</h1>
+      <h1>¡Recupera tu condena!</h1>
     </div>
+
 
     <div class="section"> 
       <div class="login"> 
         <div class="marco"> 
-          <div class="form"> 
+          <form class="form"> 
             <div class="inputBox"> 
-              <input type="text" required> 
-              <i>Usuario</i> 
+              <input type="password" required> 
+              <i>Nueva contraseña</i> 
             </div> 
             <div class="inputBox"> 
               <input type="password" required> 
-              <i>Contraseña</i> 
+              <i>Repite contraseña</i> 
+            </div> 
+                <div class="inputBox"> 
+                  <div class= "container">
+                    <div class="select">
+                      <select>
+                        <option value="" disabled selected>Selecciona tu pregunta de seguridad</option>
+                        <option value="1">¿Cuál es el nombre de tu primer mascota?</option>
+                        <option value="2">¿En qué ciudad naciste?</option>
+                        <option value="3">¿Cuál fue la marca de tu primer coche?</option>
+                      </select>
+                      </div>
+                  </div> 
+                </div>
+            <div class="inputBox"> 
+              <input type="text" required> 
+              <i>Respuesta</i> 
             </div> 
             <div class="links"> 
-              <a></a> 
-              <a href="./register.html">¿Aún no estás registrado? ¡Click aquí!</a> 
+              <a href="./login.html">Volver a Iniciar sesión</a> 
+              <a href="./login.html">¿Ya registrado? ¡Click aquí!</a> 
             </div> 
             <div class="inputBox"> 
-              <input type="submit" value="Iniciar sesión"> 
+              <input type="submit" value="Regístrate"> 
             </div> 
-          </div> 
+          </form> 
         </div> 
       </div> 
     </div>

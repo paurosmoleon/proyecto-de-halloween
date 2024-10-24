@@ -4,6 +4,7 @@ html {
   background-color: #292929 !important;
 }
 
+
 @keyframes salirDelSuelo {
   0% {
     bottom: -200px;
