@@ -57,18 +57,19 @@ function tumbaInicio() {
   header.style.display = "block";
 }
 function animarManoZombie() {
-  const manoZombie = document.getElementById("manoZombie");
-  manoZombie.style.display = "block"; 
+  var sonido = document.getElementById("sonidoGrito");
+  sonido.currentTime = 0;
+  sonido.play();
+  
+  var manoZombie = document.getElementById("manoZombie");
+  manoZombie.style.display = "block";
 
   manoZombie.classList.add("animar");
 
-  manoZombie.addEventListener(
-    "animationend",
-    function () {
-      manoZombie.style.display = "none";
-
-      tumbaInicio();
-    },
-    { once: true }
-  ); 
+  manoZombie.onanimationend = function () {
+    manoZombie.style.display = "none";
+    tumbaInicio();
+  };
 }
+
+
