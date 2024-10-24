@@ -10,14 +10,15 @@
 
   </head>
   <body>
-    <div class="prePagina">
-      <img src="./assets/img/nube_negra.png" class="nube1">
-      <img src="./assets/img/nube_negra.png" class="nube2">
+    <div id="snowContainer"></div>
+    <div class="prePagina" onclick="sonidoAmbiente()" style="cursor: pointer;">
+      <img src="./assets/img/img-landing/nube_negra.png"  class="nube1">
+      <img src="./assets/img/img-landing/nube_negra.png" class="nube2">
       <div class="tumba">
-          <img src="./assets/img/tumbatuneada.png" onclick="animarManoZombie()" style="cursor: pointer;">
+          <img src="./assets/img/img-landing/tumbatuneada.png" onclick="animarManoZombie()"  style="cursor: pointer;">
       </div>
   </div>
-  <img src="./assets/img/mano_zombie.png"  id="manoZombie" style="display: none; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%);">
+  <img src="./assets/img/img-landing/mano_zombie.png"  id="manoZombie" style="display: none; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%);">
     <header>
       <div class="contenedorHeader">
         <div class="logoTitulo">
@@ -45,8 +46,8 @@
       <h2 class="conFuenteBlood">Una calabaza u otra puede sentenciar tu futuro</h2>
       <h3 class="conFuenteBlood">¿Te atreves a clicar?</h3>
       <hr>
-      <div id="esqueleto_eleccion">
-        <img src="./assets/img/esqueletos_eleccion_full_fusion.png">
+      <div id="esqueleto_eleccion" >
+        <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png" >
       </div>
     </div>
       <div>
@@ -59,7 +60,7 @@
              
         </div>
         <div id="imagenJose" style="display:none;" class="imagenJoseC">
-          <img src="./assets/img/Cuadro_hecarim.png" onmouseover="sonidoCaballo()">
+          <img src="./assets/img/img-landing/Cuadro_hecarim_v2.png" onmouseover="sonidoCaballo()">
           <p>"Dicen que si te acercas al cuadro puedes escuchar al jinete acechando..."</p>
         </div> 
  
@@ -74,7 +75,7 @@
           <button class="botonCheck" value="Probar suerte" onclick="verificarNombreJavi()"id="checkJaviButton">Probar suerte</button>
         </div>   
         <div id="imagenJavi" style="display:none;" class="imagenJaviC">
-          <img src="./assets/img/jackSkellington.png" onclick="navidadEnHalloween()">
+          <img src="./assets/img/img-landing/jackSkellington.png" onclick="navidadEnHalloween()">
           <p>"Hoy un gélido visitante ha decido verse aparecer, dale un apretón de manos para experimentar la magia..."</p>
         </div> 
        </div>
@@ -87,7 +88,7 @@
           <button class="botonCheck" value="Probar suerte"onclick="verificarNombreJuli()" id="checkJuliButton">Probar suerte</button>
         </div>
         <div id="imagenJuli" style="display:none;" class="imagenJuliC">
-          <img src="./assets/img/TheHunterProfile.png">
+          <img src="./assets/img/img-landing/TheHunterProfile.png">
           <p>"Un cazador ha venido en tu ayuda..."</p>
         </div>  
       </div>

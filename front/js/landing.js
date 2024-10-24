@@ -2,7 +2,7 @@ function verificarNombreJose() {
   const nombre = document.getElementById("checkJose").value;
   const imagenDiv = document.getElementById("imagenJose");
 
-  if (nombre === "Jose") {
+  if (nombre.toLowerCase() === "jose") {
     imagenDiv.style.display = "block";
   }
 }
@@ -10,7 +10,7 @@ function verificarNombreJavi() {
   const nombre = document.getElementById("checkJavi").value;
   const imagenDiv = document.getElementById("imagenJavi");
 
-  if (nombre === "Javi") {
+  if (nombre.toLowerCase() === "javi") {
     imagenDiv.style.display = "block";
   }
 }
@@ -18,7 +18,7 @@ function verificarNombreJuli() {
   const nombre = document.getElementById("checkJuli").value;
   const imagenDiv = document.getElementById("imagenJuli");
 
-  if (nombre === "Juli") {
+  if (nombre.toLowerCase() === "juli") {
     imagenDiv.style.display = "block";
     var sonido = document.getElementById("sonidoBloodborne");
     sonido.currentTime = 0;
@@ -59,6 +59,7 @@ function tumbaInicio() {
 function animarManoZombie() {
   var sonido = document.getElementById("sonidoGrito");
   sonido.currentTime = 0;
+  sonido.volume =0.2
   sonido.play();
   
   var manoZombie = document.getElementById("manoZombie");
@@ -72,4 +73,13 @@ function animarManoZombie() {
   };
 }
 
+function sonidoAmbiente() {
+  var sonido = document.getElementById("sonidoTrueno");
+  sonido.volume = 0.2;
+  sonido.currentTime = 0;
+  sonido.play();
 
+  var sonido2 = document.getElementById("sonidoLobo");
+  sonido2.currentTime = 0;
+  sonido2.play();
+}

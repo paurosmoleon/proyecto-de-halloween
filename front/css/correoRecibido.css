@@ -1,14 +1,28 @@
+@font-face {
+  font-family: MediavalTitulos;
+  src: url(../assets/fonts/CloisterBlack.ttf);
+}
+@font-face {
+  font-family: MediavalTexto;
+  src: url(../assets/fonts/Seagram\ tfb.ttf);
+}
 .pergamino {
+  color: red;
+  text-shadow: 2px 0px 5px black;
   margin-top: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100svh;
-  background-image: url("../assets/img/pergamino.png") !important;
+  background-image: url("../assets/img/img-correoRecibido/pergamino.png") !important;
   background-size: 43%;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: MediavalTexto;
+}
+.pergamino h1 {
+  font-family: MediavalTitulos;
 }
 .elUl {
   text-align: left;
