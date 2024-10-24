@@ -98,5 +98,16 @@
     <audio id="sonidoLobo" src="./assets/sounds/sonidoLobo.mp3"></audio>
     <audio id="sonidoTrueno" src="./assets/sounds/sonidoTrueno.mp3"></audio>
     <script src="./js/index.js"></script>
+    <script>
+      function playSounds() {
+          var sonido = document.getElementById("sonidoTrueno");
+          sonido.currentTime = 0;
+          sonido.play();
+
+          var sonido2 = document.getElementById("sonidoLobo");
+          sonido2.currentTime = 0;
+          sonido2.play();
+      }
+  </script>
   </body>
 </html>
