@@ -1,0 +1,186 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  padding: 2em;
+  color: #c1c1c1;
+  text-align: center;
+  margin-top: 2.5em;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 80%;
+  height: 95%;
+  border: 2px solid #cd3802;
+  border-radius: 14px;
+}
+
+main h1 {
+  margin: 1em;
+}
+
+#lostres #nosotros {
+  height: 20em;
+  max-width: 100%; /* Ajusta para no superar el ancho del contenedor */
+  border-radius: 40px;
+  margin: 2em auto;
+  box-shadow: 1px 1px 10px rgb(255, 72, 0);
+}
+
+#muercielagos {
+  position: absolute;
+  height: 9%;
+}
+
+#muercielagos2 {
+  position: absolute;
+  height: 12%;
+  margin-top: 17%;
+  margin-left: -6%;
+}
+
+#gato {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7em;
+  height: auto;
+}
+
+#umbreon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+
+.imagen-columna{
+   height: 25em;
+   max-width: 100%; /* Ajusta para no superar el ancho del contenedor */
+   border-radius: 40px;
+   margin: 2em auto;
+   box-shadow: 1px 1px 10px rgb(255, 72, 0);
+}
+
+.tres-columnas {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.columna {
+    
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
+@media (max-width: 1024px) {
+  main {
+    width: 90%;
+    padding: 1.5em;
+  }
+
+  #nosotros {
+    height: 15em; /* Reducimos más el tamaño de la imagen */
+    max-width: 80%; /* Limitar el ancho para que no desborde */
+  }
+
+  #muercielagos {
+    height: 12%;
+  }
+
+  #muercielagos2 {
+    height: 15%;
+    margin-top: 12%;
+  }
+
+  #gato {
+    width: 6em;
+  }
+
+  #umbreon {
+    width: 80px;
+  }
+}
+
+/* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #nosotros {
+    height: 10em; /* Reducimos aún más el tamaño */
+    max-width: 100%; /* Asegurar que no exceda el ancho disponible */
+    margin: 1em auto;
+  }
+
+  #muercielagos {
+    height: 10%;
+  }
+
+  #muercielagos2 {
+    height: 12%;
+    margin-top: 10%;
+    margin-left: -5%;
+  }
+
+  #gato {
+    width: 5em;
+  }
+
+  #umbreon {
+    width: 60px;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+    padding: 1em;
+    margin-top: 1em;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  #nosotros {
+    height: 8em; /* Ajustamos el tamaño para pantallas muy pequeñas */
+    max-width: 100%;
+    margin: 0.5em auto;
+  }
+
+  #muercielagos {
+    height: 8%;
+  }
+
+  #muercielagos2 {
+    height: 10%;
+    margin-top: 8%;
+  }
+
+  #gato {
+    width: 4em;
+  }
+
+  #umbreon {
+    width: 50px;
+  }
+}
