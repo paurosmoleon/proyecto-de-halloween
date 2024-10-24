@@ -1,11 +1,3 @@
-window.onload = function() {
-  var sonido = document.getElementById("sonidoTrueno");
-  sonido.currentTime = 0;
-  sonido.play();
-  var sonido2 = document.getElementById("sonidoLobo");
-  sonido2.currentTime = 0;
-  sonido.play();
-};
 function verificarNombreJose() {
   const nombre = document.getElementById("checkJose").value;
   const imagenDiv = document.getElementById("imagenJose");
@@ -65,7 +57,7 @@ function tumbaInicio() {
   header.style.display = "block";
 }
 function animarManoZombie() {
-  var sonido = document.getElementById("grito");
+  var sonido = document.getElementById("sonidoGrito");
   sonido.currentTime = 0;
   sonido.play();
   
