@@ -10,11 +10,11 @@ body,html{
     
 }
 main{
-   
+    text-shadow: 1px 1px 5px black;
     display: flex;
     justify-content: center;
     height: 80%;
-    font-family: Halloweeni;
+    font-family: navHall;
     text-transform: uppercase
 
 }
@@ -36,12 +36,50 @@ main{
 button{
 
     text-transform: uppercase; 
-    font-family: Halloweeni;
+    font-family: navHall;
     background-color: transparent;
-    border: none;
     color: white;
-    border-bottom: 1px solid #CD3802;
+    border: none;
+    
+    
 }
+#jugadores {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    >h2{
+        padding-bottom: 4%;
+    }
+
+     
+}
+#jugadores > button{
+    position: relative;
+}
+
+#jugadores > button:hover{
+    text-shadow: 0 0 5px #d80000;
+}
+#jugadores > button:hover::after{
+    
+    right: 0;
+   
+}
+#jugadores > button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    border-bottom: 3px solid #d80000;
+    border-radius: 21px;
+    transition: right 1s;
+    box-shadow: 1px 1px 5px #fa0101;
+}
+
 .titulo_juego{
     padding-bottom: 1em ;
 }
