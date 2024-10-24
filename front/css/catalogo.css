@@ -101,8 +101,6 @@ html {
 
 /* Contenedor de las tarjetas */
 #cards-container {
-  margin: auto;
-  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas en pantallas grandes */
   gap: 20px;
@@ -132,8 +130,8 @@ main {
 }
 
 #corona {
-  margin-top: -14%;
-  margin-left: 57%;
+  margin-top: -55px;
+  margin-left: 190px;
   position: absolute;
   width: 150px;
   z-index: 10;
