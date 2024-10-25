@@ -18,7 +18,7 @@ function verificarNombreJuli() {
   const nombre = document.getElementById("checkJuli").value;
   const imagenDiv = document.getElementById("imagenJuli");
 
-  if (nombre.toLowerCase() === "juli") {
+  if (nombre.toLowerCase() === "juli" || nombre.toLowerCase() === "julian" || nombre.toLowerCase() === "julián") {
     imagenDiv.style.display = "block";
     var sonido = document.getElementById("sonidoBloodborne");
     sonido.currentTime = 0;
