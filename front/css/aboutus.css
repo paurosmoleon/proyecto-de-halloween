@@ -33,12 +33,12 @@ main h1 {
 
 #muercielagos {
   position: absolute;
-  height: 9%;
+  height: 4%;
 }
 
 #muercielagos2 {
   position: absolute;
-  height: 12%;
+  height: 6%;
   margin-top: 17%;
   margin-left: -6%;
 }
@@ -59,29 +59,62 @@ main h1 {
   height: auto;
 }
 
-.imagen-columna{
-   height: 25em;
-   max-width: 100%; /* Ajusta para no superar el ancho del contenedor */
-   border-radius: 40px;
-   margin: 2em auto;
-   box-shadow: 1px 1px 10px rgb(255, 72, 0);
+.imagen-columna {
+  height: 25em;
+  max-width: 100%; 
+  border-radius: 40px;
+  margin: 2em auto;
+  box-shadow: 1px 1px 10px rgb(255, 72, 0);
+  transition: all 0.5s ease;
+}  
+
+
+.imagen-columna:hover {
+  transform: scale(1.05);
 }
 
 .tres-columnas {
-    margin-top: 5em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
-    gap: 20px; /* Espacio entre las columnas */
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+  gap: 20px; /* Espacio entre las columnas */
 }
 
 .columna {
-    
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  
 }
+.columna h2{
+     color: orange;
+}
+.texto {
 
-/* Media Queries para hacer el diseño responsive */
+    background-color: #3333338b; /* Fondo del div más oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 60px auto;
+    max-width: 1000px;
+    text-align: justify;
+    color: #f0f0f0; /* Color de texto claro */
+  }
+  
+  .texto h1 {
+    color: orange; /* Color de título naranja para el efecto Halloween */
+    text-align: center;
+    font-family: 'Creepster', cursive; /* Fuente temática */
+  }
+  
+  .texto h2 {
+    color: #ffa500; /* Naranja para subtítulos */
+    margin-top: 20px;
+  }
+  
+  .texto p {
+    margin: 10px 0; /* Espaciado entre párrafos */
+  }
+  
 
 /* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
 @media (max-width: 1024px) {
