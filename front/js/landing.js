@@ -26,6 +26,8 @@ function verificarNombreJuli() {
   }
 }
 function navidadEnHalloween() {
+  var nieve = document.getElementById("snow_wrap");
+  nieve.style.display = "block";
   document.body.style.backgroundImage =
     "url('./assets/img/fondo_navidad.webp')";
   document.body.style.backgroundSize = "cover";
@@ -39,6 +41,7 @@ function navidadEnHalloween() {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundAttachment = "fixed";
+    nieve.style.display = "none";
   }, 3000);
 }
 
@@ -59,9 +62,9 @@ function tumbaInicio() {
 function animarManoZombie() {
   var sonido = document.getElementById("sonidoGrito");
   sonido.currentTime = 0;
-  sonido.volume =0.2
+  sonido.volume = 0.2;
   sonido.play();
-  
+
   var manoZombie = document.getElementById("manoZombie");
   manoZombie.style.display = "block";
 
