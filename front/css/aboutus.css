@@ -25,7 +25,7 @@ main h1 {
 
 #lostres #nosotros {
   height: 20em;
-  max-width: 100%; /* Ajusta para no superar el ancho del contenedor */
+  max-width: 100%;
   border-radius: 40px;
   margin: 2em auto;
   box-shadow: 1px 1px 10px rgb(255, 72, 0);
@@ -49,6 +49,7 @@ main h1 {
   right: 0;
   width: 7em;
   height: auto;
+  opacity: 0.3;
 }
 
 #umbreon {
@@ -61,13 +62,12 @@ main h1 {
 
 .imagen-columna {
   height: 25em;
-  max-width: 100%; 
+  max-width: 100%;
   border-radius: 40px;
   margin: 2em auto;
   box-shadow: 1px 1px 10px rgb(255, 72, 0);
   transition: all 0.5s ease;
-}  
-
+}
 
 .imagen-columna:hover {
   transform: scale(1.05);
@@ -76,144 +76,68 @@ main h1 {
 .tres-columnas {
   margin-top: 5em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
-  gap: 20px; /* Espacio entre las columnas */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .columna {
   padding: 20px;
   text-align: center;
-  
 }
-.columna h2{
-     color: orange;
+
+.columna h2 {
+  color: orange;
 }
+
 .texto {
+  background-color: #3333338b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 60px auto;
+  max-width: 1100px;
+  text-align: justify;
+  color: #f0f0f0;
+}
 
-    background-color: #3333338b; /* Fondo del div más oscuro */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    margin: 60px auto;
-    max-width: 1000px;
-    text-align: justify;
-    color: #f0f0f0; /* Color de texto claro */
-  }
-  
-  .texto h1 {
-    color: orange; /* Color de título naranja para el efecto Halloween */
-    text-align: center;
-    font-family: 'Creepster', cursive; /* Fuente temática */
-  }
-  
-  .texto h2 {
-    color: #ffa500; /* Naranja para subtítulos */
-    margin-top: 20px;
-  }
-  
-  .texto p {
-    margin: 10px 0; /* Espaciado entre párrafos */
-  }
-  
+.texto h1 {
+  color: orange;
+  text-align: center;
+  font-family: "Creepster", cursive;
+}
 
-/* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
-@media (max-width: 1024px) {
-  main {
-    width: 90%;
-    padding: 1.5em;
-  }
+.texto h2 {
+  color: #ffa500;
+  margin-top: 20px;
+}
 
-  #nosotros {
-    height: 15em; /* Reducimos más el tamaño de la imagen */
-    max-width: 80%; /* Limitar el ancho para que no desborde */
-  }
+.texto p {
+  margin: 10px 0;
+}
 
-  #muercielagos {
-    height: 12%;
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
   }
-
-  #muercielagos2 {
-    height: 15%;
-    margin-top: 12%;
-  }
-
-  #gato {
-    width: 6em;
-  }
-
-  #umbreon {
-    width: 80px;
+  50% {
+    opacity: 0.3;
   }
 }
 
-/* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
-@media (max-width: 768px) {
-  main {
-    width: 95%;
-    padding: 1em;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  #nosotros {
-    height: 10em; /* Reducimos aún más el tamaño */
-    max-width: 100%; /* Asegurar que no exceda el ancho disponible */
-    margin: 1em auto;
-  }
-
-  #muercielagos {
-    height: 10%;
-  }
-
-  #muercielagos2 {
-    height: 12%;
-    margin-top: 10%;
-    margin-left: -5%;
-  }
-
-  #gato {
-    width: 5em;
-  }
-
-  #umbreon {
-    width: 60px;
-  }
+#haunter {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 3%;
+  animation: blink 2.5s infinite;
+}
+.persona-content {
+  display: none;
 }
 
-/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-  main {
-    width: 100%;
-    padding: 1em;
-    margin-top: 1em;
-  }
-
-  h1 {
-    font-size: 1.3em;
-  }
-
-  #nosotros {
-    height: 8em; /* Ajustamos el tamaño para pantallas muy pequeñas */
-    max-width: 100%;
-    margin: 0.5em auto;
-  }
-
-  #muercielagos {
-    height: 8%;
-  }
-
-  #muercielagos2 {
-    height: 10%;
-    margin-top: 8%;
-  }
-
-  #gato {
-    width: 4em;
-  }
-
-  #umbreon {
-    width: 50px;
-  }
+.imagen-columna {
+  cursor: pointer;
+}
+.quote-button {
+  cursor: pointer;
 }
