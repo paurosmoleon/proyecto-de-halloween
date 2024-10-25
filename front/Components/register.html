@@ -38,27 +38,27 @@
     <div class="section"> 
       <div class="login"> 
         <div class="marco"> 
-          <form action="../../back/AltaUuario.php" method="post" class="form"> 
+          <form action="../../back/AltaUsuario.php" method="POST" class="form"> 
             <div class="inputBox"> 
               <input type="text" name="user" required> 
               <i>Usuario</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="email" required> 
+              <input type="email" name="email" required> 
               <i>Correo</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="password" required> 
+              <input type="password" name="password" required> 
               <i>Contraseña</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="password" required> 
+              <input type="password"   required> 
               <i>Repite contraseña</i> 
             </div> 
                 <div class="inputBox"> 
                   <div class= "container">
                     <div class="select">
-                      <select>
+                      <select name="Pseguridad" required>
                         <option value="" disabled selected>Selecciona una pregunta de seguridad</option>
                         <option value="1">¿Cuál es el nombre de tu primer mascota?</option>
                         <option value="2">¿En qué ciudad naciste?</option>
@@ -68,7 +68,7 @@
                   </div> 
                 </div>
             <div class="inputBox"> 
-              <input type="text" required> 
+              <input type="text" name="Rseguridad" required> 
               <i>Respuesta</i> 
             </div> 
             <div class="links"> 
