@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/landing.css" />
     <link rel="stylesheet" href="./css/nieve.css" />
+    <link rel="stylesheet" href="./css/logicaImagen.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/icos-svg/halloween-icon-orange.png">
 
   </head>
@@ -48,9 +49,12 @@
       <h2 class="conFuenteBlood">Una calabaza u otra puede sentenciar tu futuro</h2>
       <h3 class="conFuenteBlood">¿Te atreves a clicar?</h3>
       <hr>
-      <div id="esqueleto_eleccion" >
-        <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png" >
-      </div>
+      <div id="clickableDiv">
+        <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png">
+        <div class="central clickable-area" onclick="centro()"></div>
+        <div class="bottom-left clickable-area" onclick="abajoIzq()"></div>
+        <div class="bottom-right clickable-area" onclick="abajoDer()"></div>
+    </div>
     </div>
       <div>
         <h2>Who's this teacher?</h2>

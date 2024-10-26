@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,12 @@
         }
         #clickableDiv img {
             width: 100%;
-            
         }
-
-        /* Zonas clicables */
         .clickable-area {
             position: absolute;
             opacity: 0.5; 
             cursor: pointer;
         }
-
         /* Área central */
         .central {
             left: 52%;
@@ -31,16 +27,14 @@
             height: 7.5%; 
             background-color: pink; 
         }
-
         /* Área inferior izquierda */
         .bottom-left {
             left: 21%;
             top: 53%;
             width: 31%; 
             height: 30%; 
-            background-color: pink; /
+            background-color: pink;
         }
-
         /* Área inferior derecha */
         .bottom-right {
             left: 62%; 
@@ -54,29 +48,12 @@
 <body>
     <div id="clickableDiv">
         <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png">
-        
-        <div class="clickable-area central"></div>
-        <div class="clickable-area bottom-left"></div>
-        <div class="clickable-area bottom-right"></div>
+        <div class="central clickable-area" onclick="centro()">Central</div>
+        <div class="bottom-left clickable-area" onclick="abajoIzq()">Esquina inferior izquierda</div>
+        <div class="bottom-right clickable-area" onclick="abajoDer()">Esquina inferior derecha</div>
     </div>
     
     <script>
-        const div = document.getElementById('clickableDiv');
-
-        div.addEventListener('click', function(event) {
-            const target = event.target;
-
-            // Determinamos cuál área se ha clicado
-            if (target.classList.contains('central')) {
-                centro();
-            } else if (target.classList.contains('bottom-left')) {
-                abajoIzq();
-            } else if (target.classList.contains('bottom-right')) {
-                abajoDer();
-            }
-        });
-
-
         function centro() {
             alert('Has hecho clic en el centro');
         }

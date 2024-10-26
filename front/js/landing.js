@@ -86,3 +86,14 @@ function sonidoAmbiente() {
   sonido2.currentTime = 0;
   sonido2.play();
 }
+function centro() {
+  alert('Has hecho clic en el centro');
+}
+
+function abajoIzq() {
+  alert('Has hecho clic en la esquina inferior izquierda');
+}
+
+function abajoDer() {
+  alert('Has hecho clic en la esquina inferior derecha');
+}
