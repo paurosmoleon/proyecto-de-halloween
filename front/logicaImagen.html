@@ -3,68 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Screamer</title>
     <style>
-        #clickableDiv {
-            position: relative;
-            margin: 50px auto;
-            width: 300px; 
-            height: 300px; 
+        /* Fondo blanco que cubre toda la pantalla */
+        #background-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            z-index: 900; /* Aparece detrás de la imagen */
         }
-        #clickableDiv img {
-            width: 100%;
+
+        /* Imagen del screamer */
+        #screamer-img {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
-        .clickable-area {
-            position: absolute;
-            opacity: 0.5; 
-            cursor: pointer;
-        }
-        /* Área central */
-        .central {
-            left: 52%;
-            top: 27%; 
-            width: 7.5%; 
-            height: 7.5%; 
-            background-color: pink; 
-        }
-        /* Área inferior izquierda */
-        .bottom-left {
-            left: 21%;
-            top: 53%;
-            width: 31%; 
-            height: 30%; 
-            background-color: pink;
-        }
-        /* Área inferior derecha */
-        .bottom-right {
-            left: 62%; 
-            top: 53%; 
-            width: 31%; 
-            height: 30%; 
-            background-color: pink; 
+
+        /* Botón de activación */
+        #scare-button {
+            margin-top: 20px;
+            font-size: 1.2em;
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
-    <div id="clickableDiv">
-        <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png">
-        <div class="central clickable-area" onclick="centro()">Central</div>
-        <div class="bottom-left clickable-area" onclick="abajoIzq()">Esquina inferior izquierda</div>
-        <div class="bottom-right clickable-area" onclick="abajoDer()">Esquina inferior derecha</div>
-    </div>
-    
-    <script>
-        function centro() {
-            alert('Has hecho clic en el centro');
-        }
 
-        function abajoIzq() {
-            alert('Has hecho clic en la esquina inferior izquierda');
-        }
+<div id="background-overlay"></div>
+<button id="scare-button">Haz clic aquí si te atreves</button>
+<img id="screamer-img" src="./assets/img/img-landing/esqueletos_eleccion.png" alt="Screamer">
+<audio id="screamer-audio" src="./assets/sounds/sonidoGrito.mp3"></audio>
 
-        function abajoDer() {
-            alert('Has hecho clic en la esquina inferior derecha');
-        }
-    </script>
+<script>
+    document.getElementById('scare-button').onclick = function() {
+        // Muestra el fondo blanco y la imagen
+        document.getElementById('background-overlay').style.display = 'block';
+        const screamerImg = document.getElementById('screamer-img');
+        screamerImg.style.display = 'block';
+
+        // Reproduce el sonido
+        const screamerAudio = document.getElementById('screamer-audio');
+        screamerAudio.play();
+        screamerAudio.currentTime = 0;
+
+
+        // Oculta el screamer después de unos segundos
+        setTimeout(() => {
+            screamerImg.style.display = 'none';
+            document.getElementById('background-overlay').style.display = 'none';
+        }, 2000); // 2 segundos, ajusta según prefieras
+    };
+</script>
+
 </body>
 </html>

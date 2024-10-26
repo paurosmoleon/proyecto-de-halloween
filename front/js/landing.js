@@ -18,7 +18,11 @@ function verificarNombreJuli() {
   const nombre = document.getElementById("checkJuli").value;
   const imagenDiv = document.getElementById("imagenJuli");
 
-  if (nombre.toLowerCase() === "juli" || nombre.toLowerCase() === "julian" || nombre.toLowerCase() === "julián") {
+  if (
+    nombre.toLowerCase() === "juli" ||
+    nombre.toLowerCase() === "julian" ||
+    nombre.toLowerCase() === "julián"
+  ) {
     imagenDiv.style.display = "block";
     var sonido = document.getElementById("sonidoBloodborne");
     sonido.currentTime = 0;
@@ -87,13 +91,74 @@ function sonidoAmbiente() {
   sonido2.play();
 }
 function centro() {
-  alert('Has hecho clic en el centro');
+  var sonido = document.getElementById("sonidoPatito");
+  sonido.volume = 0.2;
+  sonido.currentTime = 0;
+  sonido.play();
 }
 
 function abajoIzq() {
-  alert('Has hecho clic en la esquina inferior izquierda');
+  document.getElementById("background-overlay").style.display = "block";
+
+  const random = Math.random();
+
+  let screamerImg;
+  let screamerAudio;
+
+  if (random < 0.5) {
+    screamerImg = document.getElementById("screamer-win");
+    screamerAudio = document.getElementById("sonidoBloodborne");
+  } else if (random < 0.7) {
+    screamerImg = document.getElementById("screamer-img");
+    screamerAudio = document.getElementById("sonidoGrito");
+  } else if (random < 0.9) {
+    screamerImg = document.getElementById("screamer-img-3");
+    screamerAudio = document.getElementById("sonidoGrito");
+  } else {
+    screamerImg = document.getElementById("screamer-img-2");
+    screamerAudio = document.getElementById("sonidoGrito");
+  }
+
+  screamerImg.style.display = "block";
+
+  screamerAudio.play();
+  screamerAudio.currentTime = 0;
+
+  setTimeout(() => {
+    screamerImg.style.display = "none";
+    document.getElementById("background-overlay").style.display = "none";
+  }, 2000);
 }
 
 function abajoDer() {
-  alert('Has hecho clic en la esquina inferior derecha');
+  document.getElementById("background-overlay").style.display = "block";
+
+  const random = Math.random();
+
+  let screamerImg;
+  let screamerAudio;
+
+  if (random < 0.5) {
+    screamerImg = document.getElementById("screamer-win");
+    screamerAudio = document.getElementById("sonidoBloodborne");
+  } else if (random < 0.7) {
+    screamerImg = document.getElementById("screamer-img");
+    screamerAudio = document.getElementById("sonidoGrito");
+  } else if (random < 0.9) {
+    screamerImg = document.getElementById("screamer-img-3");
+    screamerAudio = document.getElementById("sonidoGrito");
+  } else {
+    screamerImg = document.getElementById("screamer-img-2");
+    screamerAudio = document.getElementById("sonidoGrito");
+  }
+
+  screamerImg.style.display = "block";
+
+  screamerAudio.play();
+  screamerAudio.currentTime = 0;
+
+  setTimeout(() => {
+    screamerImg.style.display = "none";
+    document.getElementById("background-overlay").style.display = "none";
+  }, 2000);
 }
