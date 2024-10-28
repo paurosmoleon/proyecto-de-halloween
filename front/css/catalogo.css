@@ -6,14 +6,23 @@ html {
   padding: 0;
 }
 
+/* Contenedor de las tarjetas */
+#cards-container {
+  margin: auto;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas en pantallas grandes */
+  margin-top: 6%;
+}
+
 /* Estilos de las tarjetas */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 250px;
   min-width: 250px;
   margin: auto;
   text-align: center;
-  font-family: arial;
+  font-family: Arial;
   backdrop-filter: blur(10px);
   background: rgba(20, 0, 10, 0.5);
   border-radius: 5px;
@@ -35,43 +44,39 @@ html {
   color: rgb(167, 167, 167);
 }
 
+.card img {
+  height: 20em;
+  width: 100%;
+}
+
+/* Contenedor de los botones */
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Espacio entre botones */
+  margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilo del botón de favoritos */
+.favorite-btn {
+  transition: transform 0.3s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
+
 /* Estilos del botón general */
 .card button {
   border: none;
   outline: 0;
-  padding: 12px;
+  padding: 10px 15px;
   color: white;
-  background-color: #000;
-  text-align: center;
+  background-color: #000; /* Color de fondo */
   cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  
-  position: relative;
-  overflow: hidden;
-  transition: color 0.4s ease, background-color 0.4s ease;
+  font-size: 16px;
+  border-radius: 5px; /* Bordes redondeados */
 }
 
-.card button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 300%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 1.5s ease;
-}
-
-.card button:hover:before {
-  left: 100%;
-}
-
-.card button:hover {
-  opacity: 1;
-}
-
-/* Estilos del botón premium */
 .card.premium button {
   background-color: #000;
 }
@@ -88,51 +93,15 @@ html {
   left: 100%;
 }
 
-.card img {
-  height: 20em;
-  width: 100%;
-  
-}
-
-
-/* Contenedor de las tarjetas */
-#cards-container {
-  margin: auto;
-  width: 70%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas en pantallas grandes */
-  margin-top: 6%;
-}
-
-.descripcion {
-  margin: 1em 0em;
-}
-
 /* Estilos de las tarjetas premium */
 .card.premium {
   border: 2px solid rgb(187, 159, 0); /* Marco dorado */
   box-shadow: 0 0 20px rgb(255, 217, 0); /* Sombra dorada */
-  position: relative;
 }
 
-main {
-  width: 70%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-#corona {
-  margin-top: -18%;
-  margin-left: 56%;
-  position: absolute;
-  width: 150px;
-  z-index: 10;
-  transform: rotate(20deg);
+/* Estilos de las descripciones */
+.descripcion {
+  margin: 1em 0em;
 }
 
 /* Estilos del contenido de recetas */
@@ -218,8 +187,23 @@ main {
   }
 }
 
+/* Estilo del contenedor principal */
 main {
   width: 90%;
   margin: auto;
   overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+#corona {
+  margin-top: -18%;
+  margin-left: 56%;
+  position: absolute;
+  width: 150px;
+  z-index: 10;
+  transform: rotate(20deg);
 }
