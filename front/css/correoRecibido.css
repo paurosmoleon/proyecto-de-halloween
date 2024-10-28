@@ -6,6 +6,9 @@
   font-family: MediavalTexto;
   src: url(../assets/fonts/Seagram\ tfb.ttf);
 }
+body {
+  overflow-x: hidden;
+}
 .pergamino {
   color: red;
   text-shadow: 2px 0px 5px black;

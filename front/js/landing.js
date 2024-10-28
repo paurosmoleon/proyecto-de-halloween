@@ -30,7 +30,7 @@ function verificarNombreJuli() {
   }
 }
 function navidadEnHalloween() {
-  var nieve = document.getElementById("snow_wrap");
+  var nieve = document.getElementById("wrapNieve");
   nieve.style.display = "block";
   document.body.style.backgroundImage =
     "url('./assets/img/fondo_navidad.webp')";
@@ -98,7 +98,7 @@ function centro() {
 }
 
 function abajoIzq() {
-  document.getElementById("background-overlay").style.display = "block";
+  document.getElementById("fondoBackground").style.display = "block";
 
   const random = Math.random();
 
@@ -126,12 +126,12 @@ function abajoIzq() {
 
   setTimeout(() => {
     screamerImg.style.display = "none";
-    document.getElementById("background-overlay").style.display = "none";
+    document.getElementById("fondoBackground").style.display = "none";
   }, 2000);
 }
 
 function abajoDer() {
-  document.getElementById("background-overlay").style.display = "block";
+  document.getElementById("fondoBackground").style.display = "block";
 
   const random = Math.random();
 
@@ -159,6 +159,6 @@ function abajoDer() {
 
   setTimeout(() => {
     screamerImg.style.display = "none";
-    document.getElementById("background-overlay").style.display = "none";
+    document.getElementById("fondoBackground").style.display = "none";
   }, 2000);
 }

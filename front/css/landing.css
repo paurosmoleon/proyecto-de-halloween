@@ -4,7 +4,6 @@ html {
   background-color: #292929 !important;
 }
 
-
 @keyframes salirDelSuelo {
   0% {
     bottom: -200px;
@@ -25,7 +24,10 @@ html {
 #manoZombie.animar {
   animation: salirDelSuelo 4s forwards;
 }
-
+.aTotal {
+  text-decoration: none;
+  color: #171717;
+}
 .prePagina {
   width: 100vw;
   height: 100vh;
@@ -159,7 +161,7 @@ header {
     min-height: 30px;
     max-width: 172px;
     padding: 0 1rem;
-    color: #fff;
+    color: #c1c1c1;
     font-size: 15px;
     border: 1px solid #2c2c2c;
     border-radius: 6px 0 0 6px;
@@ -173,7 +175,7 @@ header {
     border-radius: 0 6px 6px 0;
     border: 2px solid #2c2c2c;
     background-color: #1a1a1a;
-    color: #fff;
+    color: #c1c1c1;
     font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -330,12 +332,12 @@ header {
     /* Televisor 4K 3840x2160*/
     .contenedorHeader {
       justify-content: space-between;
-      padding: 20px; 
+      padding: 20px;
     }
 
     nav ul {
       justify-content: space-between;
-      font-size: 50px; 
+      font-size: 50px;
     }
 
     nav ul li {
@@ -343,7 +345,7 @@ header {
     }
 
     main {
-      padding: 40px; 
+      padding: 40px;
     }
     main h2 {
       font-size: 60px;
@@ -353,15 +355,15 @@ header {
     }
 
     section {
-      margin-bottom: 40px; 
+      margin-bottom: 40px;
     }
   }
 }
 #clickableDiv {
   position: relative;
   margin: 50px auto;
-  width: 300px; 
-  height: 300px; 
+  width: 300px;
+  height: 300px;
 }
 #clickableDiv img {
   width: 100%;
@@ -372,21 +374,21 @@ header {
 }
 .central {
   left: 52%;
-  top: 27%; 
-  width: 7.5%; 
-  height: 7.5%; 
+  top: 27%;
+  width: 7.5%;
+  height: 7.5%;
 }
 .bottom-left {
   left: 21%;
   top: 53%;
-  width: 31%; 
-  height: 30%; 
+  width: 31%;
+  height: 30%;
 }
 .bottom-right {
-  left: 62%; 
-  top: 53%; 
-  width: 31%; 
-  height: 30%; 
+  left: 62%;
+  top: 53%;
+  width: 31%;
+  height: 30%;
 }
 .wrapNieve {
   height: 100vh;
@@ -448,7 +450,7 @@ header {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  z-index: 900; 
+  z-index: 900;
 }
 
 #screamer-img {
@@ -490,4 +492,3 @@ header {
   left: 0;
   z-index: 1000;
 }
-
