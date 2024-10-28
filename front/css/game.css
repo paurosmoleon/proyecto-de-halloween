@@ -140,3 +140,18 @@ img{
 .player{
     filter: drop-shadow(1px 1px 5px #651616);
 }
+
+.juegos{
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    
+}
+
+#img_selec_game{
+    flex: 1;
+}
+
+#img_selec_game:hover{
+    flex: 3;
+}
