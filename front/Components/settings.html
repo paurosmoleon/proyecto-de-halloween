@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/settings.css">
+    <script src="../js/navBar.js" defer></script>
+    <script src="../js/cerrarSesion.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icos-svg/halloween-icon-orange.png">
+
+  </head>
+  <body>
+    <header>
+      <div class="contenedorHeader">
+        <div class="logoTitulo">
+          <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" />
+          <h1>Halloween</h1>
+        </div>
+        <nav>
+          <ul class="menuNavbar">
+            <li class="listahover"><a href="../landing.html">HOME</a></li>
+            <li class="listahover"><a href="./catalogo.html">catalogo</a></li>
+            <li class="listahover"><a href="./game.html">MINIJUEGO</a></li>
+            <li class="listahover"><a href="./aboutus.html">About us</a></li>
+          </ul>
+        </nav>
+        <div class="loginDiv">
+              <span id="cerrarSesion" >cerrar sesion</span>
+          </div>
+      </div>
+    </header>
+    
+    <main>
+        <div class="settingsMenu">
+          
+          <div class="profile">
+            <img id="imgProfile" src="" alt="">
+            <h2 id="nameProfile"></h2>
+            <hr style="width: 75%; margin: auto;">
+          </div>
+
+
+
+          <div class="inputSetting">
+            <form action="">
+              <h2 class="title">Ajustes de usuario</h2>
+              <div class="inputBox"> 
+                <input type="text" name="user" required> 
+                <i>Usuario</i> 
+              </div> 
+              <div class="inputBox"> 
+                <input type="email" name="email" required> 
+                <i>Correo</i> 
+              </div> 
+              <div class="inputBox"> 
+                <input type="password" name="password" required> 
+                <i>Contraseña</i> 
+              </div> 
+              <div class="inputBox"> 
+                <input type="password"   required> 
+                <i>Repite contraseña</i> 
+              </div> 
+              <div class="inputIcon">
+                <h2>Icono</h2>
+                <div>
+  
+                  <img id="icons" src="../assets/img/iconos-register/bat-blood-halloween-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/cat-halloween-kitty-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/cauldron-halloween-pot-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/frankenstein-halloween-monster-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/halloween-horror-pumpkin-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/magic-pentagram-rite-svgrepo-com.svg" alt="">
+                  <img id="icons" src="../assets/img/iconos-register/skull-svgrepo-com.svg" alt="">
+                </div>
+                <input type="hidden" name="icon" id="inputIcons">
+              </div>
+
+              <input type="submit" value="enviar">
+            </form>
+          </div>
+        </div>
+    </main>
+
+  </body>
+</html>
