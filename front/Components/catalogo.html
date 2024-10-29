@@ -10,6 +10,7 @@
     <script src="../js/catalogo.js"></script>
   </head>
   <body>
+
     <header>
       <div class="contenedorHeader">
         <div class="logoTitulo">
@@ -30,6 +31,16 @@
       </div>
     </header>
 
+    <aside id="sidebar">
+      <div class="sidebar-menu">
+          <h2>Favoritos</h2>
+          <ul id="favorites-list">
+              <!-- Los productos favoritos se agregarán aquí -->
+          </ul>
+      </div>
+  </aside>
+  <button onclick="toggleMenu()" class="menu-toggle-btn">💖</button>
+
     <main>
       <div id="cards-container">
         <div class="card">
@@ -38,7 +49,7 @@
           <p class="descripcion">Verás más allá...</p>
           <div class="button-group">
             <a href="#chupito-ojo" href="javascript: void(0);" onClick="toggle('chupito-ojo')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
@@ -50,7 +61,7 @@
           <p class="descripcion">Vuelan hasta tu gusto</p>
           <div class="button-group">
             <a href="#galletas-murcielago" href="javascript: void(0);" onClick="toggle('galletas-murcielago')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
@@ -62,7 +73,7 @@
           <p class="descripcion">Trepan tus sentidos</p>
           <div class="button-group">
             <a href="#chocoaranya" href="javascript: void(0);" onClick="toggle('chocoaranya')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
@@ -76,9 +87,9 @@
             <p class="descripcion">Miedo lo ricas que están</p>
             <div class="button-group">
               <a href="#cookie-boo" href="javascript: void(0);" onClick="toggle('cookie-boo')">
-                <button>Ver receta</button>
+                <button class="ver-receta-btn">Ver receta</button>
               </a>
-              <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+              <button class="favorite-btn">💖</button> <!-- Botón de Favoritos -->
             </div>
           </div>
         </div>
@@ -91,9 +102,9 @@
             <p class="descripcion">Miedo a parar de comer</p>
             <div class="button-group">
               <a href="#hectocakes" href="javascript: void(0);" onClick="toggle('hectocakes')">
-                <button>Ver receta</button>
+                <button class="ver-receta-btn">Ver receta</button>
               </a>
-              <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+              <button class="favorite-btn">💖</button> <!-- Botón de Favoritos -->
             </div>
           </div>
         </div>
@@ -101,10 +112,10 @@
         <div class="card">
           <img src="../assets/img/img-catalogo/postre6.jpg" alt="VampiCakes" />
           <h1>VampiCakes</h1>
-          <p class="descripcion">Vuelna de lo dulce que están</p>
+          <p class="descripcion">Vuelan de lo dulce que están</p>
           <div class="button-group">
             <a href="#murcielago-cakes" href="javascript: void(0);" onClick="toggle('murcielago-cakes')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
@@ -116,7 +127,7 @@
           <p class="descripcion">Entierra la cuchara</p>
           <div class="button-group">
             <a href="#tarta-muerta" href="javascript: void(0);" onClick="toggle('tarta-muerta')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
@@ -128,12 +139,13 @@
           <p class="descripcion">Muerdelas tú!!</p>
           <div class="button-group">
             <a href="#vampi-cookies" href="javascript: void(0);" onClick="toggle('vampi-cookies')">
-              <button>Ver receta</button>
+              <button class="ver-receta-btn">Ver receta</button>
             </a>
             <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
           </div>
         </div>
       </div>
+      
       
       
 
