@@ -1,7 +1,8 @@
 body,
 html {
   max-width: 100%;
-  background-color: #292929 !important;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @keyframes salirDelSuelo {
@@ -100,7 +101,6 @@ header {
 }
 .contenedor {
   display: none;
-
   font-family: "Roboto", sans-serif;
   padding: 20px;
   width: 60%;
@@ -118,115 +118,115 @@ header {
   }
 }
 
-  #esqueleto_eleccion img {
-    max-width: 100%;
-    height: auto;
-  }
-  #titulo_esqueleto {
-    text-align: center;
-  }
-  #titulo_esqueleto hr {
-    width: 40%;
-    margin: auto;
-  }
+#esqueleto_eleccion img {
+  max-width: 100%;
+  height: auto;
+}
+#titulo_esqueleto {
+  text-align: center;
+}
+#titulo_esqueleto hr {
+  width: 40%;
+  margin: auto;
+}
 
-  h2 {
-    margin-top: 10px;
-    color: #ff7518;
-    margin-bottom: 10px;
-  }
-  h3 {
-    color: #ff7518;
-  }
+h2 {
+  margin-top: 10px;
+  color: #ff7518;
+  margin-bottom: 10px;
+}
+h3 {
+  color: #ff7518;
+}
 
-  hr {
-    border: none;
-    height: 2px;
-    background-color: #2c2c2c;
-    margin-bottom: 20px;
-  }
+hr {
+  border: none;
+  height: 2px;
+  background-color: #2c2c2c;
+  margin-bottom: 20px;
+}
 
-  p {
-    font-size: 16px;
-    color: #c1c1c1;
-  }
+p {
+  font-size: 16px;
+  color: #c1c1c1;
+}
 
-  .divInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
-  }
+.divInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
 
-  .input {
-    min-height: 30px;
-    max-width: 172px;
-    padding: 0 1rem;
-    color: #c1c1c1;
-    font-size: 15px;
-    border: 1px solid #2c2c2c;
-    border-radius: 6px 0 0 6px;
-    background-color: #292929;
-  }
+.input {
+  min-height: 30px;
+  max-width: 172px;
+  padding: 0 1rem;
+  color: #c1c1c1;
+  font-size: 15px;
+  border: 1px solid #2c2c2c;
+  border-radius: 6px 0 0 6px;
+  background-color: #292929;
+}
 
-  .botonCheck {
-    min-height: 30px;
-    padding: 0 1em;
-    border: none;
-    border-radius: 0 6px 6px 0;
-    border: 2px solid #2c2c2c;
-    background-color: #1a1a1a;
-    color: #c1c1c1;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
+.botonCheck {
+  min-height: 30px;
+  padding: 0 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #c1c1c1;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 
-  .botonCheck:hover {
-    border-color: rgb(205, 56, 2);
-    background: #292929;
-  }
+.botonCheck:hover {
+  border-color: rgb(205, 56, 2);
+  background: #292929;
+}
 
-  .input:focus,
-  .input:focus-visible {
-    border-color: rgb(205, 56, 2);
-    outline: none;
-  }
-  .imagenJoseC {
-    text-align: center;
-  }
+.input:focus,
+.input:focus-visible {
+  border-color: rgb(205, 56, 2);
+  outline: none;
+}
+.imagenJoseC {
+  text-align: center;
+}
 
-  .imagenJoseC img {
-    margin-top: 2%;
-    width: 50%;
-    height: auto;
-  }
-  .imagenJaviC {
-    position: relative;
-    width: 100%;
-    height: 7svh;
-  }
-  .imagenJaviC img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 10%;
-    height: auto;
-    cursor: pointer;
-  }
-  .imagenJuliC {
-    text-align: center;
-  }
-  .imagenJuliC img {
-    margin-top: 2%;
-    width: 50%;
-    height: auto;
-    opacity: 0.5;
-  }
-  .imagenJuliC,
-  .imagenJaviC.imagenJoseC p {
-    color: #2c2c2c;
-  }
+.imagenJoseC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+}
+.imagenJaviC {
+  position: relative;
+  width: 100%;
+  height: 7svh;
+}
+.imagenJaviC img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: auto;
+  cursor: pointer;
+}
+.imagenJuliC {
+  text-align: center;
+}
+.imagenJuliC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  opacity: 0.5;
+}
+.imagenJuliC,
+.imagenJaviC.imagenJoseC p {
+  color: #2c2c2c;
+}
 #clickableDiv {
   position: relative;
   margin: 50px auto;
@@ -360,134 +360,5 @@ header {
   left: 0;
   z-index: 1000;
 }
-@media (max-width: 375px) {
-  /* iPhone SE 2020 de pie */
-  .contenedorHeader {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
 
-  nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 390px) {
-  /* iPhone 13 de pie */
-  .contenedorHeader {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 391px) and (max-width: 914px) and (orientation: landscape) {
-  /* iPhone 13 tumbado */
-  .contenedorHeader {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  nav ul {
-    flex-direction: row;
-    margin-top: 0;
-  }
-
-  nav ul li {
-    margin-left: 20px;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 915px) {
-  /* Samsung S20 Ultra de pie */
-  .contenedorHeader {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 413px) and (max-width: 915px) and (orientation: landscape) {
-  /* Samsung S20 Ultra tumbado */
-  .contenedorHeader {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  nav ul {
-    flex-direction: row;
-    margin-top: 0;
-  }
-
-  nav ul li {
-    margin-left: 20px;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 1920px) {
-  /* Portátil de 1080p */
-  .contenedorHeader {
-    justify-content: space-between;
-  }
-
-  nav ul {
-    justify-content: space-between;
-  }
-}
-
-@media (min-width: 1921px) and (max-width: 3840px) {
-  /* Televisor 4K 3840x2160*/
-  .contenedorHeader {
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  nav ul {
-    justify-content: space-between;
-    font-size: 50px;
-  }
-
-  nav ul li {
-    margin-left: 60px;
-  }
-
-  main {
-    padding: 40px;
-  }
-  main h2 {
-    font-size: 60px;
-  }
-  main p {
-    font-size: 40px;
-  }
-
-  section {
-    margin-bottom: 40px;
-  }
-}

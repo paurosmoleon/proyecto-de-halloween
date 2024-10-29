@@ -1,0 +1,150 @@
+@media (max-width: 376px) {
+    /* iPhone SE 2020 de pie */
+    .contenedorHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    body,
+    html {
+      max-width: 100%;
+      background-image: url(../assets/img/img-landing/fondos-queries/Iphone\ SE\ Portrait.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .prePagina{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: .5%;
+    }
+    #imgTumba{
+      width: 40%;
+    }
+  
+  
+  }
+  
+  @media (min-width: 376px) and (max-width: 390px) {
+    /* iPhone 13 de pie */
+    .contenedorHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 391px) and (max-width: 914px) and (orientation: landscape) {
+    /* iPhone 13 tumbado */
+    .contenedorHeader {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      margin-top: 0;
+    }
+  
+    nav ul li {
+      margin-left: 20px;
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 915px) {
+    /* Samsung S20 Ultra de pie */
+    .contenedorHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 413px) and (max-width: 915px) and (orientation: landscape) {
+    /* Samsung S20 Ultra tumbado */
+    .contenedorHeader {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      margin-top: 0;
+    }
+  
+    nav ul li {
+      margin-left: 20px;
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 1920px) {
+    /* Portátil de 1080p */
+    .contenedorHeader {
+      justify-content: space-between;
+    }
+  
+    nav ul {
+      justify-content: space-between;
+    }
+  }
+  
+  @media (min-width: 1921px) and (max-width: 3840px) {
+    /* Televisor 4K 3840x2160*/
+    .contenedorHeader {
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    nav ul {
+      justify-content: space-between;
+      font-size: 50px;
+    }
+  
+    nav ul li {
+      margin-left: 60px;
+    }
+  
+    main {
+      padding: 40px;
+    }
+    main h2 {
+      font-size: 60px;
+    }
+    main p {
+      font-size: 40px;
+    }
+  
+    section {
+      margin-bottom: 40px;
+    }
+  }
+  
