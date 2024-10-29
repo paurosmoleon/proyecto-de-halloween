@@ -4,34 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - ¡Una noche escalofriante!</title>
+    <!-- Enlace a los estilos globales y específicos de la página -->
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/landing.css" />
+    <!-- Icono de la página que se mostrará en la pestaña del navegador -->
     <link rel="icon" type="image/x-icon" href="./assets/img/icos-svg/halloween-icon-orange.png">
-
   </head>
   <body>
+    <!-- Div para el fondo de la página -->
     <div id="fondoBackground"></div>
+    <!-- Imágenes para el "screamer" que aparecen bajo ciertas condiciones -->
     <img id="screamer-win" src="./assets/img/img-landing/caramelo.png" alt="Win">
     <img id="screamer-img" src="./assets/img/img-landing/img-screamer.jpg" alt="Screamer">
     <img id="screamer-img-2" src="./assets/img/img-landing/mi-mayor-miedo.png" alt="Screamer">
     <img id="screamer-img-3" src="./assets/img/img-landing/puro-cine.jpg" alt="Screamer">
+
+    <!-- Div para la página principal que activa un sonido al hacer clic -->
     <div class="prePagina" onclick="sonidoAmbiente()" style="cursor: pointer;">
       <img src="./assets/img/img-landing/nube_negra.png"  class="nube1">
       <img src="./assets/img/img-landing/nube_negra.png" class="nube2">
       <div class="tumba">
+          <!-- Tumba que activa una animación de una mano de zombie al hacer clic -->
           <img src="./assets/img/img-landing/tumbatuneada.png" onclick="animarManoZombie()"  style="cursor: pointer;">
       </div>
-  </div>
-  <img src="./assets/img/img-landing/mano_zombie.png"  id="manoZombie" style="display: none; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%);">
+    </div>
+    <!-- Mano de zombie que se muestra al activar una animación -->
+    <img src="./assets/img/img-landing/mano_zombie.png"  id="manoZombie" style="display: none; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%);">
+    
     <header>
       <div class="contenedorHeader">
+        <!-- Enlace al logo de la página -->
         <a class="aTotal" href="./landing.html">
-        <div class="logoTitulo">
-          <img src="./assets/img/icos-svg/halloween-icon.svg" class="logo" />
-          <h1>Halloween</h1>
-        </div>
-      </a>
+          <div class="logoTitulo">
+            <img src="./assets/img/icos-svg/halloween-icon.svg" class="logo" />
+            <h1>Halloween</h1>
+          </div>
+        </a>
         <nav>
+          <!-- Menú de navegación con enlaces a diferentes secciones -->
           <ul class="menuNavbar">
             <li class="listahover"><a href="./landing.html">HOME</a></li>
             <li class="listahover"><a href="./Components/catalogo.html">catalogo</a></li>
@@ -39,69 +49,76 @@
             <li class="listahover"><a href="./Components/aboutus.html">About us</a></li>
           </ul>
         </nav>
+        <!-- Enlace para iniciar sesión -->
         <div class="loginDiv">
           <a href="./Components/login.html">Iniciar sesion</a>
         </div>
       </div>
     </header>
 
-    <div class="wrapNieve" id="wrapNieve"style="display: none;">
+    <!-- Contenedor para la nieve que se muestra bajo ciertas condiciones -->
+    <div class="wrapNieve" id="wrapNieve" style="display: none;">
       <div class="nieve"></div>
     </div> 
+
     <div class="contenedor">
-  
       <div id="titulo_esqueleto">
-      <h2 class="conFuenteBlood">Una calabaza u otra puede sentenciar tu futuro</h2>
-      <h3 class="conFuenteBlood">¿Te atreves a clicar?</h3>
-      <hr>
-      <div id="clickableDiv">
-        <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png">
-        <div class="central clickable-area" onclick="centro()"></div>
-        <div class="bottom-left clickable-area" onclick="abajoIzq()"></div>
-        <div class="bottom-right clickable-area" onclick="abajoDer()"></div>
-    </div>
-    </div>
+        <!-- Títulos y mensajes llamativos -->
+        <h2 class="conFuenteBlood">Una calabaza u otra puede sentenciar tu futuro</h2>
+        <h3 class="conFuenteBlood">¿Te atreves a clicar?</h3>
+        <hr>
+        <div id="clickableDiv">
+          <!-- Imagen de fondo y áreas clicables -->
+          <img src="./assets/img/img-landing/esqueletos_eleccion_full_fusion.png">
+          <div class="central clickable-area" onclick="centro()"></div>
+          <div class="bottom-left clickable-area" onclick="abajoIzq()"></div>
+          <div class="bottom-right clickable-area" onclick="abajoDer()"></div>
+        </div>
+      </div>
+
+      <!-- Sección para interactuar con diferentes personajes -->
       <div>
         <h2>Who's this teacher?</h2>
         <hr>
-        <p>Sombra del este, noche en el horizonte. Este chamán se presentó a nuestro mundo cómo el sustituto de un alto demonio y estuvo entre los mortales unos cuantos meses hasta volver al mundo de Baldurs. "Sorpresa" la nuestra al encontrarnoslo de nuevo en la segunda parte de esta aventura.</p>
+        <p>Sombra del este, noche en el horizonte...</p>
         <div class="divInput">
           <input type="text" class="input" id="checkJose"  placeholder="Introduce un nombre">
-          <button class="botonCheck" value="Probar suerte"onclick="verificarNombreJose()" id="checkJoseButton">Probar suerte</button>
-             
+          <button class="botonCheck" value="Probar suerte" onclick="verificarNombreJose()" id="checkJoseButton">Probar suerte</button>
         </div>
         <div id="imagenJose" style="display:none;" class="imagenJoseC">
           <img src="./assets/img/img-landing/Cuadro_hecarim_v2.png" onmouseover="sonidoCaballo()">
           <p>"Dicen que si te acercas al cuadro puedes escuchar al jinete acechando..."</p>
         </div> 
- 
-        </div>  
+      </div>  
 
       <div>
         <h2>Who's this teacher?</h2>
         <hr>
-        <p>Frío glacial, sangre brotará. Calculadora en mano este nigromante anunció la vuelta del anterior antes del time-skip. Una noche más iremos en busca de vivir hasta el amanecer o unirnos a ellos en el oscuro pozo del html. </p>
+        <p>Frío glacial, sangre brotará...</p>
         <div class="divInput">
           <input type="text" class="input" id="checkJavi"  placeholder="Introduce un nombre">
-          <button class="botonCheck" value="Probar suerte" onclick="verificarNombreJavi()"id="checkJaviButton">Probar suerte</button>
+          <button class="botonCheck" value="Probar suerte" onclick="verificarNombreJavi()" id="checkJaviButton">Probar suerte</button>
         </div>   
         <div id="imagenJavi" style="display:none;" class="imagenJaviC">
           <img src="./assets/img/img-landing/jackSkellington.png" onclick="navidadEnHalloween()">
-          <p>"Hoy un gélido visitante ha decido verse aparecer, dale un apretón de manos para experimentar la magia..."</p>
+          <p>"Hoy un gélido visitante ha decidido verse aparecer..."</p>
         </div> 
-       </div>
+      </div>
+
       <div>
         <h2>Who's this teacher?</h2>
         <hr>
-        <p>Otoño eterno, noche de muertos. Días antes del comienzo de la noche de los Cazadores, la sacerdotisa mayor prescindió de la oscuridad para dejar a este brujo a cargo.</p>
+        <p>Otoño eterno, noche de muertos...</p>
         <div class="divInput">
           <input type="text" class="input" id="checkJuli"  placeholder="Introduce un nombre">
-          <button class="botonCheck" value="Probar suerte"onclick="verificarNombreJuli()" id="checkJuliButton">Probar suerte</button>
+          <button class="botonCheck" value="Probar suerte" onclick="verificarNombreJuli()" id="checkJuliButton">Probar suerte</button>
         </div>
         <div id="imagenJuli" style="display:none;" class="imagenJuliC">
           <img src="./assets/img/img-landing/TheHunterProfile.png">
           <p>"Un cazador ha venido en tu ayuda..."</p>
         </div>
+        
+        <!-- Sección para un formulario de suscripción -->
         <div>
           <h2>Noticiero infernal</h2>
           <hr>
@@ -110,9 +127,11 @@
             <input type="text" class="input" id="checkCorreo"  placeholder="Introduce tu correo">
             <button class="botonCheck" value="check" id="checkCorreoButton">Enviar</button>
           </form>
-          </div>    
+        </div>    
       </div>
     </div>
+
+    <!-- Audio para efectos sonoros en la página -->
     <audio id="sonidoBloodborne" src="./assets/sounds/campanaBloodborne.mp3"></audio>
     <audio id="sonidoCaballo" src="./assets/sounds/caballito.mp3"></audio>
     <audio id="sonidoGrito" src="./assets/sounds/sonidoGrito.mp3"></audio>
@@ -120,7 +139,7 @@
     <audio id="sonidoLobo" src="./assets/sounds/sonidoLobo.mp3"></audio>
     <audio id="sonidoPatito" src="./assets/sounds/sonidoPatito.mp3"></audio>
 
-
+    <!-- Enlace al script de la página que contiene la lógica de interacción -->
     <script src="./js/landing.js"></script>
   </body>
 </html>
