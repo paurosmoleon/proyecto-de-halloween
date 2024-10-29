@@ -34,17 +34,16 @@
 </head>
 <body>
     <div class="tablero"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script>
-let matriz = [
-['1','2','3'],
-['4','5','6'],
-['7','','8'],
-]
+let matriz =  mezclarMatriz()
 let tablero = document.querySelector('.tablero')
 dibujarFichas()
 addEventListeners()
 
 function dibujarFichas(){
+    tablero.innerHTML='';
     matriz.forEach(fila => fila.forEach(elemento =>{
         if(elemento ==''){
             tablero.innerHTML += `<div class="empty">${elemento}</div`
@@ -59,10 +58,19 @@ function addEventListeners(){
        let poscionActual = buscarPosicion(ficha.innerText)
        let posicionEmpty = buscarPosicion('')
        let movimiento = sePuedeMover(poscionActual,posicionEmpty)
-       console.log(movimiento)
 
        if(movimiento !==false){
         actualizarMatriz(ficha.innerText,poscionActual, posicionEmpty)
+        
+        let resultado = compararMatriz()
+        if (resultado === true){
+            confetti({
+                particleCount: 200,
+                spread: 180
+            })
+        }        
+        dibujarFichas()
+        addEventListeners()
        }
 
     }))
@@ -95,9 +103,53 @@ function sePuedeMover(poscionActual,posicionEmpty){
 function actualizarMatriz(elemento,poscionActual, posicionEmpty){
     matriz[poscionActual[0]][poscionActual[1]] = ''
     matriz[posicionEmpty[0]][posicionEmpty[1]] = elemento
-    console.log(matriz)
+
+}
+function mezclarMatriz(){
+        let matrizMezclada = [
+        [],
+        [],
+        []
+        ]
+        let array = ['1','2','3','4','5','6','7','8','']
+        let mezclarArray = array.sort(()=>Math.random()-0.5)
+        let columna = 0;
+        let fila = 0;
+        mezclarArray.forEach(elemento =>{
+            matrizMezclada[fila].push(elemento)
+            if(columna <2){
+                columna++;
+            }else{
+                columna = 0;
+                fila++
+            }
+        })
+        return matrizMezclada
 }    
-    
+function compararMatriz(){
+    let contador = 0
+    let matrizFinal = [
+        ['1', '2', '3'],
+        ['4', '5', '6'],
+        ['7', '8', '']
+    ]
+
+    matriz.forEach((fila, filaIndex) => {
+        fila.forEach((elemento, columnaIndex) => {
+            if (elemento == matrizFinal[filaIndex][columnaIndex]) {
+                contador++
+            }
+        })
+    })
+    console.log(contador)
+    if (contador == 9){
+        return true
+    }else{
+        return false
+    } 
+}
+
+
 </script>
 </body>
 </html>
