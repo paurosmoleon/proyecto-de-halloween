@@ -3,153 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego de Rompecabezas con Imágenes</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
     
-        .tablero{
+        .tablero {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 4px;
             width: 310px;
-            margin: 120px auto;
+            margin: 120px auto 20px;
         }
-        .ficha{
+
+        .ficha {
             background-color: #f3ea60;
             width: 100px;
             height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
             cursor: pointer;
             border-radius: 4px;
             box-shadow: 3px 3px #b96453;
+        }
+
+        .ficha img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #b96453;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 2px 2px #8c4a3c;
         }
     </style>
 </head>
 <body>
     <div class="tablero"></div>
+    <div class="btn-container">
+        <button class="btn" id="btn-reiniciar">Reiniciar</button>
+        <button class="btn" id="btn-free-win">Free Win</button>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-<script>
-let matriz =  mezclarMatriz()
-let tablero = document.querySelector('.tablero')
-dibujarFichas()
-addEventListeners()
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        const imagenes = {
+            '1': 'ruta/a/imagen1.jpg',
+            '2': 'ruta/a/imagen2.jpg',
+            '3': 'ruta/a/imagen3.jpg',
+            '4': 'ruta/a/imagen4.jpg',
+            '5': 'ruta/a/imagen5.jpg',
+            '6': 'ruta/a/imagen6.jpg',
+            '7': 'ruta/a/imagen7.jpg',
+            '8': 'ruta/a/imagen8.jpg',
+            '': ''  
+        };
 
-function dibujarFichas(){
-    tablero.innerHTML='';
-    matriz.forEach(fila => fila.forEach(elemento =>{
-        if(elemento ==''){
-            tablero.innerHTML += `<div class="empty">${elemento}</div`
-        }else{
-        tablero.innerHTML += `<div class="ficha">${elemento}</div`
+        let matriz = mezclarMatriz();
+        let tablero = document.querySelector('.tablero');
+        dibujarFichas();
+        addEventListeners();
+
+        document.getElementById('btn-reiniciar').addEventListener('click', () => {
+            matriz = mezclarMatriz();
+            dibujarFichas();
+            addEventListeners();
+        });
+
+        document.getElementById('btn-free-win').addEventListener('click', () => {
+            matriz = [
+                ['1', '2', '3'],
+                ['4', '5', '6'],
+                ['7', '', '8']
+            ];
+            dibujarFichas();
+            addEventListeners();
+        });
+
+        function dibujarFichas() {
+            tablero.innerHTML = '';
+            matriz.forEach(fila => fila.forEach(elemento => {
+                if (elemento === '') {
+                    tablero.innerHTML += `<div class="empty">${elemento}</div>`;
+                } else {
+                    tablero.innerHTML += `<div class="ficha"><img src="${imagenes[elemento]}" alt="Imagen ${elemento}"></div>`;
+                }
+            }));
         }
-    }))
-}
-function addEventListeners(){
-    let fichas = document.querySelectorAll('.ficha')
-    fichas.forEach(ficha => ficha.addEventListener('click',()=>{
-       let poscionActual = buscarPosicion(ficha.innerText)
-       let posicionEmpty = buscarPosicion('')
-       let movimiento = sePuedeMover(poscionActual,posicionEmpty)
 
-       if(movimiento !==false){
-        actualizarMatriz(ficha.innerText,poscionActual, posicionEmpty)
-        
-        let resultado = compararMatriz()
-        if (resultado === true){
-            confetti({
-                particleCount: 200,
-                spread: 180
-            })
-        }        
-        dibujarFichas()
-        addEventListeners()
-       }
+        function addEventListeners() {
+            let fichas = document.querySelectorAll('.ficha');
+            fichas.forEach(ficha => ficha.addEventListener('click', () => {
+                let poscionActual = buscarPosicion(ficha.innerText);
+                let posicionEmpty = buscarPosicion('');
+                let movimiento = sePuedeMover(poscionActual, posicionEmpty);
 
-    }))
-}
-function buscarPosicion(elemento){
-let filaIndex = 0;
-let columnaIndex = 0;
-    matriz.forEach((fila,index) =>{
-        let filaELemento = fila.findIndex(item => item == elemento)
-        if(filaELemento !== -1){
-            filaIndex = index;
-            columnaIndex = filaELemento;
+                if (movimiento !== false) {
+                    actualizarMatriz(ficha.innerText, poscionActual, posicionEmpty);
+
+                    let resultado = compararMatriz();
+                    if (resultado === true) {
+                        confetti({
+                            particleCount: 200,
+                            spread: 180
+                        });
+                    }
+                    dibujarFichas();
+                    addEventListeners();
+                }
+            }));
         }
-    })
-    return [filaIndex, columnaIndex]
-}
-function sePuedeMover(poscionActual,posicionEmpty){
-  if(poscionActual[1] == posicionEmpty[1]){
-    if(poscionActual[0]-posicionEmpty[0] >1 || poscionActual[0]-posicionEmpty[0] <-1){
-        return false
-    }
-  }else if(poscionActual[0] == posicionEmpty[0]){ 
-    if(poscionActual[1]-posicionEmpty[1] >1 || poscionActual[1]-posicionEmpty[1] <-1){ 
-        return false
-    }
-  }else{
-     return false
-  }
-} 
-function actualizarMatriz(elemento,poscionActual, posicionEmpty){
-    matriz[poscionActual[0]][poscionActual[1]] = ''
-    matriz[posicionEmpty[0]][posicionEmpty[1]] = elemento
 
-}
-function mezclarMatriz(){
-        let matrizMezclada = [
-        [],
-        [],
-        []
-        ]
-        let array = ['1','2','3','4','5','6','7','8','']
-        let mezclarArray = array.sort(()=>Math.random()-0.5)
-        let columna = 0;
-        let fila = 0;
-        mezclarArray.forEach(elemento =>{
-            matrizMezclada[fila].push(elemento)
-            if(columna <2){
-                columna++;
-            }else{
-                columna = 0;
-                fila++
+        function buscarPosicion(elemento) {
+            let filaIndex = 0;
+            let columnaIndex = 0;
+            matriz.forEach((fila, index) => {
+                let filaELemento = fila.findIndex(item => item == elemento);
+                if (filaELemento !== -1) {
+                    filaIndex = index;
+                    columnaIndex = filaELemento;
+                }
+            });
+            return [filaIndex, columnaIndex];
+        }
+
+        function sePuedeMover(poscionActual, posicionEmpty) {
+            if (poscionActual[1] == posicionEmpty[1]) {
+                if (poscionActual[0] - posicionEmpty[0] > 1 || poscionActual[0] - posicionEmpty[0] < -1) {
+                    return false;
+                }
+            } else if (poscionActual[0] == posicionEmpty[0]) {
+                if (poscionActual[1] - posicionEmpty[1] > 1 || poscionActual[1] - posicionEmpty[1] < -1) {
+                    return false;
+                }
+            } else {
+                return false;
             }
-        })
-        return matrizMezclada
-}    
-function compararMatriz(){
-    let contador = 0
-    let matrizFinal = [
-        ['1', '2', '3'],
-        ['4', '5', '6'],
-        ['7', '8', '']
-    ]
+        }
 
-    matriz.forEach((fila, filaIndex) => {
-        fila.forEach((elemento, columnaIndex) => {
-            if (elemento == matrizFinal[filaIndex][columnaIndex]) {
-                contador++
-            }
-        })
-    })
-    console.log(contador)
-    if (contador == 9){
-        return true
-    }else{
-        return false
-    } 
-}
+        function actualizarMatriz(elemento, poscionActual, posicionEmpty) {
+            matriz[poscionActual[0]][poscionActual[1]] = '';
+            matriz[posicionEmpty[0]][posicionEmpty[1]] = elemento;
+        }
 
+        function mezclarMatriz() {
+            let matrizMezclada = [
+                [],
+                [],
+                []
+            ];
+            let array = ['1', '2', '3', '4', '5', '6', '7', '8', ''];
+            let mezclarArray = array.sort(() => Math.random() - 0.5);
+            let columna = 0;
+            let fila = 0;
+            mezclarArray.forEach(elemento => {
+                matrizMezclada[fila].push(elemento);
+                if (columna < 2) {
+                    columna++;
+                } else {
+                    columna = 0;
+                    fila++;
+                }
+            });
+            return matrizMezclada;
+        }
 
-</script>
+        function compararMatriz() {
+            let contador = 0;
+            let matrizFinal = [
+                ['1', '2', '3'],
+                ['4', '5', '6'],
+                ['7', '8', '']
+            ];
+
+            matriz.forEach((fila, filaIndex) => {
+                fila.forEach((elemento, columnaIndex) => {
+                    if (elemento == matrizFinal[filaIndex][columnaIndex]) {
+                        contador++;
+                    }
+                });
+            });
+            return contador === 9;
+        }
+    </script>
 </body>
 </html>
