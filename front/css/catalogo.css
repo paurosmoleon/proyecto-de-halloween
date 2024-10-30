@@ -9,10 +9,11 @@ html {
 /* Contenedor de las tarjetas */
 #cards-container {
   margin: auto;
-  width: 70%;
+  width: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas en pantallas grandes */
   margin-top: 6%;
+  gap: 20px;
 }
 
 /* Estilos de las tarjetas */
@@ -88,7 +89,7 @@ html {
 
 /* Estilos de las tarjetas premium */
 .card.premium {
-  border: 2px solid rgb(187, 159, 0); /* Marco dorado */
+  border: 2px solid #bb9f00; /* Marco dorado */
   box-shadow: 0 0 20px rgb(255, 217, 0); /* Sombra dorada */
 }
 
@@ -272,6 +273,9 @@ aside button{
   margin-left: 10px;
   background-color: transparent;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
+
 }
 aside h2{
   margin-left: 1.5rem;

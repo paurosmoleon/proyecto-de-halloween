@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Botón para eliminar de favoritos
             const removeBtn = document.createElement("button");
-            removeBtn.textContent = "💖";
+            removeBtn.textContent = "❌";
             removeBtn.onclick = () => {
                 favoritesList.removeChild(listItem);
                 button.textContent = "💔";  // Cambia el texto del botón de vuelta al estado original
