@@ -47,8 +47,8 @@ function CambiarContraseña($email)
 {
     global $usuarios;
     $redirect = "http://127.0.0.1/proyecto-JJJ/front/Components/newPass.html";
+    mail($email, "Cambiar Contraseña", "Haz clic en este enlace para cambiar tu contraseña: $redirect","FROM: julianms@yahoo.com");
     echo "Email enviado " . $email . " ";
-    mail($email, "Cambiar Contraseña", "Haz clic en este enlace para cambiar tu contraseña: $redirect", 'From: pce_jjj@yahoo.com');
     // foreach ($usuarios as $usuario) {
     //     if ($usuario['email'] === $email) {
     //         // Verificar si la función mail() devuelve true o false

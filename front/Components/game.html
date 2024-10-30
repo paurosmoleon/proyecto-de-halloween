@@ -6,7 +6,7 @@
     <title>Minijuego</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/game.css">
-    <script src="../js/game.js"></script>
+    <script src="../js/game.js" defer></script>
   </head>
   <body>
     <header>
@@ -32,11 +32,25 @@
         <div id="contenedor_juego" class="contenedor_juego">
             <h1 class="titulo_juego" id="titulo_juego">MINIJUEGO</h1>
 
-          <div class="juegos">
-            <img id="img_selec_game" src="../assets/img/game/tic tac toe.jpg" alt="" width="32%"  height="100%">
-            <img id="img_selec_game" src="../assets/img/game/survive.webp" alt="" width="32%"  height="100%">
-            <img id="img_selec_game" src="../assets/img/game/puzle.jpg" alt="" width="32%" height="100%">
+          <div class="juegos" id="juegos_slider" >
+            <div class="img_selec_game" id="titactoe">
+              <img  src="../assets/img/game/tic tac toe.jpg" alt="" >
+              <div>
+
+                <h2>3 en ralla</h2>
+              </div>
+            </div>
+            
+            <div class="img_selec_game">
+              <img  src="../assets/img/game/puzle.jpg" alt="">
+              <div>
+
+                <h2>Puzzle</h2>
+              </div>
+
+            </div>
           </div>
+
 
 
 

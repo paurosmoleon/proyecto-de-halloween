@@ -130,6 +130,9 @@ nav ul li.listahover:hover {
   align-items: center;
   font-family: Halloweeni;
   text-transform: uppercase;
+  >h1{
+    color: black;
+  }
 }
 
 .logo {
