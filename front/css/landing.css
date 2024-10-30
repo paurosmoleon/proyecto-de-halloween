@@ -3,6 +3,8 @@ html {
   max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: auto;
+  overflow-x: hidden;
 }
 
 @keyframes salirDelSuelo {
@@ -75,12 +77,9 @@ html {
 }
 
 .tumba {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+
   width: 100%;
-  height: calc(100% - 100px);
-  position: relative;
   z-index: 2;
 }
 
@@ -360,5 +359,3 @@ p {
   left: 0;
   z-index: 1000;
 }
-
-
