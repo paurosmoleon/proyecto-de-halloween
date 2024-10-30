@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.classList.toggle("open");
     };
 
-    function addToFavorites(productName, recipeId) {
+    function addToFavorites(productName, recipeId, button) {
         const existingItem = Array.from(favoritesList.children).find(
             (item) => item.textContent.includes(productName)
         );
@@ -30,23 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
             // Crear un enlace para la receta
             const link = document.createElement("a");
             link.textContent = productName;
-            link.href = `#${recipeId}`; // Asume que el ID de la receta es el mismo que el href
+            link.href = `#${recipeId}`;
             link.onclick = (e) => {
-                e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+                e.preventDefault(); 
                 const recipeElement = document.getElementById(recipeId);
-                toggle(recipeId); // Mostrar la receta
-                recipeElement.scrollIntoView({ behavior: 'smooth' }); // Desplazarse a la receta
+                toggle(recipeId); 
+                recipeElement.scrollIntoView({ behavior: 'smooth' }); 
             };
 
+            // Botón para eliminar de favoritos
             const removeBtn = document.createElement("button");
             removeBtn.textContent = "💖";
             removeBtn.onclick = () => {
                 favoritesList.removeChild(listItem);
+                button.textContent = "💔";  // Cambia el texto del botón de vuelta al estado original
             };
 
             listItem.appendChild(link);
             listItem.appendChild(removeBtn);
             favoritesList.appendChild(listItem);
+
+            // Cambia el texto del botón original a una estrella
+            button.textContent = "🎃";
         }
     }
 
@@ -56,7 +61,32 @@ document.addEventListener("DOMContentLoaded", () => {
             const productCard = btn.closest(".card");
             const productName = productCard.querySelector("h1").textContent;
             const recipeId = productCard.querySelector("a").getAttribute("href").substring(1); // Obtener el ID de la receta
-            addToFavorites(productName, recipeId);
+            addToFavorites(productName, recipeId, btn); // Pasar el botón actual a la función
         });
     });
 });
+
+
+window.onload = function(){
+    const myPopup = new Popup({
+        id: "my-popup",
+        hideTitle: "true",
+        content: `Articulo añadido a favoritos!!👻`,
+        disableScroll: false,
+        backgroundColor:  "#bf3d00",
+        textColor: '#ffffff',
+        widthMultiplier: '0.6',
+         textShadow: '0px 0px 5px #000000',
+        closeColor: '#ffffff'
+
+    });
+    const añadir = document.querySelectorAll('.favorite-btn')
+    
+    for (let i = 0; i < añadir.length; i++) {
+        añadir[i].addEventListener('click', () => {
+            console.log('tetas')
+            myPopup.show();
+        });
+    }
+
+}
