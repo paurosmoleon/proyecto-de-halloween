@@ -159,3 +159,43 @@ select {
 #otroColor {
   color: #ccc;
 }
+
+
+.inputIcon{
+  padding:  .5em;
+  color: #aaa;
+
+  background: #333;
+  border-radius: 0.25em;
+  
+  >div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1em; 
+
+    >img{
+      width: 50px;
+      height: 50px;
+      transition: all .5s ease;
+      border-radius: 12px;
+    }
+    >img:hover{
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    
+    }
+  }
+  > h2{
+    font-size: medium;
+    font-weight: lighter;
+    margin-bottom: .4em;
+  }
+
+}
+
+.selected{
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+  
+  
+}
