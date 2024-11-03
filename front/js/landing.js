@@ -125,6 +125,10 @@ function centro() {
 // Muestra una imagen y reproduce un sonido al hacer clic en la parte inferior izquierda
 function abajoIzq() {
   document.getElementById("fondoBackground").style.display = "block"; // Muestra el fondo
+  document.getElementById("fondoBackground").style.backgroundSize = "cover";
+  document.getElementById("fondoBackground").style.backgroundPosition = "center";
+  document.getElementById("fondoBackground").style.backgroundRepeat = "no-repeat";
+  document.getElementById("fondoBackground").style.backgroundAttachment = "fixed";
 
   const random = Math.random(); // Genera un número aleatorio
 

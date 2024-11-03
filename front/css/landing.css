@@ -1,8 +1,6 @@
 body,
 html {
   max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: auto;
   overflow-x: hidden;
 }
@@ -21,7 +19,7 @@ html {
 
 #manoZombie {
   animation: salirDelSuelo 4s forwards;
-  width: 20%;
+  width: 40%;
   z-index: 10;
 }
 #manoZombie.animar {
@@ -62,71 +60,11 @@ html {
   }
 }
 
-.nube1 {
-  animation: moverDerecha 14s linear infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.nube2 {
-  animation: moverIzquierda 14s linear infinite;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.tumba {
-  position: absolute;
-
-  width: 100%;
-  z-index: 2;
-}
-
-.tumba img {
-  cursor: pointer;
-  width: 20%;
-  transition: transform 0.2s;
-}
-
-.tumba img:hover {
-  transform: scale(1.05);
-}
 .conFuenteBlood {
   font-family: navHall;
 }
 header {
   display: none;
-}
-.contenedor {
-  display: none;
-  font-family: "Roboto", sans-serif;
-  padding: 20px;
-  width: 60%;
-  background-color: #171717d5;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: #ff7518 1px solid;
-  margin: 0 auto;
-
-  #esqueleto_eleccion {
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-#esqueleto_eleccion img {
-  max-width: 100%;
-  height: auto;
-}
-#titulo_esqueleto {
-  text-align: center;
-}
-#titulo_esqueleto hr {
-  width: 40%;
-  margin: auto;
 }
 
 h2 {
@@ -150,47 +88,7 @@ p {
   color: #c1c1c1;
 }
 
-.divInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1%;
-}
 
-.input {
-  min-height: 30px;
-  max-width: 172px;
-  padding: 0 1rem;
-  color: #c1c1c1;
-  font-size: 15px;
-  border: 1px solid #2c2c2c;
-  border-radius: 6px 0 0 6px;
-  background-color: #292929;
-}
-
-.botonCheck {
-  min-height: 30px;
-  padding: 0 1em;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  border: 2px solid #2c2c2c;
-  background-color: #1a1a1a;
-  color: #c1c1c1;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.botonCheck:hover {
-  border-color: rgb(205, 56, 2);
-  background: #292929;
-}
-
-.input:focus,
-.input:focus-visible {
-  border-color: rgb(205, 56, 2);
-  outline: none;
-}
 .imagenJoseC {
   text-align: center;
 }
@@ -200,19 +98,7 @@ p {
   width: 50%;
   height: auto;
 }
-.imagenJaviC {
-  position: relative;
-  width: 100%;
-  height: 7svh;
-}
-.imagenJaviC img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 10%;
-  height: auto;
-  cursor: pointer;
-}
+
 .imagenJuliC {
   text-align: center;
 }
@@ -226,37 +112,7 @@ p {
 .imagenJaviC.imagenJoseC p {
   color: #2c2c2c;
 }
-#clickableDiv {
-  position: relative;
-  margin: 50px auto;
-  width: 300px;
-  height: 300px;
-}
-#clickableDiv img {
-  width: 100%;
-}
-.clickable-area {
-  position: absolute;
-  cursor: pointer;
-}
-.central {
-  left: 52%;
-  top: 27%;
-  width: 7.5%;
-  height: 7.5%;
-}
-.bottom-left {
-  left: 21%;
-  top: 53%;
-  width: 31%;
-  height: 30%;
-}
-.bottom-right {
-  left: 62%;
-  top: 53%;
-  width: 31%;
-  height: 30%;
-}
+
 .wrapNieve {
   height: 100vh;
   width: 100%;
