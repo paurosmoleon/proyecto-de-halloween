@@ -6,9 +6,13 @@
     <title>Catálogo - ¡Recetas espeluznantes!</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/catalogo.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/icos-svg/halloween-icon-orange.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
     <script src="../js/catalogo.js"></script>
+ 
   </head>
   <body>
+
     <header>
       <div class="contenedorHeader">
         <div class="logoTitulo">
@@ -29,69 +33,123 @@
       </div>
     </header>
 
+    <aside id="sidebar">
+      <div class="sidebar-menu">
+          <h2>Favoritos</h2>
+          <ul id="favorites-list">
+              <!-- Los productos favoritos se agregarán aquí -->
+          </ul>
+      </div>
+  </aside>
+  <button onclick="toggleMenu()" class="menu-toggle-btn" >💖</button>
+
     <main>
       <div id="cards-container">
         <div class="card">
           <img src="../assets/img/img-catalogo/postre1.jpg" alt="Chupito Ocular" />
           <h1>Chupito Ocular</h1>
           <p class="descripcion">Verás más allá...</p>
-          <a href="#chupito-ojo" href="javascript: void(0);" onClick="toggle('chupito-ojo')"><button id="chupi">Ver receta</button></a>
+          <div class="button-group">
+            <a href="#chupito-ojo" href="javascript: void(0);" onClick="toggle('chupito-ojo')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+          </div>
         </div>
-
+      
         <div class="card">
           <img src="../assets/img/img-catalogo/postre2.jpg" alt="Cookie Vampire" />
           <h1>BatCookie</h1>
           <p class="descripcion">Vuelan hasta tu gusto</p>
-          <a href="#galletas-murcielago" href="javascript: void(0);" onClick="toggle('galletas-murcielago')"><button>Ver receta</button></a>
+          <div class="button-group">
+            <a href="#galletas-murcielago" href="javascript: void(0);" onClick="toggle('galletas-murcielago')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+          </div>
         </div>
-
+      
         <div class="card">
           <img src="../assets/img/img-catalogo/postre3.jpg" alt="Choco Arañas" />
           <h1>Choco Arañas</h1>
           <p class="descripcion">Trepan tus sentidos</p>
-          <a href="#chocoaranya" href="javascript: void(0);" onClick="toggle('chocoaranya')"><button>Ver receta</button></a>
+          <div class="button-group">
+            <a href="#chocoaranya" href="javascript: void(0);" onClick="toggle('chocoaranya')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+          </div>
         </div>
-
+      
         <div class="image-container">
           <img src="../assets/img/img-catalogo/corona.png" alt="Corona" id="corona" />
           <div class="card premium">
             <img src="../assets/img/img-catalogo/postre4.jpg" alt="Cookie Boo" />
             <h1>Cookie Boo</h1>
             <p class="descripcion">Miedo lo ricas que están</p>
-            <a href="#cookie-boo" href="javascript: void(0);" onClick="toggle('cookie-boo')"><button>Ver receta</button></a>
+            <div class="button-group">
+              <a href="#cookie-boo" href="javascript: void(0);" onClick="toggle('cookie-boo')">
+                <button class="ver-receta-btn">Ver receta</button>
+              </a>
+              <button class="favorite-btn" style="text-shadow: 1px 1px 5px #bb9f00, -1px -1px 5px #bb9f00;">💖</button> <!-- Botón de Favoritos -->
+            </div>
           </div>
         </div>
+      
         <div class="image-container">
           <img src="../assets/img/img-catalogo/corona.png" alt="Corona" id="corona" />
           <div class="card premium">
             <img src="../assets/img/img-catalogo/postre5.jpg" alt="HectoCake" />
             <h1>HectoCakes</h1>
             <p class="descripcion">Miedo a parar de comer</p>
-            <a href="#hectocakes" href="javascript: void(0);" onClick="toggle('hectocakes')"><button>Ver receta</button></a>
+            <div class="button-group">
+              <a href="#hectocakes" href="javascript: void(0);" onClick="toggle('hectocakes')">
+                <button class="ver-receta-btn">Ver receta</button>
+              </a>
+              <button class="favorite-btn" style="text-shadow: 1px 1px 5px #bb9f00, -1px -1px 5px #bb9f00;">💖</button> <!-- Botón de Favoritos -->
+            </div>
           </div>
         </div>
-
+      
         <div class="card">
           <img src="../assets/img/img-catalogo/postre6.jpg" alt="VampiCakes" />
           <h1>VampiCakes</h1>
-          <p class="descripcion">Vuelna de lo dulce que estan</p>
-          <a href="#murcielago-cakes" href="javascript: void(0);" onClick="toggle('murcielago-cakes')"><button>Ver receta</button></a>
+          <p class="descripcion">Vuelan de lo dulce que están</p>
+          <div class="button-group">
+            <a href="#murcielago-cakes" href="javascript: void(0);" onClick="toggle('murcielago-cakes')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+          </div>
         </div>
-
+      
         <div class="card">
-          <img src="../assets/img/img-catalogo/postre7.jpg" alt="TartaMuerta" />
+          <img src="../assets/img/img-catalogo/postre7.jpg" alt="TartaMuerta"/>
           <h1>TartaMuerta</h1>
           <p class="descripcion">Entierra la cuchara</p>
-          <a href="#tarta-muerta" href="javascript: void(0);" onClick="toggle('tarta-muerta')"><button>Ver receta</button></a>
+          <div class="button-group">
+            <a href="#tarta-muerta" href="javascript: void(0);" onClick="toggle('tarta-muerta')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritosdfghjkl -->
+          </div>
         </div>
-
+      
         <div class="card">
           <img src="../assets/img/img-catalogo/postre8.jpg" alt="VampiCookies" />
           <h1>VampiCookies</h1>
-          <p class="descripcion">Muerdelas tu!!</p>
-          <a href="#vampi-cookies" href="javascript: void(0);" onClick="toggle('vampi-cookies')"><button>Ver receta</button></a>
+          <p class="descripcion">Muerdelas tú!!</p>
+          <div class="button-group">
+            <a href="#vampi-cookies" href="javascript: void(0);" onClick="toggle('vampi-cookies')">
+              <button class="ver-receta-btn">Ver receta</button>
+            </a>
+            <button class="favorite-btn">❤️</button> <!-- Botón de Favoritos -->
+          </div>
         </div>
       </div>
+      
+      
+      
 
       <hr />
 

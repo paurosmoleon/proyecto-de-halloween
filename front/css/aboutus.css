@@ -1,0 +1,212 @@
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  padding: 2em;
+  color: #c1c1c1;
+  text-align: center;
+  margin-top: 2.5em;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 80%;
+  height: 95%;
+  border: 2px solid #cd3802;
+  border-radius: 14px;
+}
+
+main h1 {
+  margin: 1em;
+}
+
+#lostres #nosotros {
+  height: 20em;
+  max-width: 100%;
+  border-radius: 40px;
+  margin: 2em auto;
+  box-shadow: 1px 1px 10px rgb(255, 72, 0);
+}
+
+#muercielagos {
+  position: absolute;
+  height: 4%;
+}
+
+#muercielagos2 {
+  position: absolute;
+  height: 6%;
+  margin-top: 17%;
+  margin-left: -6%;
+}
+
+#gato {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7em;
+  height: auto;
+  opacity: 0.3;
+}
+
+#umbreon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+
+.imagen-columna {
+  height: 25em;
+  max-width: 100%;
+  border-radius: 40px;
+  margin: 2em auto;
+  box-shadow: 1px 1px 10px rgb(255, 72, 0);
+  transition: all 0.5s ease;
+}
+
+.imagen-columna:hover {
+  transform: scale(1.05);
+}
+
+.tres-columnas {
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.columna {
+  padding: 20px;
+  text-align: center;
+}
+
+.columna h2 {
+  color: orange;
+}
+
+.texto {
+  background-color: #3333338b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 60px auto;
+  max-width: 1100px;
+  text-align: justify;
+  color: #f0f0f0;
+}
+
+.texto h1 {
+  color: orange;
+  text-align: center;
+  font-family: "Creepster", cursive;
+}
+
+.texto h2 {
+  color: #ffa500;
+  margin-top: 20px;
+}
+
+.texto p {
+  margin: 10px 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+#haunter {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 3%;
+  animation: blink 2.5s infinite;
+}
+
+.persona-content {
+  display: none;
+}
+
+.imagen-columna {
+  cursor: pointer;
+}
+
+.quote-button {
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+  main {
+    width: 90%;
+  }
+  .tres-columnas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #gato {
+    width: 5em;
+  }
+  #gato,
+  #umbreon,
+  #muercielagos,
+  #muercielagos2,
+  #haunter {
+    display: none; 
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+  }
+  .tres-columnas {
+    grid-template-columns: 1fr;
+  }
+  #gato {
+    width: 4em;
+  }
+  #umbreon {
+    width: 80px;
+  }
+  .texto {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+  #gato,
+  #umbreon,
+  #muercielagos,
+  #muercielagos2,
+  #haunter {
+    display: none; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  main {
+    padding: 1em;
+  }
+  .texto {
+    font-size: 0.85em;
+  }
+  .imagen-columna {
+    height: 20em;
+  }
+  #gato,
+  #umbreon,
+  #muercielagos,
+  #muercielagos2,
+  #haunter {
+    display: none;
+  }
+}
