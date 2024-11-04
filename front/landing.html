@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/landing.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/icos-svg/halloween-icon-orange.png">
-    <script src="./js/navBar.js" defer></script>
+    <script src="./js/navBar.js"></script>
   </head>
   <body>
     <div class="prePagina">
@@ -24,14 +24,25 @@
           <img src="./assets/img/icos-svg/halloween-icon.svg" class="logo" />
           <h1>Halloween</h1>
         </div>
-        <nav>
+        <div class="iconoNavBar" id="iconoNavBar" style="height: 0; overflow: hidden;" >
+          <img src="./assets/img/icons8-menú.svg" alt="" >
+        </div>
+        <nav id="navabar" >
           <ul class="menuNavbar">
             <li class="listahover"><a href="./landing.html">HOME</a></li>
-            <li class="listahover"><a href="./Components/catalogo.html">catalogo</a></li>
+            <li class=" catalogos_container">
+              <a id="botonDesplegable"  class="botonDesplegable">Catalogos</a> 
+              <ul class="listaDesplegable" id="listaDesplegable" >
+                <a>Pagina</a>
+                <a>Usuario</a>
+                </ul>
+          </li>
+          
             <li class="listahover"><a href="./Components/game.html">MINIJUEGO</a></li>
             <li class="listahover"><a href="./Components/aboutus.html">About us</a></li>
           </ul>
         </nav>
+     
         <div class="loginDiv">
           <a href="./Components/login.html" id="login_text">Iniciar sesion</a>
           <img id="img_login" src=""    alt="">

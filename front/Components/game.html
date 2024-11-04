@@ -6,6 +6,7 @@
     <title>Minijuego</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/game.css">
+    <script src="../js/navBar.js" defer></script>
     <script src="../js/game.js" defer></script>
   </head>
   <body>
@@ -15,22 +16,28 @@
           <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" />
           <h1>Halloween</h1>
         </div>
-        <nav>
+        <div class="iconoNavBar" id="iconoNavBar" style="height: 0; overflow: hidden;" >
+          <img src="../assets/img/icons8-menú.svg" alt="" >
+        </div>
+        <nav id="navabar" >
           <ul class="menuNavbar">
-            <li class="listahover"><a href="../index.html">HOME</a></li>
-            <li class="listahover"><a href="./catalogo.html">catalogo</a></li>
-            <li class="listahover"><a href="./game.html">MINIJUEGO</a></li>
-            <li class="listahover"><a href="./aboutus.html">About us</a></li>
+            <li class="listahover"><a href="./landing.html">HOME</a></li>
+            <li class=" catalogos_container"><a href="../Components/catalogo.html">Catalogos</a></li>
+          
+            <li class="listahover"><a href="./Components/game.html">MINIJUEGO</a></li>
+            <li class="listahover"><a href="./Components/aboutus.html">About us</a></li>
           </ul>
         </nav>
+     
         <div class="loginDiv">
-          <a href="./login.html">Iniciar sesion</a>
+          <a href="./Components/login.html" id="login_text">Iniciar sesion</a>
+          <img id="img_login" src=""    alt="">
         </div>
       </div>
     </header>
     <main>
         <div id="contenedor_juego" class="contenedor_juego">
-            <h1 class="titulo_juego" id="titulo_juego">MINIJUEGO</h1>
+            <h1 class="titulo_juego" id="titulo_juego">MINIJUEGOS</h1>
 
           <div class="juegos" id="juegos_slider" >
             <div class="img_selec_game" id="titactoe">
@@ -57,7 +64,7 @@
             <div id="jugadores" style="display: none;">
               
               <h2>Cuantos jugadores quieres</h2>
-                <button id="1_player">1 Jugador</button>
+                <button id="1_player">1 Jugador</button><br>
                 <button id="2_players">2 Jugadores</button>
             </div>
             <div class="juego" id="juego" style="display: none;">

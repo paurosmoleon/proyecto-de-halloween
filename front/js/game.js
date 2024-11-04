@@ -59,6 +59,7 @@ window.onload = function () {
 
 
     tictacto.addEventListener('click', () => {
+        console.log('as')
         menu_players.style.display = 'block';
         menu_slider.style.display = 'none';
     })

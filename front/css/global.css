@@ -9,6 +9,7 @@ html {
   width: 100%;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -84,6 +85,7 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: navHall;
 }
 
@@ -141,237 +143,249 @@ nav ul li.listahover:hover {
   filter: drop-shadow(1px 1px 2px white);
 }
 
+
+.catalogos_container{
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  > a {
+    cursor: pointer;
+    text-shadow: 1px 1px 5px rgb(172, 172, 172);
+    font-family: navHall;
+    font-size: large;
+    border-radius: 4px 4px 0px 0px;
+    text-decoration: none;
+    color: #171717;
+    background-color: transparent;
+    padding: .25em;
+    font-size: 1rem;
+    border: none;
+    transition: all .3s ease;
+  }
+ 
+
+  
+}
+.active_dropdown{
+  color: white !important;
+  animation: li-anim .6s ease infinite;
+
+}
+.listaDesplegable{
+    width: 100%;
+
+    z-index: 3;
+    top: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: height 1s ease;
+    >a{
+      text-shadow: 1px 1px 10px black;
+      background-color: rgb(249, 106, 34);
+      border: 2.5px solid black;
+      width: 100%;
+      padding-left: 1.25em;
+      color: white;
+      font-size: small;
+    }
+
+
+
+}
+
 /* Media Queries para hacer el diseño responsive */
+  @media (max-width: 3840px) and (min-width: 2000px) and (min-height: 2000px) {
+    .contenedorHeader{
+      height: 200px;
+     }
+     .logoTitulo {
+       >h1{ 
+        font-size: 8em;
+  
+      }
+      >img{
+        width: 130px;
+        height:130px;
+      }
+    }
+  
+    nav ul li a {
+      font-size: 4rem !important;
+    }
+    
+    .menuNavbar{
+      gap: 1rem;
+      width: 70%;
+      display: flex;
+      justify-content: space-evenly;
 
-/* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
-@media (max-width: 1024px) {
-  .contenedorHeader {
-      flex-direction: column;
-      text-align: center;
+    }
+  
+    .catalogos_container{
+      width: auto;
+      
+    }
+    .loginDiv{
+      width: 500px;
+      height: 100% ;
+      > a {
+        font-size: 3.5em ;
+      }
+      > img{
+        width: 130px;
+        height: 130px;
+      }
+    } 
   }
 
-  .loginDiv {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-      margin-top: 10px;
-  }
 
-  nav ul {
-      flex-direction: column;
-      align-items: center;
-  }
+  @media  (max-width: 1920px) and (min-width: 500px) and (min-height: 800px) {
+   .contenedorHeader{
+    height: 100px;
+   }
+   .logoTitulo {
+     >h1{ 
+      font-size: 4em;
 
-  nav ul li {
-      margin-left: 0;
-      margin-bottom: 10px;
+    }
+    >img{
+      width: 80px;
+      height: 80px;
+    }
   }
 
   nav ul li a {
-      font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+  
+  .menuNavbar{
+    gap: 1rem;
+    width: 70%;
+  }
+  .botonDesplegable{
+    font-size: 1.5em !important ;
   }
 
-  .logoTitulo {
+  .listaDesplegable{
+    width: 140px;
+
+    z-index: 3;
+    top: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: height 1s ease;
+    >a{
+      background-color: rgb(205, 56, 2);
+      border: 2.5px solid black;
       width: 100%;
-      justify-content: center;
-      margin-bottom: 15px;
-  }
+      font-size:  1.5em !important;
+      padding-left: .7em;
+      color: white;
+      font-size: small;
+    }
+    
 
-  .logo {
-      width: 50px;
+  } 
+  .loginDiv{
+    width: 250px;
+    height: 100% ;
+    > a {
+      font-size: 2em ;
+    }
+    > img{
+      width: 80px;
+      height: 80px;
+    }
   }
+ 
 }
 
-/* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
-@media (max-width: 768px) {
-  .contenedorHeader {
-      flex-direction: column;
-      padding: 20px;
-  }
 
-  .logoTitulo {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 20px;
-  }
-
-  .logo {
-      width: 50px;
-  }
-
-  nav ul {
-      flex-direction: column;
-      justify-content: center;
-  }
-
-  nav ul li {
-      margin-left: 0;
-      margin-bottom: 10px;
-  }
-
-  nav ul li a {
-      font-size: 1rem;
-  }
-
-  .loginDiv {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-  }
-
-  header {
-      padding: 20px 10px;
-  }
-
-  .menuNavbar {
-      display: block;
-  }
-
-  nav ul li a {
-      font-size: 0.9rem;
-  }
-}
-
-/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 480px) {
-  .contenedorHeader {
-      padding: 10px;
-  }
-
-  .logoTitulo {
-      width: 100%;
-      margin-bottom: 10px;
-  }
-
-  .logo {
-      width: 40px;
-  }
-
-  .loginDiv a {
-      font-size: 0.8rem;
-  }
-
-  nav ul li a {
-      font-size: 0.8rem;
-  }
-
-  header {
-      padding: 15px 5px;
-  }
-  
-  @media (max-width: 1024px) {
-    .contenedorHeader {
-        flex-direction: column;
-        text-align: center;
-    }
-  
-    .loginDiv {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin-top: 10px;
-    }
-  
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-  
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-  
-    .logoTitulo {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-  
-    .logo {
-        width: 50px;
-    }
-  }
-  
-  /* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
-  @media (max-width: 768px) {
-    .contenedorHeader {
-        flex-direction: column;
-        padding: 20px;
-    }
-  
-    .logoTitulo {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-  
-    .logo {
-        width: 50px;
-    }
-  
-    nav ul {
-        flex-direction: column;
-        justify-content: center;
-    }
-  
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-  
-    nav ul li a {
-        font-size: 1rem;
-    }
-  
-    .loginDiv {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
-  
-    header {
-        padding: 20px 10px;
-    }
-  
-    .menuNavbar {
-        display: block;
-    }
-  
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-  }
   
   /* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
-  @media (max-width: 480px) {
+@media (max-width: 480px) and ( max-height:1000px) {
     .contenedorHeader {
         padding: 10px;
+        display: grid;
+
+       
+        grid-template-areas: "logo login"
+                              "icono ."
+                             "navbar navbar";
+        
     }
+    .iconoNavBar{
+      grid-area: icono;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: .5em;
+      margin-left: .3em;
   
+      height: 30px !important;
+    }
+    .menuNavbar{
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    nav{
+   
+      height: 0px;
+      overflow: hidden;
+      
+      transition: height .5s ease-out;
+    }
+    .botonDesplegable{
+      font-size: .8em !important ;
+    }
     .logoTitulo {
-        width: 100%;
-        margin-bottom: 10px;
+      grid-area: logo;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: 0;
+      >h1 {
+
+        font-size: 1.3em;
+      }
     }
-  
-    .logo {
+    
+    .logo {   
         width: 40px;
+        margin-right: 5px;
     }
-  
+    .loginDiv{
+      width: 100%;
+      height: 100%;
+      grid-area: login;
+      >img {
+        width: 40px;
+        height: 40px;
+      }
+    }
     .loginDiv a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
-  
+
+    nav{
+      grid-area: navbar;
+    }
     nav ul li a {
         font-size: 0.8rem;
+    }
+    .listhover{
+      padding: 0;
+      margin: 0;
     }
   
     header {
         padding: 15px 5px;
     }
-  }
-  }
+}

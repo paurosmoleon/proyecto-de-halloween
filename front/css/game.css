@@ -45,16 +45,10 @@ button{
 }
 #jugadores {
     height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    >h2{
-        padding-bottom: 4%;
-    }
+    >h2,button{
+        margin-bottom: 8%;
 
-     
+    }
 }
 #jugadores > button{
     position: relative;
@@ -200,3 +194,129 @@ img{
 
   }
 
+  @media (max-width: 3840px) and (min-width: 2000px) and (min-height: 2000px) {
+    .juegos{
+        width: 100%;
+        height:80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 12px;
+        overflow: hidden;
+    
+        
+    }
+    .titulo_juego{
+        font-size: 5em;
+    }
+    .img_selec_game{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        flex: 1;
+        transition: flex .3s ease;
+        min-width: 100px;
+        
+        
+        
+        > img {
+            width: 100%;
+            height: 100%;
+        }
+        >div{  
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 4em;
+            opacity: 1;
+            >h2{
+                backdrop-filter: blur(5px);
+                text-shadow: 0px 0px 5px black;
+            }
+           
+            
+        }
+
+        
+    
+    }
+    #jugadores{
+        font-size: 4em;
+
+        > button {
+            font-size: 1em;
+        }
+    }
+    table{
+        width: 100%;
+        height: 100%;
+    }
+    .container_assets{
+        font-size: 4em;
+        > button{
+            font-size: 0.8em;
+        }
+    }
+
+    .cell{
+        width: 20em;
+        height: 20em;
+    }
+}
+
+@media (max-width: 480px) and ( max-height:1000px) {
+    
+    .juegos{
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 12px;
+        overflow: hidden;
+    
+        
+    }
+
+    .img_selec_game{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        flex: 1;
+        transition: flex .3s ease;
+        min-width: 100px;
+        
+        
+        
+        > img {
+            width: 100%;
+            height: 200px;
+        }
+        >div{  
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 1;
+            
+            
+        }
+        
+    
+    }
+}
