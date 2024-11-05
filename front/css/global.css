@@ -6,8 +6,9 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
+  width: 100%;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -33,19 +34,29 @@ html {
 }
 
 .loginDiv {
-  width: 20%;
-  text-align: end;
+  
   padding: 0 2em;
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+  align-items: center;
+  > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 }
 
-.loginDiv a {
+.loginDiv a, .loginDiv span  {
+  cursor: pointer;
   color: #171717;
   text-decoration: none;
   font-family: navHall;
+  font-size: large;
   transition: all 0.3s ease;
 }
 
-.loginDiv a:hover {
+.loginDiv a:hover, .loginDiv span:hover {
   color: rgb(249, 106, 34);
   text-shadow: black 1px 1px 5px;
 }
@@ -119,6 +130,9 @@ nav ul li.listahover:hover {
   align-items: center;
   font-family: Halloweeni;
   text-transform: uppercase;
+  >h1{
+    color: black;
+  }
 }
 
 .logo {
@@ -126,3 +140,238 @@ nav ul li.listahover:hover {
   margin-right: 20px;
   filter: drop-shadow(1px 1px 2px white);
 }
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Ajustes para pantallas medianas (tablets, entre 768px y 1024px) */
+@media (max-width: 1024px) {
+  .contenedorHeader {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .loginDiv {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      margin-top: 10px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  nav ul li a {
+      font-size: 1.2rem;
+  }
+
+  .logoTitulo {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 15px;
+  }
+
+  .logo {
+      width: 50px;
+  }
+}
+
+/* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
+@media (max-width: 768px) {
+  .contenedorHeader {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .logoTitulo {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+
+  .logo {
+      width: 50px;
+  }
+
+  nav ul {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  nav ul li a {
+      font-size: 1rem;
+  }
+
+  .loginDiv {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+  }
+
+  header {
+      padding: 20px 10px;
+  }
+
+  .menuNavbar {
+      display: block;
+  }
+
+  nav ul li a {
+      font-size: 0.9rem;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .contenedorHeader {
+      padding: 10px;
+  }
+
+  .logoTitulo {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .logo {
+      width: 40px;
+  }
+
+  .loginDiv a {
+      font-size: 0.8rem;
+  }
+
+  nav ul li a {
+      font-size: 0.8rem;
+  }
+
+  header {
+      padding: 15px 5px;
+  }
+  
+  @media (max-width: 1024px) {
+    .contenedorHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .loginDiv {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 10px;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+  
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+  
+    .logoTitulo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+  
+    .logo {
+        width: 50px;
+    }
+  }
+  
+  /* Ajustes para pantallas pequeñas (móviles, menos de 768px) */
+  @media (max-width: 768px) {
+    .contenedorHeader {
+        flex-direction: column;
+        padding: 20px;
+    }
+  
+    .logoTitulo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+  
+    .logo {
+        width: 50px;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+  
+    nav ul li a {
+        font-size: 1rem;
+    }
+  
+    .loginDiv {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+  
+    header {
+        padding: 20px 10px;
+    }
+  
+    .menuNavbar {
+        display: block;
+    }
+  
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+  }
+  
+  /* Ajustes extra para pantallas muy pequeñas (menos de 480px) */
+  @media (max-width: 480px) {
+    .contenedorHeader {
+        padding: 10px;
+    }
+  
+    .logoTitulo {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+  
+    .logo {
+        width: 40px;
+    }
+  
+    .loginDiv a {
+        font-size: 0.8rem;
+    }
+  
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+  
+    header {
+        padding: 15px 5px;
+    }
+  }
+  }

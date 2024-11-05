@@ -1,0 +1,202 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height: 100svh;
+  
+    
+}
+main{
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    font-family: navHall;
+    text-transform: uppercase
+
+}
+
+.contenedor_juego{
+    padding: 2em;
+    color: #c1c1c1;
+    text-align: center;
+    margin-top: 2.5em;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 90%;
+    height: 95%;
+    border: 2px solid #cd3802;
+    border-radius: 14px;
+    animation: border 5s ease infinite;
+    
+}
+button{
+
+    text-transform: uppercase; 
+    font-family: navHall;
+    background-color: transparent;
+    color: white;
+    border: none;
+    
+    
+}
+#jugadores {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    >h2{
+        padding-bottom: 4%;
+    }
+
+     
+}
+#jugadores > button{
+    position: relative;
+}
+
+#jugadores > button:hover{
+    text-shadow: 0 0 5px #d80000;
+}
+#jugadores > button:hover::after{
+    
+    right: 0;
+   
+}
+#jugadores > button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    border-bottom: 3px solid #d80000;
+    border-radius: 21px;
+    transition: right 1s;
+    box-shadow: 1px 1px 5px #fa0101;
+}
+
+.titulo_juego{
+    padding-bottom: 1em ;
+}
+@keyframes border {
+    0%{ border-color: #CD3802;}
+    25%{ border-color: #D1480B;}
+    50%{ border-color: #CD3802;}
+    75%{ border-color: #B53001;}
+    100%{ border-color: #C54010;}
+}
+
+.juego{
+    height: 90%;
+}
+table{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-collapse: collapse;
+}
+.cell{
+    border: 5px solid white;
+ 
+    
+    width: 7em;
+    height: 7em;
+    padding: 15px;
+}
+tr:first-child td {
+    border-top: none; 
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td:first-child {
+    border-left: none; 
+}
+
+td:last-child {
+    border-right: none; 
+}
+.container_assets{
+   display: grid;
+   place-items: center;
+   gap: .6em;
+   padding-bottom: 1.5em;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    filter: drop-shadow(1px 1px 1px  #cd3802)
+    
+}
+
+.player{
+    filter: drop-shadow(1px 1px 5px #651616);
+}
+
+.juegos{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+
+    
+}
+
+.img_selec_game{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    flex: 1;
+    transition: flex .3s ease;
+    min-width: 100px;
+    
+    
+    
+    > img {
+        width: 100%;
+        height: 100%;
+    }
+    >div{  
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        opacity: 0;
+        
+        transition: opacity .6s ease-out;
+    }
+    >div:hover{
+    opacity: 1;
+    }
+}
+
+.img_selec_game:hover{
+    flex: 3;
+  
+}
+
+.juegos:hover > :not(:hover) {
+     opacity: 0.7; 
+    filter: brightness(0.4);
+   
+
+  }
+

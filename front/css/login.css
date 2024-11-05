@@ -1,201 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .contieneTodo {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.contieneTodo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.contieneTodo h1 {
+  font-family: navHall;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  overflow: hidden;
+
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
   }
-  
-  .contieneTodo img {
-    width: 80px;
-    margin-bottom: 10px;
+  100% {
+    transform: translateY(100%);
   }
+}
+
+.section .login {
+  position: relative;
+  width: 400px;
+  background: #222;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+}
+
+.section .login .marco {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section .login .marco .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section .login .marco .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.section .login .marco .form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.section .login .marco .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.login .marco .form .inputBox input:focus ~ i,
+.login .marco .form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.login .marco .form .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login .marco .form .links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login .marco .form .links a:nth-child(2) {
+  color: rgb(205, 56, 2);
+  font-weight: 600;
+}
+
+.login .marco .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: rgb(205, 56, 2);
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+select {
+  border: 0;
+  padding: 0 1em;
+  color: #aaa;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #444;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+.select:hover::after {
+  color: rgb(205, 56, 2);
+}
+#otroColor {
+  color: #ccc;
+}
+
+
+.inputIcon{
+  padding:  .5em;
+  color: #aaa;
+
+  background: #333;
+  border-radius: 0.25em;
   
-  .contieneTodo h1 {
-    font-family: navHall;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 5px black;
-  }
-  
-  .section {
-    width: 100%;
-    height: 50svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4%;
-  }
-  
-  @keyframes animate {
-    0% {
-      transform: translateY(-100%);
+  >div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1em; 
+
+    >img{
+      width: 50px;
+      height: 50px;
+      transition: all .5s ease;
+      border-radius: 12px;
     }
-    100% {
-      transform: translateY(100%);
-    }
-  }
-  
-  .section .login {
-    position: relative;
-    width: 400px;
-    background: #222;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
-  }
-  
-  .section .login .marco {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .section .login .marco .form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .section .login .marco .form .inputBox {
-    position: relative;
-    width: 100%;
-  }
-  
-  .section .login .marco .form .inputBox input {
-    position: relative;
-    width: 100%;
-    background: #333;
-    border: none;
-    outline: none;
-    padding: 25px 10px 7.5px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1em;
-  }
-  
-  .section .login .marco .form .inputBox i {
-    position: absolute;
-    left: 0;
-    padding: 15px 10px;
-    font-style: normal;
-    color: #aaa;
-    transition: 0.5s;
-    pointer-events: none;
-  }
-  
-  .login .marco .form .inputBox input:focus ~ i,
-  .login .marco .form .inputBox input:valid ~ i {
-    transform: translateY(-7.5px);
-    font-size: 0.8em;
-    color: #fff;
-  }
-  
-  .login .marco .form .links {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .login .marco .form .links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .login .marco .form .links a:nth-child(2) {
-    color: rgb(205, 56, 2);
-    font-weight: 600;
-  }
-  
-  .login .marco .form .inputBox input[type="submit"] {
-    padding: 10px;
-    background: rgb(205, 56, 2);
-    color: #000;
-    font-weight: 600;
-    font-size: 1.35em;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:active {
-    opacity: 0.6;
-  }
-  select {
-    border: 0;
-    padding: 0 1em;
-    color: #aaa;
-    background-color: #333;
-    cursor: pointer;
-  }
-  
-  .select {
-    position: relative;
-    display: flex;
-    width: 20em;
-    height: 3em;
-    border-radius: 0.25em;
-    overflow: hidden;
-  }
-  .select::after {
-    content: "\25BC";
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1em;
-    background-color: #444;
-    transition: 0.25s all ease;
-    pointer-events: none;
-  }
-  .select:hover::after {
-    color: rgb(205, 56, 2);
-  }
-  #otroColor {
-    color: #ccc;
-  }
-  
-  
-  .inputIcon{
-    padding:  .5em;
-    color: #aaa;
-  
-    background: #333;
-    border-radius: 0.25em;
-    
-    >div{
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 1em; 
-  
-      >img{
-        width: 50px;
-        height: 50px;
-        transition: all .5s ease;
-        border-radius: 12px;
-      }
-      >img:hover{
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(1.1);
-      
-      }
-    }
-  > h2{
-      font-size: medium;
-      font-weight: lighter;
-      margin-bottom: .4em;
-    }
-  
-  }
-  
-  .selected{
+    >img:hover{
       background: rgba(255, 255, 255, 0.3);
       transform: scale(1.1);
     
-    
+    }
   }
+  > h2{
+    font-size: medium;
+    font-weight: lighter;
+    margin-bottom: .4em;
+  }
+
+}
+
+.selected{
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+  
+  
+}
