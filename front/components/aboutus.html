@@ -34,7 +34,7 @@
     <main>
       <img src="../assets/img/img-aboutus/gato.gif" alt="" id="gato" />
       <div id="lostres">
-        <h1>¡Sobre nosotros!</h1>
+        <h1>¡SOBRE NOSOTROS!</h1>
         <h3>Hola, somos Pau Carlos y Esteban (los tres sexys de abajo)</h3>
         <img src="../assets/img/img-aboutus/murcielagos.gif" alt="" id="muercielagos" />
         <img src="../assets/img/img-aboutus/haunter.png" alt="" id="haunter" />
@@ -43,26 +43,29 @@
       </div>
       <div class="texto">
         <h2>Nosotros</h2>
+        <!-- Desciripcion de los tres compañeros -->
         <p>¡Hola! Somos Pau, Esteban y Carlos, tres apasionados estudiantes del ciclo de Desarrollo de Aplicaciones Web (DAW). Nuestra aventura en el mundo del desarrollo comenzó hace un par de años y, desde entonces, hemos estado inmersos en el aprendizaje de las tecnologías más innovadoras y en la creación de proyectos que reflejan nuestra creatividad y habilidades.</p>
 
         <p>Juntos, estamos comprometidos en seguir aprendiendo y creciendo en el mundo del desarrollo web. Creemos que la colaboración y la comunicación son clave para el éxito de nuestros proyectos, y estamos emocionados por lo que el futuro nos depara.</p>
         <p>¡Gracias por conocer un poco más sobre nosotros!</p>
       </div>
+      <!-- columnas con una fotod e cada integrannte y  una descripción de cada uno de ellos -->
+
       <div class="tres-columnas">
         <div class="columna">
-          <h2>Esteban</h2>
+          <h2 class="nombre">Esteban</h2>
           <img src="../assets/img/img-aboutus/Esteban.jpeg" alt="Imagen de Esteban" class="imagen-columna" onclick="showPersonaContent('esteban')" />
           <h3 class="quote-button" onclick="showPersonaContent('esteban')">"El dinero no lo es todo, pero es todo lo que quiero."</h3>
         </div>
 
         <div class="columna">
-          <h2>Carlos</h2>
+          <h2 class="nombre">Carlos</h2>
           <img src="../assets/img/img-aboutus/Carlos.jpeg" alt="Imagen de Carlos" class="imagen-columna" onclick="showPersonaContent('carlos')" />
           <h3 class="quote-button" onclick="showPersonaContent('carlos')">"En el cielo o en la tierra solo yo merezco ser venerado."</h3>
         </div>
 
         <div class="columna">
-          <h2>Pau</h2>
+          <h2 class="nombre">Pau</h2>
           <img src="../assets/img/img-aboutus/Pau2.jpeg" alt="Imagen de Pau" class="imagen-columna" onclick="showPersonaContent('pau')" />
           <h3 class="quote-button" onclick="showPersonaContent('pau')">"Sudo su, look at me I am the captain now."</h3>
         </div>
@@ -92,6 +95,25 @@
       </div>
 
       <img src="../assets/img/img-aboutus/umbreon.png" alt="" id="umbreon" />
+      
+      <!-- formulario  de contacto -->
+
+      <div class="contact-form">
+        <h2>Comparte tus Peores Pesadillas con Jack</h2>
+        <form action="path-to-your-server-side-script" method="POST">
+          <label for="subject">Asunto:</label>
+          <input type="text" id="subject" name="subject" placeholder="Asunto de tu pesadilla" required />
+      
+          <label for="email">Tu Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required />
+      
+          <label for="message">Describe tu Peor Pesadilla:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Comparte tu peor pesadilla..." required></textarea>
+      
+          <button type="submit">Enviar a Jack</button>
+        </form>
+      </div>
+      
     </main>
 
     <script src="../js/aboutus.js"></script>

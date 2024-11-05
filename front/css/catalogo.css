@@ -31,6 +31,7 @@ html {
   margin-bottom: 10%;
   z-index: 2;
   transition: transform 0.7s ease;
+  
 }
 
 .card:hover {
@@ -152,38 +153,6 @@ html {
   box-shadow: 0 0 20px rgb(255, 217, 0);
 }
 
-/* Ajustes responsive: adaptaciones para pantallas medianas */
-@media (max-width: 1024px) {
-  #cards-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card {
-    margin-bottom: 15%;
-  }
-}
-
-/* Ajustes responsive: adaptaciones para pantallas pequeñas */
-@media (max-width: 600px) {
-  #cards-container {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: 15em;
-  }
-
-  .card {
-    margin-bottom: 20%;
-  }
-
-  .texto-recetas {
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 10px;
-  }
-}
-
 /* Estilos para el contenedor principal */
 main {
   width: 90%;
@@ -293,3 +262,82 @@ aside h2 {
   margin-left: 1.5rem;
   color: #ff6f00;
 }
+/* Ajustes responsive: adaptaciones para pantallas medianas */
+@media (max-width: 1024px) {
+  #cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    margin-bottom: 15%;
+  }
+}
+
+/* Ajustes responsive: adaptaciones para pantallas pequeñas */
+@media (max-width: 600px) {
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 15em;
+  }
+
+  .card {
+    margin-bottom: 20%;
+  }
+
+  .texto-recetas {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+/* Ajustes responsive: adaptaciones para pantallas extremadamente grandes */
+@media (min-width: 2000px) and (min-height: 2000px) {
+  #cards-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+  }
+
+  #corona {
+    display: none;
+  }
+
+  .card img {
+    height: 30em;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 400px;
+    margin-bottom: 12%;
+    max-width: 400px;
+    font-size: 1.3em;
+  }
+
+  .ver-receta-btn {
+    font-size: 1.5em; 
+    padding: 15px 25px;
+  }
+
+  .favorite-btn {
+    font-size: 1.5em;
+  }
+
+  .menu-toggle-btn {
+    font-size: 3em; /* Aumenta el tamaño de fuente del botón */
+    width: 90px; /* Aumenta el ancho del botón */
+    height: 90px; /* Aumenta la altura del botón */
+  }
+
+  .texto-recetas {
+    max-width: 75%;
+    margin: 40px auto;
+    padding: 35px;
+    font-size: 1.2em;
+  }
+}
+
+
+
