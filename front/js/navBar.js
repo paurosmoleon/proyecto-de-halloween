@@ -52,15 +52,16 @@ fetch('http://127.0.0.1/proyecto-JJJ/back/infoCliente.php')
         } )
         .then(data => {
             console.log(data)
-            if (data['icon']){
-                img_login.src = data['icon']
-            }else {
-                img_login.style.display = 'none'
-            }
+            
             if (data['name']) {
                 text_login.innerText = data['name'] 
-                text_login.href = './Components/settings.html'
+                text_login.href = 'http://127.0.0.1/proyecto-JJJ//front/Components/settings.html'
             } 
+            if (data['icon']){
+                img_login.style.display = 'block'
+                img_login.src = data['icon']
+            }
+           
         })
         .catch(error => {
             
