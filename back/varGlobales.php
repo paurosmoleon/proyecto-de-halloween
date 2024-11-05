@@ -1,7 +1,7 @@
     <?php
     session_start();
 
-    $_SESSION['usuarios'] = [];
+
     if (!isset($_SESSION['usuarios'])) {
         $_SESSION['usuarios'] = [];
     }

@@ -25,11 +25,17 @@ main{
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    display: grid;
-    grid-template-columns: 1fr 8fr;
     padding: 1.5em;
 }
 
+#cerrarSesion{
+  color: white !important;
+  transition: color .6s ease;
+}
+
+#cerrarSesion:hover{
+  color: #cd3802;
+}
 .profile{
     
   display: flex;
@@ -37,13 +43,14 @@ main{
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 2em;
 
     > img {
         width: 250px;
         height: 250px;
     }
     > h2{
-        font-size: 48px;
+        font-size: 2.5em;
     }
 }
 
