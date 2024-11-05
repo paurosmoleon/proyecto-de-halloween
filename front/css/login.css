@@ -14,12 +14,9 @@ main{
   padding: 20px;
 }
 
-.contieneTodo img {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
 .contieneTodo h1 {
+  margin-top: 2%;
+  color: white;
   font-family: navHall;
   font-size: 2.5rem;
   text-shadow: 2px 2px 5px black;
@@ -212,3 +209,43 @@ select {
   
   
 }
+@media (max-width: 600px) {
+  .contieneTodo{
+    display: none;
+
+  }
+}
+@media (min-width: 2000px) and (min-height: 2000px) {
+  .contieneTodo img{
+    width: 00px;
+  }
+  .contieneTodo h1{
+    font-size: 6em;
+  }
+  .login{
+    min-width: 1200px;
+  }
+  .seguridad{
+    font-size: 0.80em;
+  }
+  img{
+    width: 50px; 
+    height: 50px;
+  }
+  .inputIcon{
+    padding: 20px; /* Espacio alrededor del contenedor */
+  }
+  .inputIcon h2{
+    font-size: 3em;
+  }
+  .inputBox{
+    font-size: 3.5em;
+  }
+  .links{
+    font-size: 2em;
+  }
+  .select select option{
+    font-size: 1em;
+  }
+}
+
