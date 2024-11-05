@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+// crea un pop up 
 window.onload = function(){
     const myPopup = new Popup({
         id: "my-popup",
@@ -84,7 +84,7 @@ window.onload = function(){
     
     for (let i = 0; i < añadir.length; i++) {
         añadir[i].addEventListener('click', () => {
-            console.log('tetas')
+            console.log('si')
             myPopup.show();
         });
     }
