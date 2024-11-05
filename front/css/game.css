@@ -1,202 +1,288 @@
-*,*::after,*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body,html{
-    height: 100svh;
-  
-    
+body,
+html {
+  height: 100svh;
 }
-main{
-    text-shadow: 1px 1px 5px black;
-    display: flex;
-    justify-content: center;
-    height: 80%;
-    font-family: navHall;
-    text-transform: uppercase
-
+main {
+  text-shadow: 1px 1px 5px black;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  font-family: navHall;
+  text-transform: uppercase;
 }
 
-.contenedor_juego{
-    padding: 2em;
-    color: #c1c1c1;
-    text-align: center;
-    margin-top: 2.5em;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    width: 90%;
-    height: 95%;
-    border: 2px solid #cd3802;
-    border-radius: 14px;
-    animation: border 5s ease infinite;
-    
+.contenedor_juego {
+  padding: 2em;
+  color: #c1c1c1;
+  text-align: center;
+  margin-top: 2.5em;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 90%;
+  height: 95%;
+  border: 2px solid #cd3802;
+  border-radius: 14px;
+  animation: border 5s ease infinite;
 }
-button{
-
-    text-transform: uppercase; 
-    font-family: navHall;
-    background-color: transparent;
-    color: white;
-    border: none;
-    
-    
+@media (orientation: portrait) {
+  .contenedor_juego {
+    width: 100%;
+    height: 100%;
+  }
+}
+button {
+  text-transform: uppercase;
+  font-family: navHall;
+  background-color: transparent;
+  color: white;
+  border: none;
 }
 #jugadores {
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    >h2{
-        padding-bottom: 4%;
-    }
-
-     
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  > h2 {
+    padding-bottom: 4%;
+  }
 }
-#jugadores > button{
-    position: relative;
+#jugadores > button {
+  position: relative;
 }
 
-#jugadores > button:hover{
-    text-shadow: 0 0 5px #d80000;
+#jugadores > button:hover {
+  text-shadow: 0 0 5px #d80000;
 }
-#jugadores > button:hover::after{
-    
-    right: 0;
-   
+#jugadores > button:hover::after {
+  right: 0;
 }
-#jugadores > button::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 100%;
-    bottom: 0;
-    border-bottom: 3px solid #d80000;
-    border-radius: 21px;
-    transition: right 1s;
-    box-shadow: 1px 1px 5px #fa0101;
+#jugadores > button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  border-bottom: 3px solid #d80000;
+  border-radius: 21px;
+  transition: right 1s;
+  box-shadow: 1px 1px 5px #fa0101;
 }
 
-.titulo_juego{
-    padding-bottom: 1em ;
+.titulo_juego {
+  padding-bottom: 1em;
 }
 @keyframes border {
-    0%{ border-color: #CD3802;}
-    25%{ border-color: #D1480B;}
-    50%{ border-color: #CD3802;}
-    75%{ border-color: #B53001;}
-    100%{ border-color: #C54010;}
+  0% {
+    border-color: #cd3802;
+  }
+  25% {
+    border-color: #d1480b;
+  }
+  50% {
+    border-color: #cd3802;
+  }
+  75% {
+    border-color: #b53001;
+  }
+  100% {
+    border-color: #c54010;
+  }
 }
 
-.juego{
-    height: 90%;
+.juego {
+  height: 90%;
 }
-table{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border-collapse: collapse;
+table {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-collapse: collapse;
 }
-.cell{
-    border: 5px solid white;
- 
-    
-    width: 7em;
-    height: 7em;
-    padding: 15px;
+.cell {
+  border: 5px solid white;
+
+  width: 7em;
+  height: 7em;
+  padding: 15px;
 }
 tr:first-child td {
-    border-top: none; 
+  border-top: none;
 }
 
 tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 td:first-child {
-    border-left: none; 
+  border-left: none;
 }
 
 td:last-child {
-    border-right: none; 
+  border-right: none;
 }
-.container_assets{
-   display: grid;
-   place-items: center;
-   gap: .6em;
-   padding-bottom: 1.5em;
+.container_assets {
+  display: grid;
+  place-items: center;
+  gap: 0.6em;
+  padding-bottom: 1.5em;
 }
-img{
-    max-width: 100%;
-    max-height: 100%;
-    filter: drop-shadow(1px 1px 1px  #cd3802)
-    
-}
-
-.player{
-    filter: drop-shadow(1px 1px 5px #651616);
+img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: drop-shadow(1px 1px 1px #cd3802);
 }
 
-.juegos{
+.player {
+  filter: drop-shadow(1px 1px 5px #651616);
+}
+
+.juegos {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.img_selec_game {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  flex: 1;
+  transition: flex 0.3s ease;
+  min-width: 100px;
+
+  > img {
     width: 100%;
-    height: 70%;
+    height: 100%;
+  }
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
     display: flex;
+    align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
+    text-align: center;
+    opacity: 0;
 
-    
-}
-
-.img_selec_game{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    flex: 1;
-    transition: flex .3s ease;
-    min-width: 100px;
-    
-    
-    
-    > img {
-        width: 100%;
-        height: 100%;
-    }
-    >div{  
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3); 
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        opacity: 0;
-        
-        transition: opacity .6s ease-out;
-    }
-    >div:hover{
+    transition: opacity 0.6s ease-out;
+  }
+  > div:hover {
     opacity: 1;
-    }
+  }
 }
 
-.img_selec_game:hover{
-    flex: 3;
-  
+.img_selec_game:hover {
+  flex: 3;
 }
 
 .juegos:hover > :not(:hover) {
-     opacity: 0.7; 
-    filter: brightness(0.4);
-   
+  opacity: 0.7;
+  filter: brightness(0.4);
+}
 
+.tablero {
+  display: grid; /* Usamos grid para organizar las fichas */
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+  gap: 4px; /* Espacio entre las fichas */
+  width: 310px; /* Ancho fijo del tablero */
+  margin: 0px auto 20px; /* Margen superior, centrado horizontalmente y margen inferior */
+}
+
+/* Estilo para cada ficha del rompecabezas */
+.ficha {
+  width: 100px; /* Ancho de cada ficha */
+  height: 100px; /* Alto de cada ficha */
+  display: flex; /* Usamos flex para centrar el contenido */
+  align-items: center; /* Centramos verticalmente */
+  justify-content: center; /* Centramos horizontalmente */
+  cursor: pointer; /* Cambiamos el cursor al pasar sobre la ficha */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 3px 3px #b96453; /* Sombra para las fichas */
+}
+
+/* Contenedor para los botones de control */
+.btn-container {
+  display: flex; /* Usamos flex para alinear los botones */
+  justify-content: center; /* Centramos los botones */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 20px; /* Margen superior para separar del tablero */
+}
+
+/* Estilo para los botones */
+.btn {
+  padding: 10px; /* Espacio interno */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #fff; /* Color del texto */
+  background-color: rgb(249, 106, 34); /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+  box-shadow: 2px 2px #8c4a3c; /* Sombra para los botones */
+}
+
+/* Estilo para la ficha vacía */
+.empty {
+  width: 100px; /* Ancho de la ficha vacía */
+  height: 100px; /* Alto de la ficha vacía */
+  background-color: transparent; /* Sin fondo visible */
+  pointer-events: none; /* No se puede hacer clic */
+  opacity: 0.5;
+  border-radius: 4px;
+}
+@media (min-width: 1921px) {
+  .contenedor_juego {
+    padding: 4em; /* Aumenta el padding para pantallas grandes */
+    font-size: 1.5em; /* Aumenta el tamaño de fuente */
   }
 
+  .cell {
+    width: 10em; /* Aumenta el tamaño de las celdas */
+    height: 10em;
+  }
+
+  .ficha {
+    width: 150px; /* Aumenta el tamaño de las fichas */
+    height: 150px; /* Aumenta el tamaño de las fichas */
+  }
+
+  .empty {
+    width: 150px; /* Aumenta el tamaño de la ficha vacía */
+    height: 150px; /* Aumenta el tamaño de la ficha vacía */
+  }
+
+  /* Aumentar tamaño de botones de selección de jugadores */
+  #jugadores > button,
+  #boton_restart_juego,
+  #boton_restart_score {
+    padding: 15px 30px; /* Aumentar padding */
+    font-size: 24px; /* Aumentar tamaño de fuente */
+  }
+
+  .btn {
+    padding: 15px; /* Aumenta el padding de los botones */
+    font-size: 24px; /* Aumenta el tamaño de fuente de los botones */
+  }
+
+  .tablero {
+    width: 420px; /* Aumenta el ancho del tablero */
+  }
+}

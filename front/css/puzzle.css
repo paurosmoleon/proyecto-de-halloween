@@ -1,55 +1,55 @@
-        /* Reseteo de márgenes y paddings para todos los elementos */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ /* Reseteo de márgenes y paddings para todos los elementos */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Estilo para el contenedor del tablero */
-        .tablero {
-            display: grid; /* Usamos grid para organizar las fichas */
-            grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
-            gap: 4px; /* Espacio entre las fichas */
-            width: 310px; /* Ancho fijo del tablero */
-            margin: 120px auto 20px; /* Margen superior, centrado horizontalmente y margen inferior */
-        }
+/* Estilo para el contenedor del tablero */
+.tablero {
+    display: grid; /* Usamos grid para organizar las fichas */
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+    gap: 4px; /* Espacio entre las fichas */
+    width: 310px; /* Ancho fijo del tablero */
+    margin: 120px auto 20px; /* Margen superior, centrado horizontalmente y margen inferior */
+}
 
-        /* Estilo para cada ficha del rompecabezas */
-        .ficha {
-            width: 100px; /* Ancho de cada ficha */
-            height: 100px; /* Alto de cada ficha */
-            display: flex; /* Usamos flex para centrar el contenido */
-            align-items: center; /* Centramos verticalmente */
-            justify-content: center; /* Centramos horizontalmente */
-            cursor: pointer; /* Cambiamos el cursor al pasar sobre la ficha */
-            border-radius: 4px; /* Bordes redondeados */
-            box-shadow: 3px 3px #b96453; /* Sombra para las fichas */
-        }
+/* Estilo para cada ficha del rompecabezas */
+.ficha {
+    width: 100px; /* Ancho de cada ficha */
+    height: 100px; /* Alto de cada ficha */
+    display: flex; /* Usamos flex para centrar el contenido */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre la ficha */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 3px 3px #b96453; /* Sombra para las fichas */
+}
 
-        /* Contenedor para los botones de control */
-        .btn-container {
-            display: flex; /* Usamos flex para alinear los botones */
-            justify-content: center; /* Centramos los botones */
-            gap: 10px; /* Espacio entre los botones */
-            margin-top: 20px; /* Margen superior para separar del tablero */
-        }
+/* Contenedor para los botones de control */
+.btn-container {
+    display: flex; /* Usamos flex para alinear los botones */
+    justify-content: center; /* Centramos los botones */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Margen superior para separar del tablero */
+}
 
-        /* Estilo para los botones */
-        .btn {
-            padding: 10px; /* Espacio interno */
-            font-size: 18px; /* Tamaño de fuente */
-            color: #fff; /* Color del texto */
-            background-color: #b96453; /* Color de fondo del botón */
-            border: none; /* Sin borde */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
-            box-shadow: 2px 2px #8c4a3c; /* Sombra para los botones */
-        }
+/* Estilo para los botones */
+.btn {
+    padding: 10px; /* Espacio interno */
+    font-size: 18px; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    background-color: #b96453; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
+    box-shadow: 2px 2px #8c4a3c; /* Sombra para los botones */
+}
 
-        /* Estilo para la ficha vacía */
-        .empty {
-            width: 100px; /* Ancho de la ficha vacía */
-            height: 100px; /* Alto de la ficha vacía */
-            background-color: transparent; /* Sin fondo visible */
-            pointer-events: none; /* No se puede hacer clic */
-        }
+/* Estilo para la ficha vacía */
+.empty {
+    width: 100px; /* Ancho de la ficha vacía */
+    height: 100px; /* Alto de la ficha vacía */
+    background-color: transparent; /* Sin fondo visible */
+    pointer-events: none; /* No se puede hacer clic */
+}

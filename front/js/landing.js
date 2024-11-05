@@ -197,3 +197,25 @@ function abajoDer() {
     document.getElementById("fondoBackground").style.display = "none"; // Oculta el fondo
   }, 2000);
 }
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Verifica si se llegó desde otra página
+  if (localStorage.getItem('fromOtherPage') === 'true') {
+    // Oculta el div prePagina
+    const prePaginaDiv = document.querySelector('.prePagina');
+    if (prePaginaDiv) {
+      document.body.style.backgroundImage = "url('./assets/img/fondo.webp')"; // Cambia el fondo
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundAttachment = "fixed";
+      var tumba = document.getElementsByClassName("prePagina")[0]; // Obtiene el primer elemento con la clase "prePagina"
+      tumba.style.display = "none"; // Oculta la tumba
+      var contenedor = document.getElementsByClassName("contenedor")[0]; // Obtiene el primer contenedor
+      contenedor.style.display = "block"; // Muestra el contenedor
+      var header = document.getElementsByTagName("header")[0]; // Obtiene el primer header
+      header.style.display = "block"; // Muestra el header
+    }
+    // Limpia el indicador para que no afecte futuras visitas directas
+    localStorage.removeItem('fromOtherPage');
+  }
+});

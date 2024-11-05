@@ -52,8 +52,8 @@ function dibujarFichas() {
       if (elemento == "") {
         // Si es una posición vacía
         tablero.innerHTML += `
-                        <div class="empty" style="width: 100px; height: 100px; pointer-events: none;">
-                            <img src="${imagenes[""]}" alt="Parte vacía" style="width: 100%; height: 100%; opacity: 0.5; border-radius: 4px;">
+                        <div class="empty">
+                            <img src="${imagenes[""]}" alt="Parte vacía" >
                         </div>`; // Dibujamos la ficha vacía
       } else {
         tablero.innerHTML += `
