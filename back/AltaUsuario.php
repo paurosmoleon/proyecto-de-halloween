@@ -1,8 +1,13 @@
 <?php
 session_start();
 
+
+
 include 'varGlobales.php';
 
+header("Access-Control-Allow-Origin: *");  // Permitir todas las fuentes
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");  // Permitir métodos necesarios
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $id = count($_SESSION['usuarios']) + 1;
 $user_form_name = htmlspecialchars($_POST['user']);
@@ -24,9 +29,14 @@ switch ($user_form_Psecure) {
         $user_form_Psecure = "¿Cuál fue la marca de tu primer coche?";
         break;
 }
-
-AltaUsuario($id, $user_form_name, $user_form_password, $user_form_email, $user_form_privilege, $user_form_icon, $user_form_Psecure, $user_form_Rsecure);
-redirect('../front/landing.html');
+ $result = AltaUsuario($id, $user_form_name, $user_form_password, $user_form_email, $user_form_privilege, $user_form_icon, $user_form_Psecure, $user_form_Rsecure); 
+    echo $result;
+ if ($result == 1){
+    echo json_encode(['status' => 'error', 'message' => 'El usuario ya existe.']);
+    exit;
+ }else {
+   
+ }
 
 
 ?>

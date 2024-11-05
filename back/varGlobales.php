@@ -7,14 +7,12 @@ if (!isset($_SESSION['usuarios'])) {
 }
 $usuarios = &$_SESSION['usuarios'];
 
-function AltaUsuario($id, $name, $password, $email, $privilege, $icon, $Psecure, $Rsecure)
-{
-
+function AltaUsuario($id, $name, $password, $email, $privilege, $icon, $Psecure, $Rsecure){
     global $usuarios;
 
     foreach ($usuarios as $usuario) {
         if ($usuario['name'] === $name) {
-            return;
+            return 1;
         }
 
     }
@@ -32,29 +30,12 @@ function AltaUsuario($id, $name, $password, $email, $privilege, $icon, $Psecure,
 
 
     $usuarios[] = $nuevoUser;
-
-
-
-
-
-
     $_SESSION['current_user'] = $nuevoUser;
-
-
+    
 
 }
-function CambiarContraseña($email)
-{
-    global $usuarios;
-    $redirect = "http://127.0.0.1/proyecto-JJJ/front/Components/newPass.html";
-    mail($email, "Cambiar Contraseña", "Haz clic en este enlace para cambiar tu contraseña: $redirect","FROM: julianms@yahoo.com");
-    echo "Email enviado " . $email . " ";
-    // foreach ($usuarios as $usuario) {
-    //     if ($usuario['email'] === $email) {
-    //         // Verificar si la función mail() devuelve true o false
-    //     }
-
-    // }
+function CambiarContraseña($email){
+    
 }
 
 function CurrentUser($name, $password)
