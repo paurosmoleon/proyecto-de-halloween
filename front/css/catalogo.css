@@ -310,6 +310,7 @@ aside h2 {
   }
 
   .card {
+    min-width: 400px;
     margin-bottom: 12%;
     max-width: 400px;
     font-size: 1.3em;
