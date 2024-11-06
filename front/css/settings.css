@@ -1,160 +1,268 @@
-*,*::after,*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body,html{
-    height: 100%;
-}
-main{
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-.settingsMenu{
-    text-shadow: 0px 0px 5px  black;
-    border: 2px solid #cd3802;
-    border-radius: 14px;
-    margin-top: 2em;
-    color: white;
-    width: 85%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    padding: 1.5em;
+body, html {
+  height: 100%;
+  font-family: sans-serif;
 }
 
-#cerrarSesion{
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  padding: 1rem;
+}
+
+.settingsMenu {
+  text-shadow: 0px 0px 5px black;
+  border: 2px solid #cd3802;
+  border-radius: 14px;
+  margin-top: 2em;
+  color: white;
+  width: 85%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 1.5em;
+}
+
+#cerrarSesion {
   color: white !important;
   transition: color .6s ease;
 }
 
-#cerrarSesion:hover{
+#cerrarSesion:hover {
   color: #cd3802;
 }
-.profile{
-    
+
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 2em;
-
-    > img {
-        width: 250px;
-        height: 250px;
-    }
-    > h2{
-        font-size: 2.5em;
-    }
 }
 
-
-
-.inputSetting{
-  
-    height: 100%;
-
-    >form{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-
-
+.profile > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.title{
-    text-align: center;
-    font-size: 46px;
+.profile > h2 {
+  font-size: 2.5em;
 }
 
-.inputIcon{
-    padding:  .5em;
-    color: #aaa;
-    width: 30%;
-    background: #333;
-    border-radius: 0.25em;
-    
-    >div{
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 1em; 
-  
-      >img{
-        width: 50px;
-        height: 50px;
-        transition: all .5s ease;
-        border-radius: 12px;
-      }
-      >img:hover{
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(1.1);
-      
-      }
-    }
-    > h2{
-      font-size: medium;
-      font-weight: lighter;
-      margin-bottom: .4em;
-    }
-  
-  }
+.inputSetting {
+  height: 100%;
+}
+
+.inputSetting > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 46px;
+}
+
+.inputIcon {
+  padding: .5em;
+  color: #aaa;
+  width: 30%;
+  background: #333;
+  border-radius: 0.25em;
+}
+
+.inputIcon > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.inputIcon > div > img {
+  width: 50px;
+  height: 50px;
+  transition: all .5s ease;
+  border-radius: 12px;
+}
+
+.inputIcon > div > img:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.inputIcon > h2 {
+  font-size: medium;
+  font-weight: lighter;
+  margin-bottom: .4em;
+}
+
 .inputBox {
-    position: relative;
-    width: 45%;
-    display: grid;
-    place-items: center;
+  position: relative;
+  width: 45%;
+  display: grid;
+  place-items: center;
 }
-  
-  i {
-    position: absolute;
-    left: 20%;
-    padding: 15px 10px;
-    font-style: normal;
-    color: #aaa;
-    transition: 0.5s;
-    pointer-events: none;
+
+i {
+  position: absolute;
+  left: 20%;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+input:focus ~ i,
+input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+
+input {
+  position: relative;
+  width: 60%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  width: 35%;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.selected {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+
+/* Large screens (larger than 1200px) */
+@media (min-width: 1200px) {
+  .settingsMenu {
+      width: 50%;
   }
 
-  input:focus ~ i,input:valid ~ i {
-    transform: translateY(-7.5px);
-    font-size: 0.8em;
-    color: #fff;
+  .profile > img {
+      width: 300px;
+      height: 300px;
   }
 
-  input {
+  .profile > h2 {
+      font-size: 3em;
+  }
 
-    position: relative;
-    width: 60%;
-    background: #333;
-    border: none;
-    outline: none;
-    padding: 25px 10px 7.5px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1em;
+  .inputIcon > h2 {
+      font-size: 1.2em;
   }
-  input[type="submit"] {
-    width:35%;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 1.35em;
-    letter-spacing: 0.05em;
-    cursor: pointer;
+
+  .inputBox input {
+      width: 60%;
   }
-  .selected{
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(1.1);
-    
-    
+}
+
+/* Medium screens (between 768px and 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .settingsMenu {
+      width: 70%;
   }
+
+  .profile > img {
+      width: 200px;
+      height: 200px;
+  }
+
+  .profile > h2 {
+      font-size: 2.2em;
+  }
+
+  .inputIcon > h2 {
+      font-size: 1em;
+  }
+
+  .inputBox input {
+      width: 70%;
+  }
+}
+
+/* Small screens (between 480px and 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .settingsMenu {
+      width: 80%;
+      padding: 1em;
+  }
+
+  .profile > img {
+      width: 180px;
+      height: 180px;
+  }
+
+  .profile > h2 {
+      font-size: 1.8em;
+  }
+
+  .inputBox input {
+      width: 80%;
+  }
+
+  .title {
+      font-size: 36px;
+  }
+}
+
+/* Extra Small screens (less than 480px) */
+@media (max-width: 479px) {
+  body, html {
+      font-size: 14px;
+  }
+
+  main {
+      padding: 0.5em;
+  }
+
+  .settingsMenu {
+      width: 90%;
+      padding: 0.8em;
+  }
+
+  .profile > img {
+      width: 150px;
+      height: 150px;
+  }
+
+  .profile > h2 {
+      font-size: 1.6em;
+  }
+
+  .inputBox input {
+      width: 90%;
+  }
+
+  .title {
+      font-size: 28px;
+  }
+}

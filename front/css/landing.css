@@ -1,9 +1,9 @@
 body,
 html {
   max-width: 100%;
-  background-color: #292929 !important;
+  margin: auto;
+  overflow-x: hidden;
 }
-
 
 @keyframes salirDelSuelo {
   0% {
@@ -19,13 +19,16 @@ html {
 
 #manoZombie {
   animation: salirDelSuelo 4s forwards;
-  width: 20%;
+  width: 40%;
   z-index: 10;
 }
 #manoZombie.animar {
   animation: salirDelSuelo 4s forwards;
 }
-
+.aTotal {
+  text-decoration: none;
+  color: #171717;
+}
 .prePagina {
   width: 100vw;
   height: 100vh;
@@ -57,303 +60,158 @@ html {
   }
 }
 
-.nube1 {
-  animation: moverDerecha 14s linear infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.nube2 {
-  animation: moverIzquierda 14s linear infinite;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.tumba {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: calc(100% - 100px);
-  position: relative;
-  z-index: 2;
-}
-
-.tumba img {
-  cursor: pointer;
-  width: 20%;
-  transition: transform 0.2s;
-}
-
-.tumba img:hover {
-  transform: scale(1.05);
-}
 .conFuenteBlood {
   font-family: navHall;
 }
 header {
   display: none;
 }
-.contenedor {
+
+h2 {
+  margin-top: 10px;
+  color: #ff7518;
+  margin-bottom: 10px;
+}
+h3 {
+  color: #ff7518;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #c1c1c1;
+}
+
+
+.imagenJoseC {
+  text-align: center;
+}
+
+.imagenJoseC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+}
+
+.imagenJuliC {
+  text-align: center;
+}
+.imagenJuliC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  opacity: 0.5;
+}
+.imagenJuliC,
+.imagenJaviC.imagenJoseC p {
+  color: #2c2c2c;
+}
+
+.wrapNieve {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center bottom;
+  overflow: hidden;
+  position: absolute;
+}
+.nieve,
+.nieve:before,
+.nieve:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: nieve 3s linear infinite;
+  content: "";
+}
+
+.nieve:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.nieve:before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes nieve {
+  to {
+    transform: translateY(650px);
+  }
+}
+#fondoBackground {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 900;
+}
 
-  font-family: "Roboto", sans-serif;
-  padding: 20px;
-  width: 60%;
-  background-color: #171717d5;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: #ff7518 1px solid;
-  margin: 0 auto;
+#screamer-img {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-  #esqueleto_eleccion {
-    height: auto;
-    margin: 0;
-    padding: 0;
-  }
+#screamer-img-2 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-  #esqueleto_eleccion img {
-    max-width: 100%;
-    height: auto;
-  }
-  #titulo_esqueleto {
-    text-align: center;
-  }
-  #titulo_esqueleto hr {
-    width: 40%;
-    margin: auto;
-  }
+#screamer-img-3 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-  h2 {
-    margin-top: 10px;
-    color: #ff7518;
-    margin-bottom: 10px;
-  }
-  h3 {
-    color: #ff7518;
-  }
-
-  hr {
-    border: none;
-    height: 2px;
-    background-color: #2c2c2c;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: 16px;
-    color: #c1c1c1;
-  }
-
-  .divInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
-  }
-
-  .input {
-    min-height: 30px;
-    max-width: 172px;
-    padding: 0 1rem;
-    color: #fff;
-    font-size: 15px;
-    border: 1px solid #2c2c2c;
-    border-radius: 6px 0 0 6px;
-    background-color: #292929;
-  }
-
-  .botonCheck {
-    min-height: 30px;
-    padding: 0 1em;
-    border: none;
-    border-radius: 0 6px 6px 0;
-    border: 2px solid #2c2c2c;
-    background-color: #1a1a1a;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  .botonCheck:hover {
-    border-color: rgb(205, 56, 2);
-    background: #292929;
-  }
-
-  .input:focus,
-  .input:focus-visible {
-    border-color: rgb(205, 56, 2);
-    outline: none;
-  }
-  .imagenJoseC {
-    text-align: center;
-  }
-
-  .imagenJoseC img {
-    margin-top: 2%;
-    width: 50%;
-    height: auto;
-  }
-  .imagenJaviC {
-    position: relative;
-    width: 100%;
-    height: 7svh;
-  }
-  .imagenJaviC img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 10%;
-    height: auto;
-    cursor: pointer;
-  }
-  .imagenJuliC {
-    text-align: center;
-  }
-  .imagenJuliC img {
-    margin-top: 2%;
-    width: 50%;
-    height: auto;
-    opacity: 0.5;
-  }
-  .imagenJuliC,
-  .imagenJaviC.imagenJoseC p {
-    color: #2c2c2c;
-  }
-
-  @media (max-width: 375px) {
-    /* iPhone SE 2020 de pie */
-    .contenedorHeader {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    nav ul {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-
-    nav ul li {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-  }
-
-  @media (min-width: 376px) and (max-width: 390px) {
-    /* iPhone 13 de pie */
-    .contenedorHeader {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    nav ul {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-
-    nav ul li {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-  }
-
-  @media (min-width: 391px) and (max-width: 914px) and (orientation: landscape) {
-    /* iPhone 13 tumbado */
-    .contenedorHeader {
-      flex-direction: row;
-      text-align: left;
-    }
-
-    nav ul {
-      flex-direction: row;
-      margin-top: 0;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-      margin-top: 0;
-    }
-  }
-
-  @media (max-width: 915px) {
-    /* Samsung S20 Ultra de pie */
-    .contenedorHeader {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    nav ul {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-
-    nav ul li {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-  }
-
-  @media (min-width: 413px) and (max-width: 915px) and (orientation: landscape) {
-    /* Samsung S20 Ultra tumbado */
-    .contenedorHeader {
-      flex-direction: row;
-      text-align: left;
-    }
-
-    nav ul {
-      flex-direction: row;
-      margin-top: 0;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-      margin-top: 0;
-    }
-  }
-
-  @media (max-width: 1920px) {
-    /* Portátil de 1080p */
-    .contenedorHeader {
-      justify-content: space-between;
-    }
-
-    nav ul {
-      justify-content: space-between;
-    }
-  }
-
-  @media (min-width: 1921px) and (max-width: 3840px) {
-    /* Televisor 4K 3840x2160*/
-    .contenedorHeader {
-      justify-content: space-between;
-      padding: 20px; /* Espaciado adicional en el contenedor */
-    }
-
-    nav ul {
-      justify-content: space-between;
-      font-size: 50px; /* Aumentar tamaño de la fuente del menú */
-    }
-
-    nav ul li {
-      margin-left: 60px; /* Más espacio entre los elementos del menú */
-    }
-
-    main {
-      padding: 40px; /* Más espaciado en el main */
-    }
-    main h2 {
-      font-size: 60px;
-    }
-    main p {
-      font-size: 40px;
-    }
-
-    section {
-      margin-bottom: 40px; /* Más espacio entre secciones */
-    }
-  }
+#screamer-win {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }

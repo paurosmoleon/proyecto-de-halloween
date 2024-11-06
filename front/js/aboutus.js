@@ -12,3 +12,14 @@ function showPersonaContent(personaId) {
       personaContent.style.display = "block";
     }
   }
+
+  // Verifica si el localStorage tiene el valor de la visita
+window.addEventListener("DOMContentLoaded", (event) => {
+  if (localStorage.getItem("visitedLanding") !== "true") {
+    // Oculta el div prePagina si no se accedió desde landing.html
+    const prePaginaDiv = document.querySelector(".prePagina");
+    if (prePaginaDiv) {
+      prePaginaDiv.style.display = "none";
+    }
+  }
+});

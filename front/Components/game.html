@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../css/game.css">
     <script src="../js/navBar.js" defer></script>
     <script src="../js/game.js" defer></script>
+    <script src="../js/checkLanding.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="../js/puzzle.js" defer></script>
   </head>
   <body>
     <header>
@@ -21,17 +26,17 @@
         </div>
         <nav id="navabar" >
           <ul class="menuNavbar">
-            <li class="listahover"><a href="./landing.html">HOME</a></li>
-            <li class=" catalogos_container"><a href="../Components/catalogo.html">Catalogos</a></li>
+            <li class="listahover"><a href="../landing.html">HOME</a></li>
+            <li class="listahover"><a href="./catalogo.html">Catalogos</a></li>
           
-            <li class="listahover"><a href="./Components/game.html">MINIJUEGO</a></li>
-            <li class="listahover"><a href="./Components/aboutus.html">About us</a></li>
+            <li class="listahover"><a href="./game.html">MINIJUEGO</a></li>
+            <li class="listahover"><a href="./aboutus.html">About us</a></li>
           </ul>
         </nav>
      
         <div class="loginDiv">
-          <a href="./Components/login.html" id="login_text">Iniciar sesion</a>
-          <img id="img_login" src=""    alt="">
+          <a href="./login.html" id="login_text">Iniciar sesion</a>
+          <img id="img_login" src=""    alt="" style="display: none;">
         </div>
       </div>
     </header>
@@ -60,7 +65,11 @@
 
 
 
-
+          <div class="tablero"  id="puzzle" style="display: none;"></div> <!-- Contenedor para el tablero del rompecabezas -->
+          <div class="btn-container" id="botonesPuzzle" style="display: none;">
+              <button class="btn" id="btn-reiniciar">Reiniciar</button> <!-- Botón para reiniciar el juego -->
+              <button class="btn" id="btn-free-win">Free Win</button> <!-- Botón para ganar automáticamente -->
+          </div>
             <div id="jugadores" style="display: none;">
               
               <h2>Cuantos jugadores quieres</h2>
