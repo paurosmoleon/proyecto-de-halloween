@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="icon" type="image/x-icon" href="../assets/img/icos-svg/halloween-icon-orange.png">
+    <script src="../js/navBar.js" defer></script>
+    <script src="../js/register.js" ></script>
   </head>
   <body>
     <header>
@@ -15,16 +17,22 @@
           <img src="../assets/img/icos-svg/halloween-icon.svg" class="logo" />
           <h1>Halloween</h1>
         </div>
-        <nav>
+        <div class="iconoNavBar" id="iconoNavBar" style="height: 0; overflow: hidden;" >
+          <img src="../assets/img/icons8-menú.svg" alt="" >
+        </div>
+        <nav id="navabar" >
           <ul class="menuNavbar">
-            <li class="listahover"><a href="../landing.html">HOME</a></li>
-            <li class="listahover"><a href="./catalogo.html">catalogo</a></li>
-            <li class="listahover"><a href="./game.html">MINIJUEGO</a></li>
-            <li class="listahover"><a href="./aboutus.html">About us</a></li>
+            <li class="listahover"><a href="./landing.html">HOME</a></li>
+            <li class=" catalogos_container"><a href="../Components/catalogo.html">Catalogos</a></li>
+          
+            <li class="listahover"><a href="./Components/game.html">MINIJUEGO</a></li>
+            <li class="listahover"><a href="./Components/aboutus.html">About us</a></li>
           </ul>
         </nav>
+     
         <div class="loginDiv">
-          <a href="./login.html">Iniciar sesion</a>
+          <a href="./Components/login.html" id="login_text">Iniciar sesion</a>
+          <img id="img_login" src=""    alt="">
         </div>
       </div>
     </header>
@@ -38,27 +46,42 @@
     <div class="section"> 
       <div class="login"> 
         <div class="marco"> 
-          <form class="form"> 
+          <form  method="POST" class="form"> 
             <div class="inputBox"> 
-              <input type="text" required> 
+              <input type="text" name="user" required> 
               <i>Usuario</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="email" required> 
+              <input type="email" name="email" required> 
               <i>Correo</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="password" required> 
+              <input type="password" name="password" required> 
               <i>Contraseña</i> 
             </div> 
             <div class="inputBox"> 
-              <input type="password" required> 
+              <input type="password"   required> 
               <i>Repite contraseña</i> 
             </div> 
+            <div class="inputIcon">
+              <h2>Icono</h2>
+              <div>
+
+                <img id="icons" src="../assets/img/iconos-register/bat-blood-halloween-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/cat-halloween-kitty-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/cauldron-halloween-pot-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/frankenstein-halloween-monster-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/halloween-horror-pumpkin-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/magic-pentagram-rite-svgrepo-com.svg" alt="">
+                <img id="icons" src="../assets/img/iconos-register/skull-svgrepo-com.svg" alt="">
+              </div>
+              <input type="hidden" name="icon" id="inputIcons">
+            </div>
+
                 <div class="inputBox"> 
                   <div class= "container">
                     <div class="select">
-                      <select>
+                      <select name="Pseguridad" required>
                         <option value="" disabled selected>Selecciona una pregunta de seguridad</option>
                         <option value="1">¿Cuál es el nombre de tu primer mascota?</option>
                         <option value="2">¿En qué ciudad naciste?</option>
@@ -68,7 +91,7 @@
                   </div> 
                 </div>
             <div class="inputBox"> 
-              <input type="text" required> 
+              <input type="text" name="Rseguridad" required> 
               <i>Respuesta</i> 
             </div> 
             <div class="links"> 
@@ -76,8 +99,9 @@
               <a href="./login.html">¿Ya registrado? ¡Click aquí!</a> 
             </div> 
             <div class="inputBox"> 
-              <input type="submit" value="Regístrate"> 
+              <input type="submit" id="submitButton" value="Regístrate  "> 
             </div> 
+          </form> 
           </form> 
         </div> 
       </div> 
